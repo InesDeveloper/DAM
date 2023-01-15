@@ -1,0 +1,88 @@
+body{
+    font-family: Arial, sans-serif;
+    color:black;
+    background: #A9D7AE;
+}
+
+/* Estilos Header */
+nav ul li {
+    padding:20px; /*tamaño de los iconos*/
+    margin: 10px;
+    list-style-type:none;
+    
+    float:right;
+    display: inline;
+    background: #FFD700;
+    color: #DF8611;
+    
+    text-transform: uppercase;
+    width: 90px;
+    font-size:10px;
+    text-align: center;
+    
+    transition:all 2s;
+    border-radius: 15px;  
+}
+
+nav ul li a, a {
+    text-decoration:none;
+    color: inherit;
+}
+
+nav ul li:hover{
+    background: wheat;
+    color: black;
+}
+
+h2{
+    color:rgb(30,30,30);
+    margin: 0px;
+    padding: 10px;
+    background:#78B957; 
+    font-weight:bold;
+    border:3px solid #65904F; 
+    margin-top:40px; 
+    margin-bottom:40px; 
+    text-align:center; 
+    font-size:22px; 
+    border-radius:10px;
+}
+
+p{   
+    color:black(30,30,30);
+}
+
+.ecosugerencias {
+    width: 700px;  
+}
+
+.ecosugerencias h2 {
+
+}
+
+.ecoarticle{
+    width: 700px;
+    display: flex;
+}
+
+.ecoarticle h2 {
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info p {
+    padding-left: 16px;
+}
+
+.ecoarticle img {
+    width: 300px;
+    height: 200px;
+    float: left;
+    border: black 3px solid;
+}
+

@@ -1,0 +1,112 @@
+/*////////////////////////PRINCIPAL///////////////////////////*/
+body{
+    font-family: Arial, sans-serif;
+    color:wheat;
+    background: black;
+}
+
+.welcome {
+    margin-left: 20px;
+    width: 700px;
+    float: left;
+    font-size:20px;
+}
+
+.homebutton{
+    float: right;
+}
+
+/* Estilos Header */
+nav ul li {
+    padding:20px; /*tamaño de los iconos*/
+    margin: 10px;
+    list-style-type:none;
+    
+    float:left;
+    display: inline;
+    background: #FFD700;
+    color: #DF8611;
+    
+    text-transform: uppercase;
+    width: 90px;
+    font-size:10px;
+    text-align: center;
+    
+    transition:all 2s;
+    border-radius: 15px;  
+}
+
+nav ul li a, a {
+    text-decoration:none;
+    color: inherit;
+}
+
+nav ul li:hover{
+    background: wheat;
+    color: black;
+}
+
+/*Estilos main*/
+main {
+    clear: both;
+}
+
+/* Estilos para los botones */
+.button{
+    padding:25px; /*tamaño de los iconos*/
+    margin: 10px;
+    list-style-type:none;
+    
+    float: left;
+    background: #FFD700;
+    color: #DF8611;
+    
+    text-transform: uppercase;  
+    width: 90px;
+    font-size:10px;
+    text-align: center;
+    text-decoration:none;
+    
+    transition:all 2s;
+    border-radius: 50%;
+}
+
+.button:hover{
+    background: wheat;
+    color: black;
+}
+
+.contenedor img {
+    width: 600px;
+    height: 600px;
+}
+
+.contenedor {
+    width: 100%;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor > article {
+    float: left;
+    text-align: center;
+}
+
+#contenedorIzquierda, #contenedorDerecha {
+    width: 20%;
+    top: 50%;
+}
+
+#contenedorIzquierda > a {
+    float: right;
+}
+
+#contenedorDerecha > a {
+    float: left;
+}
+
+#contenedorCentro {
+    width: 60%;
+}
