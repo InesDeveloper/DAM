@@ -8,34 +8,32 @@
     <?php
         session_start();
         if(!isset($_SESSION['pasas']) || $_SESSION['pasas'] == false) {
-            die("Te has intentado colar en el panel de control sin permiso");
+            die("Holi, Te has intentado colar en el panel de control sin permiso");
         }
     ?>
     
     <header> 
-        <div class="homeSection">
-            <?php
-                  echo "<p>Holi, ".$_SESSION['usuario'].", ¿Qué quieres hacer hoy?</p>";
-            ?>
-            <nav class="homebutton">
-                <ul>     
-                    <li><a href="principal.php">Home</a></li>
-                    <li><a href="suscripciones.php">Suscripciones</a> </li>
-                    <li><a href="../paginasHtml/ecosugerencias.html">EcoSugerencias</a></li>
-                    <li><a href="donaciones">Donaciones</a></li>
-                    <li><a href='logout.php'>Cerrar Sesión</a></li>
-                </ul>
-            </nav>
-        </div>
+        <?php
+              echo "<p class='welcome'>Holi, ".$_SESSION['usuario'].", ¿Qué te apetece hacer hoy?</p>";
+        ?>
+        <nav class="homebutton">
+            <ul>     
+                <li><a href="principal.php">Home</a></li>
+                <li><a href="kakebo.php">Kakebo</a> </li>
+                <li><a href="../paginasHtml/ecosugerencias.html">EcoSugerencias</a></li>
+                <li><a href="donaciones">Donaciones</a></li>
+                <li><a href='logout.php'>Cerrar Sesión</a></li>
+            </ul>
+        </nav>
     </header>  
     <br>
     <br>
     <main>
         <br>
         <section class="contenedor">  
-            <article id="contenedorIzquierda"><a href="/pantalla2" class="button">Gestiona<br> Tu<br> Rutina</a></article>
-            <article id="contenedorCentro"><img src="../imagenes/giratutiempo.jpg"></article>
-            <article id="contenedorDerecha"><a href="/pantalla2" class="button">Gestiona<br> Tu<br> Ocio</a></article> 
+            <article id="contenedorIzquierda"><a href="gestionaturutina.php" class="button">Gestiona<br>Tu tiempo<br> de Rutina</a></article>
+            <article id="contenedorCentro"><img src="../imagenes/imagentazareloj.jpeg"></article>
+            <article id="contenedorDerecha"><a href="gestionatuocio.php" class="button">Gestiona<br>Tu tiempo<br> de Ocio</a></article> 
         </section> 
     </main>
 </body>

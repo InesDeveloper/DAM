@@ -2,17 +2,18 @@
 
 $enlace = mysqli_connect("localhost", "giratutiempo", "giratutiempo", "giratutiempo");
 
-$redondeo = round($_POST['precio'], 0, PHP_ROUND_HALF_UP);
-$ahorroCalculado = $redondeo - $_POST['precio'];
+$gasto = $_POST['gasto'];
+$redondeo = round($gasto, 0, PHP_ROUND_HALF_UP);
+$ahorroCalculado = $redondeo - $gasto;
 $ahorroRedondeo = round($ahorroCalculado, 2);
 
 $peticion = "  
 INSERT INTO 
-Suscripciones
+Kakebo
 VALUES
 (NULL,
-'".$_POST['entidad']."',
-'".$_POST['precio']."',
+'".$_POST['concepto']."',
+'".$gasto."',
 '".$_POST['tipo']."',
 '".$_POST['fecha']."',
 '".$ahorroRedondeo."')
@@ -20,6 +21,6 @@ VALUES
 $resultado = mysqli_query($enlace,$peticion);
 
 echo '<meta http-equiv="refresh"
-    content="5; url=suscripciones.php">';
+    content="5; url=kakebo.php">';
     mysqli_close($enlace);
 ?>

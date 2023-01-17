@@ -2,21 +2,36 @@
 body{
     font-family: Arial, sans-serif;
     color:wheat;
-    background: black;
+    background: -webkit-gradient(linear, left top, left bottom, from(#8b4958), to(#d6bfb5)) fixed;
 }
 
 .welcome {
-    margin-left: 20px;
+    margin-left: 50px;
     width: 700px;
     float: left;
     font-size:20px;
 }
 
 .homebutton{
-    float: right;
+    display: block;
+    float: left;
 }
 
 /* Estilos Header */
+
+header p {
+    display: block;
+    float: left;
+    width: 50px;
+    clear: both;
+}
+
+nav {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
 nav ul li {
     padding:20px; /*tamaño de los iconos*/
     margin: 10px;
@@ -79,7 +94,20 @@ main {
 .contenedor img {
     width: 600px;
     height: 600px;
+    border-radius: 50%;
+    
+    animation: rotation 60s infinite linear;
 }
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
 
 .contenedor {
     width: 100%;
