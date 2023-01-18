@@ -95,6 +95,7 @@ main {
     width: 600px;
     height: 600px;
     border-radius: 50%;
+    border: 1px solid black;
     
     animation: rotation 60s infinite linear;
 }

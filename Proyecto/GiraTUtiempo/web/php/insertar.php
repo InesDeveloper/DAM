@@ -1,11 +1,16 @@
 <?php 
+session_start();
 
 $enlace = mysqli_connect("localhost", "giratutiempo", "giratutiempo", "giratutiempo");
 
 $gasto = $_POST['gasto'];
-$redondeo = round($gasto, 0, PHP_ROUND_HALF_UP);
-$ahorroCalculado = $redondeo - $gasto;
-$ahorroRedondeo = round($ahorroCalculado, 2);
+$gastosindecimales = floor($gasto);
+$decimales = $gasto - $gastosindecimales;
+$ahorroRedondeo = 0;
+
+if($gasto != $gastosindecimales) {
+    $ahorroRedondeo = 1 - $decimales;
+}
 
 $peticion = "  
 INSERT INTO 
@@ -16,7 +21,8 @@ VALUES
 '".$gasto."',
 '".$_POST['tipo']."',
 '".$_POST['fecha']."',
-'".$ahorroRedondeo."')
+'".$ahorroRedondeo."',
+'".$_SESSION['idUsuario']."')
 ";
 $resultado = mysqli_query($enlace,$peticion);
 

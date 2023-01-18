@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 17-01-2023 a las 21:54:09
+-- Tiempo de generación: 18-01-2023 a las 23:28:38
 -- Versión del servidor: 5.7.34
 -- Versión de PHP: 7.4.21
 
@@ -31,7 +31,8 @@ CREATE TABLE `Donaciones` (
   `id` int(255) NOT NULL,
   `entidad` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `cantidad` double NOT NULL,
-  `fecha` date NOT NULL
+  `fecha` date NOT NULL,
+  `idUsuario` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -46,8 +47,16 @@ CREATE TABLE `Kakebo` (
   `gasto` double NOT NULL,
   `tipo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `fecha` date NOT NULL,
-  `redondeo` double NOT NULL
+  `redondeo` double NOT NULL,
+  `idUsuario` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `Kakebo`
+--
+
+INSERT INTO `Kakebo` (`id`, `concepto`, `gasto`, `tipo`, `fecha`, `redondeo`, `idUsuario`) VALUES
+(6, 'Alquiler', 700, 'Fijo', '2022-01-01', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -61,15 +70,16 @@ CREATE TABLE `Ocio` (
   `horaInicio` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `horaFin` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `totalTiempo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` date NOT NULL
+  `fecha` date NOT NULL,
+  `idUsuario` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `Ocio`
 --
 
-INSERT INTO `Ocio` (`id`, `ocio`, `horaInicio`, `horaFin`, `totalTiempo`, `fecha`) VALUES
-(3, 'Gym', '15:40', '16:34', '00 horas 54 minutos', '2023-01-19');
+INSERT INTO `Ocio` (`id`, `ocio`, `horaInicio`, `horaFin`, `totalTiempo`, `fecha`, `idUsuario`) VALUES
+(4, 'Gym', '16:00', '17:00', '01 horas 0 minutos', '2022-01-03', 1);
 
 -- --------------------------------------------------------
 
@@ -81,8 +91,18 @@ CREATE TABLE `Organizaciones` (
   `id` int(255) NOT NULL,
   `entidad` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `direccion` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `contacto` int(255) NOT NULL
+  `contacto` varchar(255) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `Organizaciones`
+--
+
+INSERT INTO `Organizaciones` (`id`, `entidad`, `direccion`, `contacto`) VALUES
+(1, 'Reforesta', 'https://reforesta.es/', 'info@reforesta.es'),
+(2, 'WWF', 'https://www.wwf.es/nuestro_trabajo/bosques/', 'info@wwf.es'),
+(3, 'CO2 Gestión', 'https://co2gestion.com/apadrinar-bosque/', 'hola@co2gestion.com'),
+(4, 'Asociación Plantamos árboles', 'https://plantamosarboles.org/', 'plantaarboles@hotmail.com');
 
 -- --------------------------------------------------------
 
@@ -96,15 +116,16 @@ CREATE TABLE `Rutina` (
   `horaInicio` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `horaFin` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `totalTiempo` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` date NOT NULL
+  `fecha` date NOT NULL,
+  `idUsuario` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `Rutina`
 --
 
-INSERT INTO `Rutina` (`id`, `rutina`, `horaInicio`, `horaFin`, `totalTiempo`, `fecha`) VALUES
-(2, 'Trabajo', '07:15', '18:09', '10 horas 54 minutos', '2023-01-18');
+INSERT INTO `Rutina` (`id`, `rutina`, `horaInicio`, `horaFin`, `totalTiempo`, `fecha`, `idUsuario`) VALUES
+(3, 'Trabajo', '07:00', '15:00', '08 horas 0 minutos', '2022-01-03', 1);
 
 -- --------------------------------------------------------
 
@@ -126,19 +147,8 @@ CREATE TABLE `Usuarios` (
 --
 
 INSERT INTO `Usuarios` (`id`, `nombre`, `apellidos`, `usuario`, `contrasena`, `email`) VALUES
-(1, 'Ines', 'Martinez Sanchez', 'Efreya', '12345678', 'inesms@correo.com');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `UsuariosYSuscripciones`
---
-
-CREATE TABLE `UsuariosYSuscripciones` (
-  `id` int(11) NOT NULL,
-  `id_usuario` int(11) NOT NULL,
-  `id_suscripcion` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+(1, 'Ines', 'Martinez Sanchez', 'Efreya', '12345678', 'inesms@correo.com'),
+(2, 'Javier', 'Martínez Montilla', 'Qibokki', '12345678', 'jmm@correo.com');
 
 --
 -- Índices para tablas volcadas
@@ -148,19 +158,22 @@ CREATE TABLE `UsuariosYSuscripciones` (
 -- Indices de la tabla `Donaciones`
 --
 ALTER TABLE `Donaciones`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `UsuarioDonaciones` (`idUsuario`);
 
 --
 -- Indices de la tabla `Kakebo`
 --
 ALTER TABLE `Kakebo`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `UsuarioKakebo` (`idUsuario`);
 
 --
 -- Indices de la tabla `Ocio`
 --
 ALTER TABLE `Ocio`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `UsuarioOcio` (`idUsuario`);
 
 --
 -- Indices de la tabla `Organizaciones`
@@ -172,21 +185,14 @@ ALTER TABLE `Organizaciones`
 -- Indices de la tabla `Rutina`
 --
 ALTER TABLE `Rutina`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `UsuarioRutina` (`idUsuario`);
 
 --
 -- Indices de la tabla `Usuarios`
 --
 ALTER TABLE `Usuarios`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `UsuariosYSuscripciones`
---
-ALTER TABLE `UsuariosYSuscripciones`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_suscripcion` (`id_suscripcion`),
-  ADD KEY `id_usuario` (`id_usuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -196,54 +202,65 @@ ALTER TABLE `UsuariosYSuscripciones`
 -- AUTO_INCREMENT de la tabla `Donaciones`
 --
 ALTER TABLE `Donaciones`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `Kakebo`
 --
 ALTER TABLE `Kakebo`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `Ocio`
 --
 ALTER TABLE `Ocio`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `Organizaciones`
 --
 ALTER TABLE `Organizaciones`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `Rutina`
 --
 ALTER TABLE `Rutina`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `Usuarios`
 --
 ALTER TABLE `Usuarios`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de la tabla `UsuariosYSuscripciones`
---
-ALTER TABLE `UsuariosYSuscripciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `UsuariosYSuscripciones`
+-- Filtros para la tabla `Donaciones`
 --
-ALTER TABLE `UsuariosYSuscripciones`
-  ADD CONSTRAINT `id_suscripcion` FOREIGN KEY (`id_suscripcion`) REFERENCES `kakebo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `Usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `Donaciones`
+  ADD CONSTRAINT `UsuarioDonaciones` FOREIGN KEY (`idUsuario`) REFERENCES `Usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `Kakebo`
+--
+ALTER TABLE `Kakebo`
+  ADD CONSTRAINT `UsuarioKakebo` FOREIGN KEY (`idUsuario`) REFERENCES `Usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `Ocio`
+--
+ALTER TABLE `Ocio`
+  ADD CONSTRAINT `UsuarioOcio` FOREIGN KEY (`idUsuario`) REFERENCES `Usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `Rutina`
+--
+ALTER TABLE `Rutina`
+  ADD CONSTRAINT `UsuarioRutina` FOREIGN KEY (`idUsuario`) REFERENCES `Usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

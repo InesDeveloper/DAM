@@ -1,11 +1,13 @@
 body{
     font-family: Arial, sans-serif;
-    background-color: black;
-    background-image: url("../imagenes/ecosu2.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    background: -webkit-gradient(linear, left top, left bottom, from(#06633f), to(black)) fixed;
+    color: white;
+}
+
+nav {
+    float: right;
+    display: block;
+    width: 25%;
 }
 
 /* Estilos Header */
@@ -38,16 +40,12 @@ nav ul li:hover{
     color: black;
 }
 
-h2{
-    color:rgb(30,30,30);
-    margin: 0px;
-    padding: 10px;
-    font-weight:bold; 
-    margin-top:40px; 
-    margin-bottom:40px; 
-    text-align:center; 
-    font-size:22px; 
-    border-radius:10px;
+h1{
+    display: block;
+    float: left;
+    text-align: center;
+    margin: 20px;
+    width: 70%;
 }
 
 p{   
@@ -55,26 +53,24 @@ p{
 }
 
 .ecosugerencias {
-    width: 700px;  
+    width: 100%;  
 }
 
 .ecoarticle{
-    width: 700px;
-    display: flex;
+    width: 50%;
+    display: block;
+    float: left;
 }
 
-.ecoarticle h2 {
+main {
     width: 100%;
+    clear: both;
 }
 
 .info {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-}
-
-.info p {
-    padding-left: 16px;
 }
 
 .ecoarticle img {

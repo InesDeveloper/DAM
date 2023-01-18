@@ -35,7 +35,7 @@
 
         <?php
         $enlace = mysqli_connect("localhost", "giratutiempo", "giratutiempo", "giratutiempo");
-        $peticion = "SELECT * FROM Rutina";
+        $peticion = "SELECT * FROM Rutina WHERE idUsuario = '".$_SESSION['idUsuario']."'";
         $resultado = mysqli_query($enlace, $peticion);
 
         if($resultado->num_rows === 0){
@@ -65,12 +65,8 @@
                 </form>
             </tr>
             </table>
-            <div class="instrucciones">
-                <p>1. Instruccion 1</p>
-                <p>2. Instruccion 2</p>
-                <p>3. Instruccion 3</p>
-                <p>4. Instruccion 4</p>
-                <p>5. Instruccion 5</p>
+            <div class="imagen">
+                <img src="../imagenes/galletafelizrutina.jpeg">
             </div>
         </main>
     </body>

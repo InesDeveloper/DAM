@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #8c9cc9, white);
+    background: linear-gradient(to bottom, #554867, #caa899);
     color: white;
 }
 
@@ -84,10 +84,15 @@ td input {
     width: 100%;
 }
 
-.instrucciones {
+.imagen {
     display: block;
     float: right;
     border: 1px solid black;
     border-radius: 20px;
     width: 30%;
+}
+
+.imagen img {
+    width: 100%;
+    border-radius: 20px;
 }

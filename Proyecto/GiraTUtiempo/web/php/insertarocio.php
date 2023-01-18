@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $enlace = mysqli_connect("localhost", "giratutiempo", "giratutiempo", "giratutiempo");
 
 $horaInicio = new DateTime($_POST['horaInicio']);
@@ -17,7 +17,8 @@ VALUES
 '".$_POST['horaInicio']."',
 '".$_POST['horaFin']."',
 '".$totalTiempo."',
-'".$_POST['fecha']."')
+'".$_POST['fecha']."',
+'".$_SESSION['idUsuario']."')
 ";
 $resultado = mysqli_query($enlace,$peticion);
 

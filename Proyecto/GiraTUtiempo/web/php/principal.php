@@ -18,10 +18,9 @@
         ?>
         <nav class="homebutton">
             <ul>     
-                <li><a href="principal.php">Home</a></li>
                 <li><a href="kakebo.php">Kakebo</a> </li>
+                <li><a href="donaciones.php">Donaciones</a></li>
                 <li><a href="../paginasHtml/ecosugerencias.html">EcoSugerencias</a></li>
-                <li><a href="donaciones">Donaciones</a></li>
                 <li><a href='logout.php'>Cerrar Sesión</a></li>
             </ul>
         </nav>

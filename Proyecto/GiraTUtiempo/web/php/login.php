@@ -30,6 +30,7 @@
     if ($fila = $resultado->fetch_assoc()) {
         $pasas= true;
         $_SESSION['usuario'] = $fila['usuario'];
+        $_SESSION['idUsuario'] = $fila['id'];
     }else{
         $pasas= false;
     }
