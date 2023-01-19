@@ -12,6 +12,8 @@ if($gasto != $gastosindecimales) {
     $ahorroRedondeo = 1 - $decimales;
 }
 
+$ahorroRedondeo = bcdiv($ahorroRedondeo, 1, 2);
+
 $peticion = "  
 INSERT INTO 
 Kakebo

@@ -59,10 +59,15 @@ main {
 }
 
 table {
+    border-collapse: collapse;
     border: 1px solid black;
     margin-top: 20px;
     display: block;
     float: left;
+}
+
+table tr, td {
+    border: 1px solid black;
 }
 
 table tr:nth-child(odd){ 
@@ -80,7 +85,7 @@ table tr td {
     padding: 5px; 
 }
 
-td input {
+td input, td select {
     width: 100%;
 }
 

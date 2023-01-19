@@ -7,8 +7,11 @@
 <body>
     <?php
         session_start();
+    /*si no existe la variable sesion pasas o es false*/
         if(!isset($_SESSION['pasas']) || $_SESSION['pasas'] == false) {
-            die("Holi, Te has intentado colar en el panel de control sin permiso");
+            echo '<meta http-equiv="refresh" 
+                content="5; url=../index.html">';
+            die("Holi, Primero tienes que iniciar sesión o registrarte para acceder");
         }
     ?>
     
