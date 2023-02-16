@@ -1,0 +1,15 @@
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/bin/Debug/net7.0/CalcularDistanciaTormenta
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/bin/Debug/net7.0/CalcularDistanciaTormenta.deps.json
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/bin/Debug/net7.0/CalcularDistanciaTormenta.runtimeconfig.json
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/bin/Debug/net7.0/CalcularDistanciaTormenta.dll
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/bin/Debug/net7.0/CalcularDistanciaTormenta.pdb
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/CalcularDistanciaTormenta.csproj.AssemblyReference.cache
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/CalcularDistanciaTormenta.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/CalcularDistanciaTormenta.AssemblyInfoInputs.cache
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/CalcularDistanciaTormenta.AssemblyInfo.cs
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/CalcularDistanciaTormenta.csproj.CoreCompileInputs.cache
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/CalcularDistanciaTormenta.dll
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/refint/CalcularDistanciaTormenta.dll
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/CalcularDistanciaTormenta.pdb
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/CalcularDistanciaTormenta.genruntimeconfig.cache
+/Users/ines/Desktop/Examen bases de datos 2T/CalcularDistanciaTormenta/obj/Debug/net7.0/ref/CalcularDistanciaTormenta.dll

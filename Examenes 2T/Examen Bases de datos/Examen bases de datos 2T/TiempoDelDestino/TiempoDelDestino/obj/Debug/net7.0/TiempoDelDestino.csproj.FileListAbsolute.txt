@@ -1,0 +1,15 @@
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/TiempoDelDestino.csproj.AssemblyReference.cache
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/TiempoDelDestino.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/TiempoDelDestino.AssemblyInfoInputs.cache
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/TiempoDelDestino.AssemblyInfo.cs
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/TiempoDelDestino.csproj.CoreCompileInputs.cache
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/bin/Debug/net7.0/TiempoDelDestino
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/bin/Debug/net7.0/TiempoDelDestino.deps.json
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/bin/Debug/net7.0/TiempoDelDestino.runtimeconfig.json
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/bin/Debug/net7.0/TiempoDelDestino.dll
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/bin/Debug/net7.0/TiempoDelDestino.pdb
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/TiempoDelDestino.dll
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/refint/TiempoDelDestino.dll
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/TiempoDelDestino.pdb
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/TiempoDelDestino.genruntimeconfig.cache
+/Users/ines/Desktop/Examen bases de datos 2T/TiempoDelDestino/TiempoDelDestino/obj/Debug/net7.0/ref/TiempoDelDestino.dll

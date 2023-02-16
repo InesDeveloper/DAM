@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{F6F05A59-8E08-43E5-9478-139B839DA6C3}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CalcularDistanciaTormenta" expanded="True">
+            <Node name="CalcularDistanciaTormenta" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CalcularDistanciaTormenta PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
