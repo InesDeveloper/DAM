@@ -1,0 +1,15 @@
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/bin/Debug/net6.0/Proyecto0001
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/bin/Debug/net6.0/Proyecto0001.deps.json
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/bin/Debug/net6.0/Proyecto0001.runtimeconfig.json
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/bin/Debug/net6.0/Proyecto0001.dll
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/bin/Debug/net6.0/Proyecto0001.pdb
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/Proyecto0001.csproj.AssemblyReference.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/Proyecto0001.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/Proyecto0001.AssemblyInfoInputs.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/Proyecto0001.AssemblyInfo.cs
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/Proyecto0001.csproj.CoreCompileInputs.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/Proyecto0001.dll
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/refint/Proyecto0001.dll
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/Proyecto0001.pdb
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/Proyecto0001.genruntimeconfig.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0001/Proyecto0001/obj/Debug/net6.0/ref/Proyecto0001.dll

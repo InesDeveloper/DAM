@@ -1,0 +1,15 @@
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/bin/Debug/net7.0/Proyecto0024
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/bin/Debug/net7.0/Proyecto0024.deps.json
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/bin/Debug/net7.0/Proyecto0024.runtimeconfig.json
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/bin/Debug/net7.0/Proyecto0024.dll
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/bin/Debug/net7.0/Proyecto0024.pdb
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/Proyecto0024.csproj.AssemblyReference.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/Proyecto0024.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/Proyecto0024.AssemblyInfoInputs.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/Proyecto0024.AssemblyInfo.cs
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/Proyecto0024.csproj.CoreCompileInputs.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/Proyecto0024.dll
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/refint/Proyecto0024.dll
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/Proyecto0024.pdb
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/Proyecto0024.genruntimeconfig.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0024/obj/Debug/net7.0/ref/Proyecto0024.dll

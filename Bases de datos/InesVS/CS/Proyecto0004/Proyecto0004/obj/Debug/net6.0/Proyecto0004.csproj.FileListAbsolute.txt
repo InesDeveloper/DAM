@@ -1,0 +1,5 @@
+/Users/ines/Desktop/InesVS/CS/Proyecto0004/Proyecto0004/obj/Debug/net6.0/Proyecto0004.csproj.AssemblyReference.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0004/Proyecto0004/obj/Debug/net6.0/Proyecto0004.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ines/Desktop/InesVS/CS/Proyecto0004/Proyecto0004/obj/Debug/net6.0/Proyecto0004.AssemblyInfoInputs.cache
+/Users/ines/Desktop/InesVS/CS/Proyecto0004/Proyecto0004/obj/Debug/net6.0/Proyecto0004.AssemblyInfo.cs
+/Users/ines/Desktop/InesVS/CS/Proyecto0004/Proyecto0004/obj/Debug/net6.0/Proyecto0004.csproj.CoreCompileInputs.cache

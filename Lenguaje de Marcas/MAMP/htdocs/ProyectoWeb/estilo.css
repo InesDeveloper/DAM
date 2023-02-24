@@ -1,0 +1,243 @@
+/* Así se escriben los comentarios */
+
+/*
+selector{
+(selector es como voy a llamar a un elemento para que el programa sepa a quien estoy llamando, a quien estoy seleccionando)
+
+    propiedad:valor; 
+    propiedad:valor;
+    propiedad:valor;
+    ...
+} */
+
+/* ///////////////////////// ESTILOS GENERALES /////////////////////// */
+
+p{
+    
+    
+color:brown(30,30,30);
+    
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li{
+    color:rgb(30,30,30);
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+/*
+    section -> buscame en html la que se llame así
+    palabra suelta -> etiqueta
+    almohadilla # -> buscame unid
+    punto . ->buscame una clase
+*/
+
+header,main,footer{
+    
+    width:800px; /* 800 pixeles de dimensión */
+    
+    margin:auto; /* centra a los elementos en la pantalla. Crecen al centro */
+   
+    background-color: antiquewhite;
+   
+    margin-top: 0px; /* Con esto le decimos que el margen tiene 0 pixeles */
+    
+    margin-bottom: 20px;
+    
+    margin-right: 20px;
+    
+    margin-left: 20px;
+    
+    padding: 30px; /* Padding -> para tener más margen con el filo */
+       
+}
+
+body{
+    
+    background-color:azure ; /* background -> para seleccionar estilo a todo background: el color que sea; -> solo lo pone en la parte que elijas ejemplo, #blog{
+                                                            background:red; */
+  
+    font-family: sans-serif; /* Para cambiar el tipo de letra */
+}
+    /* ///////////////////////// ESRILO DE CABECERA /////////////////////// */
+    
+    h1{ 
+        font-family: serif; 
+        font-size:30px; 
+    }
+
+    h2{ 
+        font-family: serif;
+        font-size: 20px;
+
+    }
+ 
+    /* ///////////////////////// ESRILO DE CABECERA /////////////////////// */
+    
+    
+    /* ///////////////////////// ESTILOS GENERALES /////////////////////// */
+
+#imagenlogo{
+    float:left;
+    margin-right:20px;
+    border-radius: 10px 10px 10px 10px; 
+}
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL MENU ///////////////////*/
+
+nav ul li a{
+    
+    text-decoration:none;
+    color: inherit;
+}
+
+nav ul{
+    
+    padding:4px; /* para que este alineado con la foto */
+    margin:0px;
+    
+ }
+
+nav ul li{
+    
+    padding:8px; /*tamaño de los iconos*/
+    margin: 4px;
+    list-style-type:none;
+    
+    float:left;
+    background: lightpink;
+    color: black;
+    
+    text-transform: uppercase;
+    width: 70px;
+    font-size:10px;
+    text-align: center;
+    
+    transition:all 2s;
+    border-radius: 15px;
+   
+}
+/* .clearfix = estilizar a cualquier elemento que tenga esta clase de clear */
+
+.clearfix{
+    
+    clear:both;
+    
+}
+
+nav ul li:first-child{
+    border-radius: 15px 15px 15px 15px;
+    
+}
+
+nac ul li:
+
+nav ul li:last-child{
+    border-radius: 15px 15px 15px 15px;
+}
+
+nav ul li:hover{
+    background: beige;
+    color: hotpink;
+
+}
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL MENU ///////////////////*/
+
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL CARRUSEL ///////////////////*/
+
+/* # para referirte a un id y  . para referirte a class */
+
+#carousel #contenedorcarrusel .diapositiva img{
+    width:100%; 
+}
+
+#carousel #contenedorcarrusel .diapositiva{
+    width:800px; /*ancho*/
+    height:400px; /*alto*/
+    float: left; /*como debe flotar un elemento*/
+
+}
+
+#contenedorcarrusel{
+    width:800px;
+    height:400px;     
+    overflow: hidden;  /* especifica como recortar el contenido*/  
+    border-radius: 10px 10px 10px 10px; 
+}
+
+#mascara{ /*el proposito de esta mascara es ser un contenedor animado de las img*/
+    width: 4200px;
+    height: 800px; 
+    animation: mueve 50s;
+    animation-iteration-count: infinite ;
+    position: relative; /*como va a ser posicionado un elemento, es relative porque cambiara */
+}
+
+@keyframes mueve{  /*keyframes son puntos de trayectoria,animación de la secuencia automatica*/
+    0%{left:0px}
+    20%{left:-0px;}
+    25%{left:-800px;}
+    45%{left:-800px;}
+    50%{left:-1600px;}
+    70%{left:-1600px;}
+    75%{left:-2400px;}
+    85%{left:-2400px;}
+    90%{left:-3200px;}
+    100%{left:-3200px;}
+    
+}
+
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL CARRUSEL ///////////////////*/
+
+
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL BLOG DEL MENU ///////////////////*/
+
+#blog article{
+    width: 25%;
+    float: left;   
+}
+#blog article img{
+    width: 100%; 
+    border-radius: 0px 10px 0px 10px;  
+    
+}
+#blog article p{
+    width: 70%; 
+}
+#blog article .contienearticulo{
+    padding: 5px;
+    float: right;
+    
+}
+
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL BLOG DEL MENU ///////////////////*/
+
+/* ///////////////////AQUI VOY A TRABAJAR CON DESTACADOS DEL MENU ///////////////////*/
+
+#highlights article{
+    width: 50%;
+    float: right;     
+}
+
+#highlights article img{
+    width: 300%; 
+    border-radius: 0pxs; 
+}
+
+#highlights article .contienearticulo{
+    padding: 5px;
+    float: left;
+}
+
+
+
+
+
+
+/* ///////////////////AQUI VOY A TRABAJAR CON DESTACADOS DEL MENU ///////////////////*/

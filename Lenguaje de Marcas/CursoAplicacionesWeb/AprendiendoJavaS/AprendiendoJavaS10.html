@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            .dia{width:100px;height:100px;border:1px solid grey;float:left;}
+        </style> 
+        <script src="jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function() {                                  // Si el documento está listo, creamos una función anónima ¡Importante! Sin esta línea, no podriamos referenciar el elemento calendario.                                                                    no lo encontraría y tendríamos que poner la etiqueta <script> en el body
+                document.getElementById("calendario").innerHTML = "Holi"    // añadimos al div con id calendario, un texto hola
+                
+                $("#pulsame").click(function(){                             // al objeto con id pulsame, le configuramos la función click, que recibe una función anónima
+                    console.log("Has pulsado el boton")  
+                    document.getElementById("calendario").innerHTML = "Has pulsado el boton y todos lo sabremos"
+                })
+            })
+            // $(selector).metodo(lo que hago)
+            
+        </script>
+    </head>
+    <body>
+        <div id="calendario">
+            
+        </div>
+        <button id="pulsame">Pulsame si te atreves</button>
+        
+    </body>
+</html>

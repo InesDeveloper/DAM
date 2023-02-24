@@ -1,0 +1,7 @@
+SELECT
+IP,
+COUNT(ip) AS numero
+FROM
+logs
+GROUP BY ip
+ORDER BY numero DESC

@@ -1,0 +1,175 @@
+/* ///////////////////////// ESTILOS GENERALES /////////////////////// */
+
+p{
+    
+    
+color:brown(30,30,30);
+    
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li{
+    color:rgb(30,30,30);
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+header,main,footer{
+    
+    width:800px; 
+    
+    margin:auto; 
+   
+    background: rgb(240,240,240);
+   
+    margin-top: 0px; 
+    
+    margin-bottom: 0px;
+    
+    padding: 20px; 
+       
+}
+
+body{
+    
+    background: rgb(200,200,200); 
+  
+    font-family: sans-serif; 
+}
+    /* ///////////////////////// ESRILO DE CABECERA /////////////////////// */
+    
+    h1{ 
+        font-family: serif; 
+        font-size:30px; 
+    }
+
+    h2{ 
+        font-family: serif;
+        font-size: 20px;
+
+    }
+ 
+    /* ///////////////////////// ESRILO DE CABECERA /////////////////////// */
+    
+    
+    /* ///////////////////////// ESTILOS GENERALES /////////////////////// */
+
+#imagenlogo{
+    float:left;
+    margin-right:20px;   
+}
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL MENU ///////////////////*/
+
+nav ul li a{
+    
+    text-decoration:none;
+    color: inherit;
+}
+
+nav ul{
+    
+    padding:0px;
+    margin:0px;
+    
+ }
+
+nav ul li{
+    
+    padding:5px; 
+    margin: 1px;
+    list-style-type:none;
+    
+    float:left;
+    background: lightpink;
+    color: black;
+    
+    text-transform: uppercase;
+    width: 70px;
+    font-size:10px;
+    text-align: center;
+    
+    transition:all 2s;
+    border-radius: 15px;
+   
+}
+
+.clearfix{
+    
+    clear:both;
+    
+}
+
+nav ul li:first-child{
+    border-radius: 15px 15px 15px 15px;
+    
+}
+
+nac ul li:
+
+nav ul li:last-child{
+    border-radius: 15px 15px 15px 15px;
+}
+
+nav ul li:hover{
+    background: beige;
+    color: hotpink;
+
+}
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL MENU ///////////////////*/
+
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL BANNER ///////////////////*/
+
+#banner #contenedorbanner .diapositiva img{
+    width:100%; 
+}
+
+#banner #contenedorbanner .diapositiva{
+    width:800px;
+    height:400px; 
+    float: left;
+
+}
+
+#contenedorbanner{
+    width:800px;
+    height:400px;     
+    overflow: hidden;     
+       
+}
+
+#mascara{
+    width: 4200px;
+    height: 800px; 
+    animation: mueve 40s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+
+/* ///////////////////AQUI VOY A TRABAJAR CON EL BANNER ///////////////////*/
+
+
+
+/* ///////////////////AQUI VOY A TRABAJAR CON LAS NOTICIAS///////////////////*/
+#noticias {
+    clear: both;
+}
+#noticias article{
+    width: 25%;
+    float: left; 
+}
+#noticias article img{
+    width: 100% 
+}
+#noticias article p{
+    width: 75% 
+}
+#noticias article {
+    padding: 5px;
+}
+
+
+/* ///////////////////AQUI VOY A TRABAJAR CON LAS NOTICIAS ///////////////////*/
