@@ -1,0 +1,4 @@
+Ines|Martinez|12312312|test@test.com
+Pedro|Pepito|123123213|pedro@correo.com
+Nombre|Apellidos|Telefono|Email@email.com
+Nombre|Apellidos|Telefono|Email@ejemplo.es

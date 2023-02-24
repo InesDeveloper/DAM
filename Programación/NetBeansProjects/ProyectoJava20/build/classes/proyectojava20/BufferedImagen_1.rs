@@ -1,0 +1,1 @@
+proyectojava20.BufferedImagen
