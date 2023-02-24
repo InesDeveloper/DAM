@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/ines/Documents/GitHub/examenbasesdedatos/registros.db1" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2837"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainAndroid"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">SELECT
+hora AS &quot;Horas&quot;,
+COUNT (hora) AS &quot;Numero&quot;
+FROM logs
+GROUP BY hora
+ORDER BY COUNT (hora) DESC</sql><sql name="SQL 2">SELECT
+dia AS &quot;Dia&quot;,
+COUNT (dia) AS &quot;Numero&quot;
+FROM logs
+GROUP BY dia
+ORDER BY COUNT (dia) DESC</sql><sql name="SQL 3">SELECT
+mes AS &quot;Mes&quot;,
+COUNT (mes) AS &quot;Numero&quot;
+FROM logs
+GROUP BY mes
+ORDER BY COUNT (mes) DESC</sql><sql name="SQL 4">SELECT
+extra2 AS &quot;Web&quot;,
+COUNT (mes) AS &quot;Numero&quot;
+FROM logs
+GROUP BY extra2
+ORDER BY COUNT (extra2) DESC</sql><sql name="SQL 5">SELECT
+COUNT (navegador) AS &quot;Numero&quot;
+FROM logs
+WHERE navegador like &quot;%WINDOW%&quot;</sql><sql name="SQL 6">SELECT
+COUNT (navegador) AS &quot;Numero&quot;
+FROM logs
+WHERE navegador like &quot;%Iphone%&quot;</sql><sql name="SQL 7">SELECT
+COUNT (navegador) AS &quot;Numero&quot;
+FROM logs
+WHERE navegador like &quot;%Android%&quot;</sql><current_tab id="6"/></tab_sql></sqlb_project>
