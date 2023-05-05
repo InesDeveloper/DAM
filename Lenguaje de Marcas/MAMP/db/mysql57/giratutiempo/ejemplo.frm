@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `giratutiempo`.`kakebo`.`id` AS `id`,`giratutiempo`.`kakebo`.`concepto` AS `concepto`,`giratutiempo`.`kakebo`.`gasto` AS `gasto`,`giratutiempo`.`kakebo`.`tipo` AS `tipo`,`giratutiempo`.`kakebo`.`fecha` AS `fecha`,`giratutiempo`.`kakebo`.`redondeo` AS `redondeo`,`giratutiempo`.`kakebo`.`idUsuario` AS `idUsuario` from `giratutiempo`.`kakebo`
+md5=9b877e287fdf12bf6439c38b5aa879e0
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=2
+with_check_option=0
+timestamp=2023-01-19 10:12:16
+create-version=1
+source=SELECT * FROM `Kakebo`
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_unicode_ci
+view_body_utf8=select `giratutiempo`.`kakebo`.`id` AS `id`,`giratutiempo`.`kakebo`.`concepto` AS `concepto`,`giratutiempo`.`kakebo`.`gasto` AS `gasto`,`giratutiempo`.`kakebo`.`tipo` AS `tipo`,`giratutiempo`.`kakebo`.`fecha` AS `fecha`,`giratutiempo`.`kakebo`.`redondeo` AS `redondeo`,`giratutiempo`.`kakebo`.`idUsuario` AS `idUsuario` from `giratutiempo`.`kakebo`

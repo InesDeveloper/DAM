@@ -1,0 +1,403 @@
+[Fri Sep 23 15:20:03.511939 2022] [:notice] [pid 1884] FastCGI: process manager initialized (pid 1884)
+[Fri Sep 23 15:20:03.519850 2022] [mpm_prefork:notice] [pid 1870] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Sep 23 15:20:03.520455 2022] [core:notice] [pid 1870] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri Sep 23 15:20:26.979447 2022] [mpm_prefork:notice] [pid 1870] AH00169: caught SIGTERM, shutting down
+[Fri Sep 23 15:21:04.901160 2022] [:notice] [pid 2318] FastCGI: process manager initialized (pid 2318)
+[Fri Sep 23 15:21:04.921000 2022] [mpm_prefork:notice] [pid 2313] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Sep 23 15:21:04.921658 2022] [core:notice] [pid 2313] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sat Sep 24 15:45:35.029130 2022] [mpm_prefork:notice] [pid 2313] AH00169: caught SIGTERM, shutting down
+[Wed Sep 28 10:13:34.139960 2022] [:notice] [pid 1089] FastCGI: process manager initialized (pid 1089)
+[Wed Sep 28 10:13:34.143347 2022] [mpm_prefork:notice] [pid 1083] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Wed Sep 28 10:13:34.143917 2022] [core:notice] [pid 1083] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Wed Sep 28 10:14:08.870967 2022] [mpm_prefork:notice] [pid 1083] AH00169: caught SIGTERM, shutting down
+[Wed Sep 28 10:14:19.121623 2022] [:notice] [pid 1326] FastCGI: process manager initialized (pid 1326)
+[Wed Sep 28 10:14:19.129124 2022] [mpm_prefork:notice] [pid 1323] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Wed Sep 28 10:14:19.129661 2022] [core:notice] [pid 1323] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Sep 29 19:13:51.162951 2022] [mpm_prefork:notice] [pid 1323] AH00169: caught SIGTERM, shutting down
+[Fri Sep 30 11:20:29.809840 2022] [:notice] [pid 1558] FastCGI: process manager initialized (pid 1558)
+[Fri Sep 30 11:20:29.816349 2022] [mpm_prefork:notice] [pid 1548] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Sep 30 11:20:29.816982 2022] [core:notice] [pid 1548] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri Sep 30 15:08:24.104578 2022] [mpm_prefork:notice] [pid 1548] AH00169: caught SIGTERM, shutting down
+[Mon Oct 10 15:38:43.590066 2022] [:notice] [pid 2544] FastCGI: process manager initialized (pid 2544)
+[Mon Oct 10 15:38:43.594103 2022] [mpm_prefork:notice] [pid 2536] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Mon Oct 10 15:38:43.594923 2022] [core:notice] [pid 2536] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Mon Oct 10 18:45:16.255490 2022] [mpm_prefork:notice] [pid 2536] AH00169: caught SIGTERM, shutting down
+[Mon Oct 10 18:45:22.839011 2022] [:notice] [pid 11603] FastCGI: process manager initialized (pid 11603)
+[Mon Oct 10 18:45:22.848389 2022] [mpm_prefork:notice] [pid 11597] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Mon Oct 10 18:45:22.848926 2022] [core:notice] [pid 11597] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Mon Oct 10 19:40:58.733866 2022] [mpm_prefork:notice] [pid 11597] AH00169: caught SIGTERM, shutting down
+[Tue Oct 11 09:47:10.470721 2022] [:notice] [pid 1169] FastCGI: process manager initialized (pid 1169)
+[Tue Oct 11 09:47:10.475829 2022] [mpm_prefork:notice] [pid 1161] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Tue Oct 11 09:47:10.476395 2022] [core:notice] [pid 1161] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Tue Oct 11 12:53:27.726785 2022] [mpm_prefork:notice] [pid 1161] AH00169: caught SIGTERM, shutting down
+[Tue Oct 18 13:31:49.945247 2022] [:notice] [pid 13278] FastCGI: process manager initialized (pid 13278)
+[Tue Oct 18 13:31:49.949531 2022] [mpm_prefork:notice] [pid 13268] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Tue Oct 18 13:31:49.950254 2022] [core:notice] [pid 13268] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Oct 20 14:52:48.819253 2022] [mpm_prefork:notice] [pid 13268] AH00169: caught SIGTERM, shutting down
+[Thu Oct 20 14:52:55.460115 2022] [:notice] [pid 38841] FastCGI: process manager initialized (pid 38841)
+[Thu Oct 20 14:52:55.465219 2022] [mpm_prefork:notice] [pid 38836] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Oct 20 14:52:55.465676 2022] [core:notice] [pid 38836] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Oct 20 16:38:57.215232 2022] [mpm_prefork:notice] [pid 38836] AH00169: caught SIGTERM, shutting down
+[Fri Oct 21 01:55:15.526280 2022] [:notice] [pid 42717] FastCGI: process manager initialized (pid 42717)
+[Fri Oct 21 01:55:15.546720 2022] [mpm_prefork:notice] [pid 42710] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Oct 21 01:55:15.549478 2022] [core:notice] [pid 42710] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri Oct 21 02:11:49.843155 2022] [mpm_prefork:notice] [pid 42710] AH00169: caught SIGTERM, shutting down
+[Thu Oct 27 16:34:40.077537 2022] [:notice] [pid 6851] FastCGI: process manager initialized (pid 6851)
+[Thu Oct 27 16:34:40.081176 2022] [mpm_prefork:notice] [pid 6843] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Oct 27 16:34:40.081800 2022] [core:notice] [pid 6843] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Oct 27 16:35:09.886442 2022] [mpm_prefork:notice] [pid 6843] AH00169: caught SIGTERM, shutting down
+[Thu Nov 03 18:42:03.312077 2022] [:notice] [pid 4609] FastCGI: process manager initialized (pid 4609)
+[Thu Nov 03 18:42:03.316950 2022] [mpm_prefork:notice] [pid 4602] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Nov 03 18:42:03.317555 2022] [core:notice] [pid 4602] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Nov 03 18:45:58.368357 2022] [mpm_prefork:notice] [pid 4602] AH00169: caught SIGTERM, shutting down
+[Thu Nov 03 18:54:16.727194 2022] [:notice] [pid 5316] FastCGI: process manager initialized (pid 5316)
+[Thu Nov 03 18:54:16.734795 2022] [mpm_prefork:notice] [pid 5305] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Nov 03 18:54:16.735316 2022] [core:notice] [pid 5305] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri Nov 04 11:54:12.587939 2022] [mpm_prefork:notice] [pid 5305] AH00169: caught SIGTERM, shutting down
+[Fri Nov 04 11:54:23.012084 2022] [:notice] [pid 15402] FastCGI: process manager initialized (pid 15402)
+[Fri Nov 04 11:54:23.018155 2022] [mpm_prefork:notice] [pid 15398] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Nov 04 11:54:23.018610 2022] [core:notice] [pid 15398] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri Nov 04 13:40:05.574098 2022] [mpm_prefork:notice] [pid 15398] AH00169: caught SIGTERM, shutting down
+[Fri Nov 11 16:45:04.883947 2022] [:notice] [pid 21343] FastCGI: process manager initialized (pid 21343)
+[Fri Nov 11 16:45:04.893326 2022] [mpm_prefork:notice] [pid 21333] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Nov 11 16:45:04.894196 2022] [core:notice] [pid 21333] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri Nov 11 17:21:24.549087 2022] [authz_core:error] [pid 21833] [client ::1:57233] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Fri Nov 11 17:32:06.517565 2022] [authz_core:error] [pid 21833] [client ::1:57351] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Fri Nov 11 17:38:49.967616 2022] [authz_core:error] [pid 21368] [client ::1:57378] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Fri Nov 11 17:54:40.627502 2022] [authz_core:error] [pid 21346] [client ::1:57442] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Sat Nov 12 21:50:46.992844 2022] [authz_core:error] [pid 21344] [client ::1:58528] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Sat Nov 12 21:51:14.516789 2022] [authz_core:error] [pid 21368] [client ::1:58530] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Sat Nov 12 21:51:40.698657 2022] [authz_core:error] [pid 21348] [client ::1:58536] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Sat Nov 12 21:51:50.515102 2022] [authz_core:error] [pid 21347] [client ::1:58537] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Sat Nov 12 22:09:13.070372 2022] [authz_core:error] [pid 21836] [client ::1:58575] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Sat Nov 12 22:19:15.862913 2022] [authz_core:error] [pid 21833] [client ::1:58621] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Sat Nov 12 22:47:34.272080 2022] [mpm_prefork:notice] [pid 21333] AH00169: caught SIGTERM, shutting down
+[Thu Nov 24 14:55:25.073170 2022] [:notice] [pid 2364] FastCGI: process manager initialized (pid 2364)
+[Thu Nov 24 14:55:25.076796 2022] [mpm_prefork:notice] [pid 2356] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Nov 24 14:55:25.077412 2022] [core:notice] [pid 2356] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Nov 24 14:56:20.353657 2022] [mpm_prefork:notice] [pid 2356] AH00169: caught SIGTERM, shutting down
+[Wed Nov 30 18:21:31.209300 2022] [:notice] [pid 6569] FastCGI: process manager initialized (pid 6569)
+[Wed Nov 30 18:21:31.218841 2022] [mpm_prefork:notice] [pid 6561] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Wed Nov 30 18:21:31.219621 2022] [core:notice] [pid 6561] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Wed Nov 30 18:59:19.921479 2022] [authz_core:error] [pid 6908] [client ::1:50922] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Wed Nov 30 19:55:02.692116 2022] [authz_core:error] [pid 8653] [client ::1:51093] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Wed Nov 30 20:08:26.177454 2022] [mpm_prefork:notice] [pid 6561] AH00169: caught SIGTERM, shutting down
+[Wed Nov 30 20:08:32.186818 2022] [:notice] [pid 11588] FastCGI: process manager initialized (pid 11588)
+[Wed Nov 30 20:08:32.196004 2022] [mpm_prefork:notice] [pid 11583] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Wed Nov 30 20:08:32.196998 2022] [core:notice] [pid 11583] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Wed Nov 30 21:20:43.555140 2022] [mpm_prefork:notice] [pid 11583] AH00169: caught SIGTERM, shutting down
+[Wed Nov 30 21:59:18.215173 2022] [:notice] [pid 15729] FastCGI: process manager initialized (pid 15729)
+[Wed Nov 30 21:59:18.222881 2022] [mpm_prefork:notice] [pid 15724] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Wed Nov 30 21:59:18.225574 2022] [core:notice] [pid 15724] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Dec 01 19:14:44.299961 2022] [:notice] [pid 2355] FastCGI: process manager initialized (pid 2355)
+[Thu Dec 01 19:14:44.303347 2022] [mpm_prefork:notice] [pid 2345] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Dec 01 19:14:44.304283 2022] [core:notice] [pid 2345] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Dec 01 19:56:35.739754 2022] [mpm_prefork:notice] [pid 2345] AH00169: caught SIGTERM, shutting down
+[Thu Dec 01 20:09:16.265402 2022] [:notice] [pid 6447] FastCGI: process manager initialized (pid 6447)
+[Thu Dec 01 20:09:16.276105 2022] [mpm_prefork:notice] [pid 6443] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Dec 01 20:09:16.277195 2022] [core:notice] [pid 6443] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Dec 01 22:15:08.227153 2022] [mpm_prefork:notice] [pid 6443] AH00169: caught SIGTERM, shutting down
+[Sun Jan 15 17:40:14.593414 2023] [:notice] [pid 26156] FastCGI: process manager initialized (pid 26156)
+[Sun Jan 15 17:40:14.596392 2023] [mpm_prefork:notice] [pid 26147] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Jan 15 17:40:14.597123 2023] [core:notice] [pid 26147] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Jan 15 17:40:59.253526 2023] [authz_core:error] [pid 26157] [client ::1:63474] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/GiraTutiempo/.DS_Store
+[Sun Jan 15 18:17:09.611132 2023] [mpm_prefork:notice] [pid 26147] AH00169: caught SIGTERM, shutting down
+[Sun Jan 15 18:17:18.498627 2023] [:notice] [pid 30368] FastCGI: process manager initialized (pid 30368)
+[Sun Jan 15 18:17:18.507278 2023] [mpm_prefork:notice] [pid 30363] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Jan 15 18:17:18.508112 2023] [core:notice] [pid 30363] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Jan 15 22:19:43.077061 2023] [mpm_prefork:notice] [pid 30363] AH00169: caught SIGTERM, shutting down
+[Sun Jan 15 22:22:13.229761 2023] [:notice] [pid 42701] FastCGI: process manager initialized (pid 42701)
+[Sun Jan 15 22:22:13.238967 2023] [mpm_prefork:notice] [pid 42695] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Jan 15 22:22:13.239515 2023] [core:notice] [pid 42695] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Jan 15 22:51:42.999402 2023] [php7:error] [pid 42714] [client ::1:49925] script '/Applications/MAMP/htdocs/GiraTutiempo/web/php/paneldecontrol.php' not found or unable to stat, referer: http://localhost:8888/GiraTutiempo/web/php/login.php
+[Sun Jan 15 23:23:26.843430 2023] [mpm_prefork:notice] [pid 42695] AH00169: caught SIGTERM, shutting down
+[Sun Jan 15 23:39:33.973034 2023] [:notice] [pid 49041] FastCGI: process manager initialized (pid 49041)
+[Sun Jan 15 23:39:33.976601 2023] [mpm_prefork:notice] [pid 49035] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Jan 15 23:39:33.977335 2023] [core:notice] [pid 49035] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Jan 15 23:41:45.970811 2023] [mpm_prefork:notice] [pid 49035] AH00169: caught SIGTERM, shutting down
+[Mon Jan 16 19:25:57.499856 2023] [:notice] [pid 4820] FastCGI: process manager initialized (pid 4820)
+[Mon Jan 16 19:25:57.503193 2023] [mpm_prefork:notice] [pid 4811] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Mon Jan 16 19:25:57.503927 2023] [core:notice] [pid 4811] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Mon Jan 16 20:21:00.364219 2023] [php7:error] [pid 4824] [client ::1:51048] script '/Applications/MAMP/htdocs/giratutiempo/web/php/paneldecontrol.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/eliminar.php?id=3
+[Mon Jan 16 23:36:04.879772 2023] [mpm_prefork:notice] [pid 4811] AH00169: caught SIGTERM, shutting down
+[Mon Jan 16 23:36:25.393648 2023] [:notice] [pid 22134] FastCGI: process manager initialized (pid 22134)
+[Mon Jan 16 23:36:25.402559 2023] [mpm_prefork:notice] [pid 22130] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Mon Jan 16 23:36:25.404101 2023] [core:notice] [pid 22130] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Mon Jan 16 23:41:29.332485 2023] [mpm_prefork:notice] [pid 22130] AH00169: caught SIGTERM, shutting down
+[Tue Jan 17 11:15:54.437050 2023] [:notice] [pid 24103] FastCGI: process manager initialized (pid 24103)
+[Tue Jan 17 11:15:54.440499 2023] [mpm_prefork:notice] [pid 24096] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Tue Jan 17 11:15:54.441204 2023] [core:notice] [pid 24096] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Tue Jan 17 13:07:30.431147 2023] [mpm_prefork:notice] [pid 24096] AH00169: caught SIGTERM, shutting down
+[Tue Jan 17 13:07:43.851058 2023] [:notice] [pid 29644] FastCGI: process manager initialized (pid 29644)
+[Tue Jan 17 13:07:43.859099 2023] [mpm_prefork:notice] [pid 29639] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Tue Jan 17 13:07:43.859855 2023] [core:notice] [pid 29639] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Tue Jan 17 17:02:37.047020 2023] [php7:error] [pid 29665] [client ::1:55055] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 17:02:41.091795 2023] [php7:error] [pid 29665] [client ::1:55055] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 17:03:23.015425 2023] [php7:error] [pid 29684] [client ::1:55057] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 17:03:28.178439 2023] [php7:error] [pid 29684] [client ::1:55057] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 17:08:22.943213 2023] [php7:error] [pid 29684] [client ::1:55077] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 17:08:25.256694 2023] [php7:error] [pid 29684] [client ::1:55077] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 17:28:59.060801 2023] [php7:error] [pid 29646] [client ::1:55156] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 17:29:36.112952 2023] [php7:error] [pid 29648] [client ::1:55164] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 17:29:42.881564 2023] [php7:error] [pid 29648] [client ::1:55164] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 18:20:22.587550 2023] [php7:error] [pid 29853] [client ::1:55520] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 19:10:25.840188 2023] [php7:error] [pid 29857] [client ::1:56256] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Tue Jan 17 19:11:07.768575 2023] [php7:error] [pid 29858] [client ::1:56264] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/principal.php
+[Wed Jan 18 12:49:54.427688 2023] [mpm_prefork:notice] [pid 29639] AH00169: caught SIGTERM, shutting down
+[Wed Jan 18 12:50:00.827777 2023] [:notice] [pid 58342] FastCGI: process manager initialized (pid 58342)
+[Wed Jan 18 12:50:00.838969 2023] [mpm_prefork:notice] [pid 58337] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Wed Jan 18 12:50:00.839630 2023] [core:notice] [pid 58337] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Wed Jan 18 13:12:45.206547 2023] [php7:error] [pid 58553] [client ::1:53147] script '/Applications/MAMP/htdocs/giratutiempo/web/php/insertardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Wed Jan 18 13:15:15.499097 2023] [php7:error] [pid 58344] [client ::1:53159] script '/Applications/MAMP/htdocs/giratutiempo/web/php/insertardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Wed Jan 18 13:22:40.080368 2023] [php7:error] [pid 58553] [client ::1:53202] script '/Applications/MAMP/htdocs/giratutiempo/web/php/insertardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Wed Jan 18 13:29:43.547265 2023] [php7:error] [pid 58344] [client ::1:53481] script '/Applications/MAMP/htdocs/giratutiempo/web/php/insertardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Wed Jan 18 13:32:02.887119 2023] [php7:error] [pid 58347] [client ::1:53493] script '/Applications/MAMP/htdocs/giratutiempo/web/php/insertardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Wed Jan 18 14:02:07.082297 2023] [php7:error] [pid 61034] [client ::1:53887] script '/Applications/MAMP/htdocs/giratutiempo/web/php/insertardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Wed Jan 18 22:19:38.053986 2023] [php7:error] [pid 61034] [client ::1:54523] script '/Applications/MAMP/htdocs/giratutiempo/web/php/insertardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Wed Jan 18 22:20:49.031846 2023] [php7:error] [pid 61037] [client ::1:54527] script '/Applications/MAMP/htdocs/giratutiempo/web/php/insertardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Wed Jan 18 23:06:40.478572 2023] [php7:error] [pid 58355] [client ::1:54869] script '/Applications/MAMP/htdocs/giratutiempo/web/php/eliminardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Wed Jan 18 23:35:42.241982 2023] [php7:error] [pid 61036] [client ::1:55487] script '/Applications/MAMP/htdocs/giratutiempo/web/php/eliminardonaciones.php' not found or unable to stat, referer: http://localhost:8888/giratutiempo/web/php/donaciones.php
+[Thu Jan 19 14:00:47.542098 2023] [mpm_prefork:notice] [pid 58337] AH00169: caught SIGTERM, shutting down
+[Thu Jan 19 17:09:57.612181 2023] [:notice] [pid 78839] FastCGI: process manager initialized (pid 78839)
+[Thu Jan 19 17:09:57.617724 2023] [mpm_prefork:notice] [pid 78833] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Jan 19 17:09:57.618461 2023] [core:notice] [pid 78833] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Jan 19 17:37:56.281058 2023] [php7:error] [pid 78843] [client ::1:59456] script '/Applications/MAMP/htdocs/giratutiempo/web/php/suscripciones.php' not found or unable to stat
+[Thu Jan 19 17:38:04.483548 2023] [authz_core:error] [pid 78842] [client ::1:59457] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/giratutiempo/.DS_Store
+[Thu Jan 19 17:40:39.329739 2023] [mpm_prefork:notice] [pid 78833] AH00169: caught SIGTERM, shutting down
+[Sat Jan 28 18:15:03.343230 2023] [:notice] [pid 26024] FastCGI: process manager initialized (pid 26024)
+[Sat Jan 28 18:15:03.346885 2023] [mpm_prefork:notice] [pid 26015] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sat Jan 28 18:15:03.347639 2023] [core:notice] [pid 26015] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sat Jan 28 23:27:33.372452 2023] [mpm_prefork:notice] [pid 26015] AH00169: caught SIGTERM, shutting down
+[Sun Jan 29 09:14:07.003025 2023] [:notice] [pid 34972] FastCGI: process manager initialized (pid 34972)
+[Sun Jan 29 09:14:07.013381 2023] [mpm_prefork:notice] [pid 34968] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Jan 29 09:14:07.014063 2023] [core:notice] [pid 34968] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Jan 29 09:22:50.614471 2023] [php7:error] [pid 34977] [client ::1:58359] script '/Applications/MAMP/htdocs/AprendiendoPHP/APP/admin/actualizar.php' not found or unable to stat, referer: http://localhost:8888/AprendiendoPHP/APP/admin/paneldecontrol.php
+[Sun Jan 29 11:26:49.482498 2023] [authz_core:error] [pid 35043] [client ::1:58671] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:26:55.903682 2023] [authz_core:error] [pid 35038] [client ::1:58676] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:26:57.213909 2023] [authz_core:error] [pid 35038] [client ::1:58676] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:26:58.204323 2023] [authz_core:error] [pid 34976] [client ::1:58677] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:26:59.069888 2023] [authz_core:error] [pid 35038] [client ::1:58676] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:39:52.160146 2023] [authz_core:error] [pid 34974] [client ::1:58696] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:43:06.576130 2023] [authz_core:error] [pid 35043] [client ::1:58710] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:44:31.559510 2023] [authz_core:error] [pid 35042] [client ::1:58717] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:44:32.098542 2023] [authz_core:error] [pid 35042] [client ::1:58717] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:44:32.247231 2023] [authz_core:error] [pid 35042] [client ::1:58717] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:44:32.554561 2023] [authz_core:error] [pid 35042] [client ::1:58717] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:44:32.791470 2023] [authz_core:error] [pid 35042] [client ::1:58717] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:44:32.926517 2023] [authz_core:error] [pid 41862] [client ::1:58718] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:44:35.843973 2023] [authz_core:error] [pid 35042] [client ::1:58717] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:45:04.991860 2023] [authz_core:error] [pid 42743] [client ::1:58736] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:28.840343 2023] [authz_core:error] [pid 34974] [client ::1:58747] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:30.977634 2023] [authz_core:error] [pid 34974] [client ::1:58747] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:31.446222 2023] [authz_core:error] [pid 42730] [client ::1:58748] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:31.735473 2023] [authz_core:error] [pid 34974] [client ::1:58747] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:31.904686 2023] [authz_core:error] [pid 34974] [client ::1:58747] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:32.579279 2023] [authz_core:error] [pid 42730] [client ::1:58748] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:33.043146 2023] [authz_core:error] [pid 42006] [client ::1:58749] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:33.656878 2023] [authz_core:error] [pid 42006] [client ::1:58749] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:34.221002 2023] [authz_core:error] [pid 42006] [client ::1:58749] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:34.942232 2023] [authz_core:error] [pid 42006] [client ::1:58749] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:35.358389 2023] [authz_core:error] [pid 42006] [client ::1:58749] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:35.747160 2023] [authz_core:error] [pid 35041] [client ::1:58750] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:44.058637 2023] [authz_core:error] [pid 42745] [client ::1:58755] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:44.593900 2023] [authz_core:error] [pid 42745] [client ::1:58755] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:47.819302 2023] [authz_core:error] [pid 42745] [client ::1:58755] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:48.367842 2023] [authz_core:error] [pid 42743] [client ::1:58756] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:48.517382 2023] [authz_core:error] [pid 42743] [client ::1:58756] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:48.861002 2023] [authz_core:error] [pid 42743] [client ::1:58756] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:48.998977 2023] [authz_core:error] [pid 34974] [client ::1:58758] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:49.154053 2023] [authz_core:error] [pid 42744] [client ::1:58757] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:51.356808 2023] [authz_core:error] [pid 42744] [client ::1:58757] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:52.071974 2023] [authz_core:error] [pid 42730] [client ::1:58759] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:52.517619 2023] [authz_core:error] [pid 42744] [client ::1:58757] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:46:52.982341 2023] [authz_core:error] [pid 42744] [client ::1:58757] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:03.375178 2023] [authz_core:error] [pid 42745] [client ::1:58768] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:12.958282 2023] [authz_core:error] [pid 42730] [client ::1:58772] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:14.841392 2023] [authz_core:error] [pid 34976] [client ::1:58774] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:15.540909 2023] [authz_core:error] [pid 35043] [client ::1:58777] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:16.141716 2023] [authz_core:error] [pid 42006] [client ::1:58776] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:16.709914 2023] [authz_core:error] [pid 42730] [client ::1:58772] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:17.349732 2023] [authz_core:error] [pid 42744] [client ::1:58773] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:17.914354 2023] [authz_core:error] [pid 42981] [client ::1:58775] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:18.766361 2023] [authz_core:error] [pid 42981] [client ::1:58775] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:19.351898 2023] [authz_core:error] [pid 42744] [client ::1:58773] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:19.914991 2023] [authz_core:error] [pid 35043] [client ::1:58777] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:20.570210 2023] [authz_core:error] [pid 42744] [client ::1:58773] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:21.133708 2023] [authz_core:error] [pid 42981] [client ::1:58775] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:21.694758 2023] [authz_core:error] [pid 42981] [client ::1:58775] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:22.218589 2023] [authz_core:error] [pid 42006] [client ::1:58776] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:47:22.829700 2023] [authz_core:error] [pid 42981] [client ::1:58775] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:53:07.934914 2023] [authz_core:error] [pid 42744] [client ::1:58791] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:55:35.608688 2023] [authz_core:error] [pid 34976] [client ::1:58796] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:55:45.056009 2023] [authz_core:error] [pid 35043] [client ::1:58821] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:55:45.953924 2023] [authz_core:error] [pid 35043] [client ::1:58821] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:57:56.921378 2023] [authz_core:error] [pid 42997] [client ::1:59348] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:57:57.314452 2023] [authz_core:error] [pid 42997] [client ::1:59348] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:58:02.614733 2023] [authz_core:error] [pid 42730] [client ::1:59376] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:58:10.185024 2023] [authz_core:error] [pid 42745] [client ::1:59409] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:59:30.935435 2023] [authz_core:error] [pid 34976] [client ::1:59730] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:59:31.217522 2023] [authz_core:error] [pid 42997] [client ::1:59734] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:59:31.421426 2023] [authz_core:error] [pid 35043] [client ::1:59732] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:59:31.740376 2023] [authz_core:error] [pid 35041] [client ::1:59731] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:59:31.895589 2023] [authz_core:error] [pid 35043] [client ::1:59732] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:59:51.474903 2023] [authz_core:error] [pid 42997] [client ::1:59825] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 11:59:52.138806 2023] [authz_core:error] [pid 43635] [client ::1:59826] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 12:01:50.887817 2023] [authz_core:error] [pid 34976] [client ::1:60301] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 12:01:51.473444 2023] [authz_core:error] [pid 35043] [client ::1:60303] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 12:02:53.284924 2023] [authz_core:error] [pid 42730] [client ::1:60557] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 12:06:25.210075 2023] [authz_core:error] [pid 42997] [client ::1:61412] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 12:06:26.031834 2023] [authz_core:error] [pid 43973] [client ::1:61414] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 12:07:24.175194 2023] [authz_core:error] [pid 44251] [client ::1:61621] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 12:09:08.765618 2023] [authz_core:error] [pid 44002] [client ::1:62022] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 12:09:50.037845 2023] [authz_core:error] [pid 35043] [client ::1:62190] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 13:57:19.354600 2023] [mpm_prefork:notice] [pid 34968] AH00169: caught SIGTERM, shutting down
+[Sun Jan 29 16:51:34.574578 2023] [:notice] [pid 48393] FastCGI: process manager initialized (pid 48393)
+[Sun Jan 29 16:51:34.587384 2023] [mpm_prefork:notice] [pid 48386] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Jan 29 16:51:34.588104 2023] [core:notice] [pid 48386] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Jan 29 21:37:03.516055 2023] [authz_core:error] [pid 48398] [client ::1:57569] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 21:37:09.569860 2023] [authz_core:error] [pid 48395] [client ::1:57573] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 22:12:43.277611 2023] [authz_core:error] [pid 48409] [client ::1:57768] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sun Jan 29 22:14:50.273324 2023] [mpm_prefork:notice] [pid 48386] AH00169: caught SIGTERM, shutting down
+[Wed Feb 15 23:37:51.732545 2023] [:notice] [pid 34002] FastCGI: process manager initialized (pid 34002)
+[Wed Feb 15 23:37:51.736182 2023] [mpm_prefork:notice] [pid 33992] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Wed Feb 15 23:37:51.736999 2023] [core:notice] [pid 33992] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Wed Feb 15 23:55:19.311022 2023] [mpm_prefork:notice] [pid 33992] AH00169: caught SIGTERM, shutting down
+[Thu Feb 16 10:22:44.929141 2023] [:notice] [pid 37893] FastCGI: process manager initialized (pid 37893)
+[Thu Feb 16 10:22:44.938009 2023] [mpm_prefork:notice] [pid 37889] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Feb 16 10:22:44.938602 2023] [core:notice] [pid 37889] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Feb 16 12:54:10.202265 2023] [mpm_prefork:notice] [pid 37889] AH00169: caught SIGTERM, shutting down
+[Thu Feb 16 14:11:00.052275 2023] [:notice] [pid 45095] FastCGI: process manager initialized (pid 45095)
+[Thu Feb 16 14:11:00.057539 2023] [mpm_prefork:notice] [pid 45091] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Feb 16 14:11:00.059127 2023] [core:notice] [pid 45091] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Feb 16 18:41:47.839474 2023] [mpm_prefork:notice] [pid 45091] AH00169: caught SIGTERM, shutting down
+[Thu Feb 16 18:41:52.778430 2023] [:notice] [pid 55002] FastCGI: process manager initialized (pid 55002)
+[Thu Feb 16 18:41:52.790603 2023] [mpm_prefork:notice] [pid 54998] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Feb 16 18:41:52.791466 2023] [core:notice] [pid 54998] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Feb 16 18:42:13.533254 2023] [mpm_prefork:notice] [pid 54998] AH00169: caught SIGTERM, shutting down
+[Fri Feb 24 22:26:11.623690 2023] [:notice] [pid 3905] FastCGI: process manager initialized (pid 3905)
+[Fri Feb 24 22:26:11.628819 2023] [mpm_prefork:notice] [pid 3895] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Feb 24 22:26:11.629472 2023] [core:notice] [pid 3895] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri Feb 24 22:49:05.043644 2023] [mpm_prefork:notice] [pid 3895] AH00169: caught SIGTERM, shutting down
+[Fri Mar 10 18:53:39.339034 2023] [:notice] [pid 16055] FastCGI: process manager initialized (pid 16055)
+[Fri Mar 10 18:53:39.343463 2023] [mpm_prefork:notice] [pid 16047] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Mar 10 18:53:39.344092 2023] [core:notice] [pid 16047] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sat Mar 11 12:26:25.405304 2023] [mpm_prefork:notice] [pid 16047] AH00169: caught SIGTERM, shutting down
+[Sat Mar 11 12:26:39.945666 2023] [:notice] [pid 29530] FastCGI: process manager initialized (pid 29530)
+[Sat Mar 11 12:26:39.954245 2023] [mpm_prefork:notice] [pid 29526] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sat Mar 11 12:26:39.955064 2023] [core:notice] [pid 29526] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sat Mar 11 12:45:01.261953 2023] [mpm_prefork:notice] [pid 29526] AH00169: caught SIGTERM, shutting down
+[Sat Mar 11 13:06:18.686533 2023] [:notice] [pid 1048] FastCGI: process manager initialized (pid 1048)
+[Sat Mar 11 13:06:18.690283 2023] [mpm_prefork:notice] [pid 1038] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sat Mar 11 13:06:18.691014 2023] [core:notice] [pid 1038] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sat Mar 11 21:26:28.206542 2023] [mpm_prefork:notice] [pid 1038] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 12:49:38.409634 2023] [:notice] [pid 3739] FastCGI: process manager initialized (pid 3739)
+[Sun Mar 12 12:49:38.413328 2023] [mpm_prefork:notice] [pid 3730] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 12:49:38.414070 2023] [core:notice] [pid 3730] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 13:48:22.569959 2023] [core:error] [pid 3730] AH00046: child process 3740 still did not exit, sending a SIGKILL
+[Sun Mar 12 13:48:22.570765 2023] [core:error] [pid 3730] AH00046: child process 3741 still did not exit, sending a SIGKILL
+[Sun Mar 12 13:48:22.570805 2023] [core:error] [pid 3730] AH00046: child process 3742 still did not exit, sending a SIGKILL
+[Sun Mar 12 13:48:22.570837 2023] [core:error] [pid 3730] AH00046: child process 3743 still did not exit, sending a SIGKILL
+[Sun Mar 12 13:48:22.570866 2023] [core:error] [pid 3730] AH00046: child process 3744 still did not exit, sending a SIGKILL
+[Sun Mar 12 13:48:22.570896 2023] [core:error] [pid 3730] AH00046: child process 3757 still did not exit, sending a SIGKILL
+[Sun Mar 12 13:48:22.570926 2023] [core:error] [pid 3730] AH00046: child process 5211 still did not exit, sending a SIGKILL
+[Sun Mar 12 13:48:23.572498 2023] [mpm_prefork:notice] [pid 3730] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 13:50:25.547277 2023] [:notice] [pid 6950] FastCGI: process manager initialized (pid 6950)
+[Sun Mar 12 13:50:25.557324 2023] [mpm_prefork:notice] [pid 6946] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 13:50:25.558652 2023] [core:notice] [pid 6946] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 13:50:45.110092 2023] [mpm_prefork:notice] [pid 6946] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 13:50:50.428569 2023] [:notice] [pid 7176] FastCGI: process manager initialized (pid 7176)
+[Sun Mar 12 13:50:50.436887 2023] [mpm_prefork:notice] [pid 7172] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 13:50:50.437433 2023] [core:notice] [pid 7172] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 13:58:34.905699 2023] [mpm_prefork:notice] [pid 7172] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 14:16:43.237552 2023] [:notice] [pid 8220] FastCGI: process manager initialized (pid 8220)
+[Sun Mar 12 14:16:43.245779 2023] [mpm_prefork:notice] [pid 8217] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 14:16:43.246379 2023] [core:notice] [pid 8217] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 14:17:18.427385 2023] [mpm_prefork:notice] [pid 8217] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 14:18:35.968842 2023] [:notice] [pid 8556] FastCGI: process manager initialized (pid 8556)
+[Sun Mar 12 14:18:35.992640 2023] [mpm_prefork:notice] [pid 8536] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 14:18:35.993642 2023] [core:notice] [pid 8536] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 14:19:26.827730 2023] [mpm_prefork:notice] [pid 8536] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 14:21:38.125750 2023] [:notice] [pid 8953] FastCGI: process manager initialized (pid 8953)
+[Sun Mar 12 14:21:38.145142 2023] [mpm_prefork:notice] [pid 8946] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 14:21:38.145755 2023] [core:notice] [pid 8946] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 14:22:46.388536 2023] [mpm_prefork:notice] [pid 8946] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 14:38:42.178311 2023] [:notice] [pid 9762] FastCGI: process manager initialized (pid 9762)
+[Sun Mar 12 14:38:42.198231 2023] [mpm_prefork:notice] [pid 9756] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 14:38:42.201286 2023] [core:notice] [pid 9756] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 16:50:51.390756 2023] [mpm_prefork:notice] [pid 9756] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 16:55:10.390167 2023] [:notice] [pid 10902] FastCGI: process manager initialized (pid 10902)
+[Sun Mar 12 16:55:10.398983 2023] [mpm_prefork:notice] [pid 10896] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 16:55:10.399528 2023] [core:notice] [pid 10896] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 16:59:10.471775 2023] [mpm_prefork:notice] [pid 10896] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 17:01:27.511958 2023] [:notice] [pid 11571] FastCGI: process manager initialized (pid 11571)
+[Sun Mar 12 17:01:27.519013 2023] [mpm_prefork:notice] [pid 11566] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 17:01:27.519616 2023] [core:notice] [pid 11566] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 17:01:58.534910 2023] [mpm_prefork:notice] [pid 11566] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 17:04:40.085522 2023] [:notice] [pid 11896] FastCGI: process manager initialized (pid 11896)
+[Sun Mar 12 17:04:40.097728 2023] [mpm_prefork:notice] [pid 11891] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 17:04:40.098711 2023] [core:notice] [pid 11891] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Sun Mar 12 17:09:29.236837 2023] [mpm_prefork:notice] [pid 11891] AH00169: caught SIGTERM, shutting down
+[Sun Mar 12 17:09:35.312746 2023] [:notice] [pid 12314] FastCGI: process manager initialized (pid 12314)
+[Sun Mar 12 17:09:35.322784 2023] [mpm_prefork:notice] [pid 12309] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Sun Mar 12 17:09:35.323448 2023] [core:notice] [pid 12309] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Mon Mar 13 14:06:12.339147 2023] [mpm_prefork:notice] [pid 12309] AH00169: caught SIGTERM, shutting down
+[Mon Mar 13 17:43:47.992901 2023] [:notice] [pid 24743] FastCGI: process manager initialized (pid 24743)
+[Mon Mar 13 17:43:47.996994 2023] [mpm_prefork:notice] [pid 24737] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Mon Mar 13 17:43:47.997697 2023] [core:notice] [pid 24737] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Tue Mar 14 13:45:21.135144 2023] [authz_core:error] [pid 24969] [client ::1:53289] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Tue Mar 14 13:46:34.394236 2023] [authz_core:error] [pid 24747] [client ::1:53296] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/.DS_Store
+[Tue Mar 14 13:46:43.202154 2023] [authz_core:error] [pid 24969] [client ::1:53301] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Tue Mar 14 13:47:25.450275 2023] [php7:error] [pid 24746] [client ::1:53308] script '/Applications/MAMP/htdocs/AprendiendoPHP/APP/admin/index.php' not found or unable to stat, referer: http://localhost:8888/AprendiendoPHP/APP/admin/login.php
+[Tue Mar 14 13:51:59.704571 2023] [php7:error] [pid 24822] [client ::1:53377] script '/Applications/MAMP/htdocs/AprendiendoPHP/APP/admin/index.php' not found or unable to stat, referer: http://localhost:8888/AprendiendoPHP/APP/admin/login.php
+[Tue Mar 14 14:13:48.498558 2023] [authz_core:error] [pid 24859] [client ::1:53555] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Sat Mar 18 15:11:59.365151 2023] [php7:error] [pid 24744] [client ::1:57965] script '/Applications/MAMP/htdocs/AprendiendoPHP/APP/adminfw/ver.php' not found or unable to stat, referer: http://localhost:8888/AprendiendoPHP/APP/adminfw/escritorio.php?tabla=NombresNinos
+[Sat Mar 18 15:19:15.693405 2023] [php7:error] [pid 24744] [client ::1:58107] script '/Applications/MAMP/htdocs/AprendiendoPHP/APP/adminfw/index.php' not found or unable to stat, referer: http://localhost:8888/AprendiendoPHP/APP/adminfw/eliminar.php?tabla=usuarios&id=3
+[Sat Mar 18 15:20:02.287289 2023] [php7:error] [pid 24859] [client ::1:58112] script '/Applications/MAMP/htdocs/AprendiendoPHP/APP/adminfw/index.php' not found or unable to stat, referer: http://localhost:8888/AprendiendoPHP/APP/adminfw/eliminar.php?tabla=usuarios&id=3
+[Sat Mar 18 22:25:14.136257 2023] [mpm_prefork:notice] [pid 24737] AH00169: caught SIGTERM, shutting down
+[Tue Mar 21 18:51:49.017469 2023] [:notice] [pid 16120] FastCGI: process manager initialized (pid 16120)
+[Tue Mar 21 18:51:49.033588 2023] [mpm_prefork:notice] [pid 16106] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Tue Mar 21 18:51:49.037620 2023] [core:notice] [pid 16106] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Wed Mar 22 13:42:59.791309 2023] [:notice] [pid 3246] FastCGI: process manager initialized (pid 3246)
+[Wed Mar 22 13:42:59.794022 2023] [mpm_prefork:notice] [pid 3237] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Wed Mar 22 13:42:59.794719 2023] [core:notice] [pid 3237] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri Mar 24 10:57:31.741580 2023] [authz_core:error] [pid 3247] [client ::1:53884] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Fri Mar 24 15:24:28.114458 2023] [mpm_prefork:notice] [pid 3237] AH00169: caught SIGTERM, shutting down
+[Fri Mar 24 15:57:17.349619 2023] [:notice] [pid 63486] FastCGI: process manager initialized (pid 63486)
+[Fri Mar 24 15:57:17.359045 2023] [mpm_prefork:notice] [pid 63482] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Mar 24 15:57:17.359668 2023] [core:notice] [pid 63482] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri Mar 24 16:51:34.758964 2023] [authz_core:error] [pid 63488] [client ::1:60053] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Fri Mar 24 16:52:30.773433 2023] [authz_core:error] [pid 63489] [client ::1:60061] AH01630: client denied by server configuration: /Applications/MAMP/htdocs/AprendiendoPHP/APP/photo/.DS_Store, referer: http://localhost:8888/AprendiendoPHP/APP/
+[Tue Mar 28 18:22:45.975169 2023] [php7:error] [pid 65883] [client ::1:58461] script '/Applications/MAMP/htdocs/formularios/cargardesplegable.php' not found or unable to stat, referer: http://localhost:8888/formularios/
+[Tue Mar 28 18:24:59.932857 2023] [php7:error] [pid 63489] [client ::1:59020] script '/Applications/MAMP/htdocs/formularios/cargardesplegable.php' not found or unable to stat, referer: http://localhost:8888/formularios/
+[Tue Mar 28 18:27:30.377257 2023] [php7:error] [pid 63492] [client ::1:59608] script '/Applications/MAMP/htdocs/formularios/cargardesplegable.php' not found or unable to stat, referer: http://localhost:8888/formularios/
+[Tue Mar 28 18:27:37.916377 2023] [php7:error] [pid 69292] [client ::1:59682] script '/Applications/MAMP/htdocs/formularios/cargardesplegable.php' not found or unable to stat, referer: http://localhost:8888/formularios/
+[Tue Mar 28 18:27:52.385313 2023] [php7:error] [pid 65883] [client ::1:59716] script '/Applications/MAMP/htdocs/formularios/cargardesplegable.php' not found or unable to stat, referer: http://localhost:8888/formularios/
+[Wed Mar 29 19:46:26.963020 2023] [mpm_prefork:notice] [pid 63482] AH00169: caught SIGTERM, shutting down
+[Thu Apr 13 13:52:41.185660 2023] [:notice] [pid 40792] FastCGI: process manager initialized (pid 40792)
+[Thu Apr 13 13:52:41.192604 2023] [mpm_prefork:notice] [pid 40782] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Apr 13 13:52:41.193636 2023] [core:notice] [pid 40782] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Apr 13 15:14:02.615074 2023] [mpm_prefork:notice] [pid 40782] AH00169: caught SIGTERM, shutting down
+[Tue Apr 25 15:57:53.869425 2023] [:notice] [pid 26719] FastCGI: process manager initialized (pid 26719)
+[Tue Apr 25 15:57:53.875295 2023] [mpm_prefork:notice] [pid 26711] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Tue Apr 25 15:57:53.876057 2023] [core:notice] [pid 26711] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Apr 27 18:28:18.418555 2023] [mpm_prefork:notice] [pid 26711] AH00169: caught SIGTERM, shutting down
+[Thu Apr 27 18:28:23.526003 2023] [:notice] [pid 46010] FastCGI: process manager initialized (pid 46010)
+[Thu Apr 27 18:28:23.536988 2023] [mpm_prefork:notice] [pid 46006] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu Apr 27 18:28:23.537661 2023] [core:notice] [pid 46006] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Thu Apr 27 19:41:15.623558 2023] [mpm_prefork:notice] [pid 46006] AH00169: caught SIGTERM, shutting down
+[Fri Apr 28 12:17:07.329444 2023] [:notice] [pid 3699] FastCGI: process manager initialized (pid 3699)
+[Fri Apr 28 12:17:07.334117 2023] [mpm_prefork:notice] [pid 3691] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Fri Apr 28 12:17:07.335016 2023] [core:notice] [pid 3691] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Mon May 01 10:09:35.744584 2023] [mpm_prefork:notice] [pid 3691] AH00169: caught SIGTERM, shutting down
+[Mon May 01 10:09:43.604589 2023] [:notice] [pid 11223] FastCGI: process manager initialized (pid 11223)
+[Mon May 01 10:09:43.614286 2023] [mpm_prefork:notice] [pid 11218] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Mon May 01 10:09:43.614822 2023] [core:notice] [pid 11218] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Mon May 01 11:38:16.544915 2023] [mpm_prefork:notice] [pid 11218] AH00169: caught SIGTERM, shutting down
+[Mon May 01 11:38:22.485044 2023] [:notice] [pid 14877] FastCGI: process manager initialized (pid 14877)
+[Mon May 01 11:38:22.500594 2023] [mpm_prefork:notice] [pid 14873] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Mon May 01 11:38:22.501273 2023] [core:notice] [pid 14873] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Wed May 03 09:49:20.383222 2023] [mpm_prefork:notice] [pid 14873] AH00169: caught SIGTERM, shutting down
+[Thu May 04 16:16:26.213893 2023] [:notice] [pid 9809] FastCGI: process manager initialized (pid 9809)
+[Thu May 04 16:16:26.219649 2023] [mpm_prefork:notice] [pid 9799] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.0.2u PHP/7.4.21 mod_wsgi/3.5 Python/2.7.13 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1 configured -- resuming normal operations
+[Thu May 04 16:16:26.220290 2023] [core:notice] [pid 9799] AH00094: Command line: '/Applications/MAMP/Library/bin/httpd'
+[Fri May 05 11:20:05.929401 2023] [mpm_prefork:notice] [pid 9799] AH00169: caught SIGTERM, shutting down
