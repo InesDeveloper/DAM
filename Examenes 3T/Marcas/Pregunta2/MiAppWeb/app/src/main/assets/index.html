@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+         <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+        <script src="jquery-3.6.4.min.js"></script>
+        <link href="estilos.css" rel="stylesheet" type="text/css">
+        <script src="funciones.js"></script>
+    </head>
+    <body>
+        <button id="boton" onclick="botonpulsado()">Púlsame</button>
+        <p id="resultadoJavascript"></p>
+        <p id="resultadoJQuery"></p>
+        <script>
+            $(document).ready(function(){
+                $("#boton").click(function() {
+                    $("#resultadoJQuery").append("Pulsado desde jquery")
+                })
+            })
+        </script>
+    </body>
+</html>
