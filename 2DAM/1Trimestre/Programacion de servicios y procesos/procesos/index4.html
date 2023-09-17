@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            
+            var numeroDeNucleos =navigator.hardwareConcurrency;
+            console.log("el ordenador en el que estás ahora mismo tiene "+numeroDeNucleos+" núcleos")
+            
+            var trabajador = new Array();
+            for(var i = 0;i<100;i++){
+                trabajador[i] = new Worker("tarea2.js")
+                trabajador[i].postMessage("comienza");
+                trabajador[i].onmessage = function(datos){
+                    console.log(datos.data)
+                }
+                   
+            }
+            
+            for(var i = 0;i<100;i++){
+                for(var k = 0;k<100;k++){
+                    trabajador[i][k] = new Worker("tarea2.js")
+                    trabajador[i][k].postMessage("comienza");
+                    trabajador[i][k].onmessage = function(datos){
+                        console.log(datos.data)
+                    }
+                }
+            }
+            
+        </script>
+
+    </body>
+
+</html>
