@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+    <head>
+        <title>videojuego</title>
+        <meta charset="UTF8">
+        <style>
+            body{margin: 0px;padding: 0px;}
+            canvas{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="lienzo" width=512px height=512px></canvas>
+        <script>
+        /* Capturamos el lienzo y lo introducimos dentro de una variable contexto */
+            var contexto = document.getElementById("lienzo").getContext("2d");
+            
+        /* Probamos a dibujar un rectángulo blanco */
+            // contexto.fillStyle = "red";
+        
+        /* Aqui voy a declarar las variables globales a todo el programa */
+            var temporizador;
+            var anchuranavegador = window.innerWidth;
+            var alturanavegador = window.innerHeight;
+            document.getElementById("lienzo").height = alturanavegador;
+            document.getElementById("lienzo").width = anchuranavegador;
+            
+        /* En esta zona cargamos las imágenes que vamos a utilizar en el videojuego */  
+            var imagenrejilla = new Image();
+            imagenrejilla.src ="rejilla.png";
+            var imagenpersonaje1 = new Image();
+            imagenpersonaje1.src = "personaje2.png";
+            var imagenfondo = new Image();
+            imagenfondo.src = "fondo.jpg";
+            
+        /* creamos una plantilla para un personaje*/ 
+            class Personaje{
+                
+                /* Dotamos al personaje de una serie de propiedades iniciales */
+                constructor(x,y,z,direccion,direccionisometrica,color,tiemponacimiento){
+                    this.tiemponacimiento = 0;
+                    this.x = Math.random()*anchuranavegador;
+                    this.y = Math.random()*alturanavegador;
+                    this.direccion = Math.PI*2*Math.random();
+                    this.direccionverdadera = Math.PI*2*Math.random();
+                    this.direccionisometrica = Math.floor(Math.random()*4);
+                    this.color = "#ff0000";
+                    
+                }
+                /* Creamos un método para gestionar el movimiento del personaje */
+                mueve(){
+                    
+                    this.tiemponacimiento += 1;
+                    this.x += Math.cos(this.direccion);
+                    this.y += Math.sin(this.direccion);
+                    
+                    /* Aqui le indicamos al programa que el personaje cambia de dirección cada 100 U de vida */
+                    if(this.tiemponacimiento % 100 == 0){this.direccionisometrica = Math.floor(Math.random()*4);}
+                    
+                    if(this.direccionisometrica == 0){
+                        this.direccion = 0;
+                    }else if(this.direccionisometrica == 1){
+                        this.direccion = Math.PI/2;
+                    }else if(this.direccionisometrica == 2){
+                        this.direccion = Math.PI;
+                    }else if(this.direccionisometrica == 3){
+                        this.direccion = Math.PI*1.5;
+                    }
+                    
+                    this.colisiona();
+                }
+                colisiona(){
+                    if(this.x > anchuranavegador || this.x < 0 || this.y < 0 || this.y > alturanavegador) {
+                        this.direccion += Math.PI;}
+                }
+            }
+            var numeropersonajes = 100;
+            var arraypersonajes = new Array();
+            
+            
+            inicio();
+            
+            /* En la función de inicio cargamos todas las condiciones iniciales del juego */ 
+            function inicio(){
+                /* Creo una instancia del objeto o personaje dentro de cada uno de los elementos de la colección */
+                for(var i = 0;i<numeropersonajes;i++){
+                    arraypersonajes[i] = new Personaje;
+                }
+
+                /* Ahora lanzo la ejecución del bucle */
+                temporizador = setTimeout("bucle()",1000);
+            } 
+            
+            /* Aquí cargamos todo lo que se va a ir repitiendo una y otra vez durante el juego */  
+            function bucle(){
+                /* Al principio de cada bucle, borramos el lienzo anterior */
+                contexto.clearRect(0,0,anchuranavegador,alturanavegador);
+                contexto.drawImage(imagenfondo,0,0);
+                contexto.drawImage(imagenrejilla,0,0);
+                /* Y te damos en todos los elementos de la raya uno a uno y realizamos las operaciones */
+                for(var i = 0;i<numeropersonajes;i++){
+                    arraypersonajes[i].mueve();
+                    
+                    contexto.drawImage(imagenpersonaje1,isox(arraypersonajes[i].x,arraypersonajes[i].y),isoy(arraypersonajes[i].x,arraypersonajes[i].y),30,30);
+                }
+
+                clearTimeout(temporizador);/* Esta línea elimina el temporizador actual */
+                temporizador = setTimeout("bucle()",33); /* Creamos un temporizador para volver a ejecutar el bucle */
+
+            }  
+            
+            function isox(x,y){
+                return(x-y); 
+            }
+            
+            function isoy(x,y){
+                return((x+y)/2);
+            }
+            
+        </script>
+    </body>
+</html>
