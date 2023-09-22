@@ -37,7 +37,7 @@
         /* creamos una plantilla para un personaje*/ 
             class Personaje{
                 
-                /* Dotamos al personaje de una serie de propiedades iniciales */
+                /* Dotamos al personaje de una serie de propiedades iniciales, le damos unas coordenadas para su inicialización */
                 constructor(x,y,z,direccion,direccionisometrica,color,tiemponacimiento){
                     this.tiemponacimiento = 0;
                     this.x = Math.random()*anchuranavegador;
@@ -48,7 +48,7 @@
                     this.color = "#ff0000";
                     
                 }
-                /* Creamos un método para gestionar el movimiento del personaje */
+                /* Creamos un método para gestionar el movimiento del personaje con unas coordenadas */
                 mueve(){
                     
                     this.tiemponacimiento += 1;
