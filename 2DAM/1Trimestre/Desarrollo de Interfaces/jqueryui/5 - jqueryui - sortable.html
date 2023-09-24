@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <link real="Stylesheet" href="js/jquery-ui.min.css">
+        <link real="Stylesheet" href="js/jquery-ui.structure.min.css">
+        <link real="Stylesheet" href="js/jquery-ui.theme.min.css">
+        <style>
+            ul{list-style-type: none;padding: 0px;margin: 0px;}
+            li{width: 200px;border: 1px solid black;padding: 10px;}
+        </style>
+        <script>
+            $(document).ready(function(){
+                $(".ordenable").sortable();
+                 $(".ordenable li").hover(function(){
+                     $(this).find("span").addClass("ui-icon ui-icon-arrowthick-2-n-s")
+                 },function(){
+                     $(this).find("span").removeClass("ui-icon ui-icon-arrowthick-2-n-s")
+                 })       
+            })
+            
+        </script>
+    </head>
+    <body>
+        <ul class="ordenable">
+            <li>Primer elemento<samp></samp></li>
+            <li>Segundo elemento<samp></samp></li>
+            <li>Tercer elemento<samp></samp></li>
+            <li>Cuarto elemento<samp></samp></li>
+            <li>Quinto elemento<samp></samp></li>
+            <li>Sexto elemento<samp></samp></li>
+        </ul>
+        
+    </body>
+</html>
