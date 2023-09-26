@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <script src="lib/jquery-3.7.1.min.js"></script>
+        <script src="lib/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+        <link rel="Stylesheet" href="lib/jquery-ui-1.13.2.custom/jquery-ui.css" >
+        <link rel="Stylesheet" href="css/estilo.css">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        
+        <script> // Estilo y funcionalidad de jquery a las clases e identificadores
+            $(document).ready(function(){
+                $("#tabs").tabs();
+                $("#biblioteca").accordion();
+                $("#parametros").accordion();
+                $("#menu").menu();
+                $(".nodo").draggable();
+                $(".dialogo").dialog() // Función que abre el dialogo con el clic derecho.
+                $(".dialogo").dialog('close');
+                $("#espacio").contextmenu(function(event) {
+                    event.preventDefault()
+                    console.log("menu contextual")
+                    $(".dialogo").dialog('open');
+                });
+                $(".select2").select2();
+            })
+        
+        </script>
+    </head>
+    <body lang="es">
+        <!-- Creamos un contenedor para mostrar un desplegable con tres opciones -->
+        <div class="dialogo">
+            <select class="select2">
+                <option>uno</option>
+                <option>dos</option>
+                <option>tres</option>
+            </select>
+        </div>
+        <div id="app"> <!-- Contenedor de la aplicación estructurada con tablas -->
+            <table border=0 width=100% height=100%>
+                <tr height=20px>
+                    <td>
+                        <ul id="menu"> 
+                            <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table border=0 width=100% height=100%>
+                            <tr>
+                                <td width=200px>
+                                    <div id="biblioteca"> <!-- Contenedores de las secciones de la parte izquierda con información -->
+                                        <h3>Section 1</h3>
+                                        <div>
+                                            <p>
+                                                Los dinosaurios son un grupo diverso de animales desde el punto de vista taxonomico, morfologico y ecologico. Usando la evidencia fosil, los paleontologos han identificado cerca de 900 generos distintos13 y mas de 1000 especies diferentes de dinosaurios no avianos. Algunos eran herbivoros, otros carnivoros, incluyendo granivoros, piscivoros, insectivoros y omnivoros.   
+                                            </p>
+                                        </div>
+                                        <h3>Section 2</h3>
+                                        <div>
+                                            <p>
+                                                Lo que extinguio a los dinosaurios
+                                                Gracias a descubrimientos que se han hecho anteriormente, hoy se sabe que la extincion de los dinosaurios tuvo lugar hace 66 millones de anios. Esta ocurrio como consecuencia de un asteroide que golpeo la tierra, especificamente, al noroeste de la peninsula de Yucatan, Mexico.
+                                            </p>
+                                        </div>
+                                        <h3>Section 3</h3>
+                                        <div>
+                                            <p>
+                                                El Tiranosaurio Rex es quiza el dinosaurio mas conocido y su nombre significa Reptil Tirano. Era uno de los mas temidos, por ser uno de los carnivoros mas feroces. Este dinosaurio media de 10 a 14 metros de longitud y pesaba entre cuatro y siete toneladas.  
+                                            </p>
+                                            <ul>
+                                                <li>List item one</li>
+                                                <li>List item two</li>
+                                                <li>List item three</li>
+                                            </ul>
+                                        </div>
+                                        <h3>Section 4</h3>
+                                        <div>
+                                            <p>
+                                                Antes de los dinosaurios en la tierra habia, durante la era Paleozoica, que abarco desde hace unos 541 millones de anios hasta hace unos 252 millones de anios, la Tierra estaba habitada principalmente por animales marinos como trilobites, braquiopodos, moluscos y equinodermos, asi como por los primeros vertebrados, como los peces. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="tabs"> <!-- Pestañas con diferentes opciones -->
+                                        <ul>
+                                            <li><a href="#tabs-1">Espacio 1</a></li>
+                                            <li><a href="#tabs-2">Espacio 2</a></li>
+                                            <li><a href="#tabs-3">Espacio 3</a></li>
+                                        </ul>
+                                        <div id="tabs-1"> <!-- Contenido de la pestaña del tab 1 -->
+                                            <div id="espacio">
+                                                <div id="dialog" title="Basic dialog" class="nodo">
+                                                    <p>Nombre del nodo 1</p>
+                                                    <div class="entradas">
+                                                        <div class="ejecucion"><span class="conector"></span>Exec</div>
+                                                        <div class="parametro"><span class="conector"></span>param1</div>
+                                                        <div class="parametro"><span class="conector"></span>param2</div>
+                                                    </div>
+                                                    <div class="salidas">
+                                                        <div class="ejecucion">Exec<span class="conector"></span></div>
+                                                        <div class="parametro">param1<span class="conector"></span></div>
+                                                        <div class="parametro">param2<span class="conector"></span></div>
+                                                    </div>
+                                                </div>
+                                                <div id="dialog" title="Basic dialog" class="nodo">
+                                                    <p>Nombre del nodo 2</p>
+                                                    <div class="entradas">
+                                                        <div class="ejecucion"><span class="conector"></span>Exec</div>
+                                                        <div class="parametro"><span class="conector"></span>param1</div>
+                                                        <div class="parametro"><span class="conector"></span>param2</div>
+                                                    </div>
+                                                    <div class="salidas">
+                                                        <div class="ejecucion">Exec<span class="conector"></span></div>
+                                                        <div class="parametro">param1<span class="conector"></span></div>
+                                                        <div class="parametro">param2<span class="conector"></span></div>
+                                                    </div>
+                                                </div>
+                                                <div id="dialog" title="Basic dialog" class="nodo">
+                                                    <p>Nombre del nodo 3</p>
+                                                    <div class="entradas">
+                                                        <div class="ejecucion"><span class="conector"></span>Exec</div>
+                                                        <div class="parametro"><span class="conector"></span>param1</div>
+                                                        <div class="parametro"><span class="conector"></span>param2</div>
+                                                    </div>
+                                                    <div class="salidas">
+                                                        <div class="ejecucion">Exec<span class="conector"></span></div>
+                                                        <div class="parametro">param1<span class="conector"></span></div>
+                                                        <div class="parametro">param2<span class="conector"></span></div>
+                                                    </div>
+                                                </div>
+                                                <div id="dialog" title="Basic dialog" class="nodo">
+                                                    <p>Nombre del nodo 4</p>
+                                                    <div class="entradas">
+                                                        <div class="ejecucion"><span class="conector"></span>Exec</div>
+                                                        <div class="parametro"><span class="conector"></span>param1</div>
+                                                        <div class="parametro"><span class="conector"></span>param2</div>
+                                                    </div>
+                                                    <div class="salidas">
+                                                        <div class="ejecucion">Exec<span class="conector"></span></div>
+                                                        <div class="parametro">param1<span class="conector"></span></div>
+                                                        <div class="parametro">param2<span class="conector"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                        <div id="tabs-2">
+                                            <p></p>
+                                        </div> 
+                                        <div id="tabs-3">
+                                            <p></p>
+                                        </div>
+                                    </div>            
+                                </td>
+                                <td width=100px>
+                                    <div id="parametros"> <!-- Contenedores de las secciones de la parte derecha con información -->
+                                        <h3>Section 1</h3>
+                                        <div>
+                                            <p>
+                                                Los cuernos o crestas son comunes a todos los grupos de dinosaurios, y algunos grupos desarrollaron modificaciones esqueleticas como armaduras oseas y espinas.Los dinosaurios eran los vertebrados terrestres dominantes del Mesozoico, especialmente en los periodos Jurasico y Cretacico.    
+                                            </p>
+                                        </div>
+                                        <h3>Section 2</h3>
+                                        <div>
+                                            <p>
+                                                Muchos dinosaurios eran de gran porte, el dinosaurio sauropodo más grande pudo haber alcanzado una longitud de 40 metros y 18 metros de altura y una masa estimada maxima de 140 toneladas.   
+                                            </p>
+                                        </div>
+                                        <h3>Section 3</h3>
+                                        <div>
+                                            <p>
+                                                Desde el punto de vista de la taxonomia filogenetica, los dinosaurios se definen generalmente como el grupo constituido por todos los descendientes del mas reciente ancestro comun (ACMR) del Triceratops y las aves modernas. 
+                                            </p>
+                                            <ul>
+                                                <li>List item one</li>
+                                                <li>List item two</li>
+                                                <li>List item three</li>
+                                            </ul>
+                                        </div>
+                                        <h3>Section 4</h3>
+                                        <div>
+                                            <p>
+                                                Muchos grupos de animales prehistoricos son popularmente concebidos como dinosaurios, como los ictiosaurios, plesiosaurios, mosasaurios, pterosaurios y pelicosaurios, pero no se clasifican cientificamente como dinosaurios. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>      
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

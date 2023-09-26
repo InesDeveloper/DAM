@@ -1,0 +1,69 @@
+#tabs{
+    height: 100%;
+}
+#tabs .espacio{
+    height: 100%;
+}
+
+.nodo{
+    width: 150px;
+    min-height: 50px;
+    border: 2px solid #e57e90;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    
+    border-top: 5px solid pink;
+    font-size: 10px;
+}
+#espacio{
+    position: relative;
+    
+}
+p{padding: 0px;margin: 0px;}
+
+.nodo .entradas{
+    float: left;
+    width: 50%;
+    
+    text-align: left;
+    position: relative;
+    left: -23px;
+}
+
+.nodo .salidas{
+    float: right;
+    width: 50%;
+    
+    text-align: right;
+    position: relative;
+    right: -23px;
+}
+
+.nodo .conector{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #d43434;
+    border-radius: 10px;
+    background: black;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+.nodo .ejecucion .conector{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #d43434;
+    border-radius: 0px;
+    background: black;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+.select2{
+    width: 100% !important;
+}
