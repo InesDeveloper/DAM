@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            <body{text-align: center;}
+            #contienecanvas{width: 2048px;height: 2048px;position: relative;float: left;}
+            #contienecanvas canvas{position: absolute;top: 0px;left: 0px;}
+        </style>
+    </head>
+    
+    <body>
+        <canvas id="lienzo" width=2048 height=2048></canvas>
+        <div id="contienecanvas">
+            <canvas id="lienzodestino" width="2048" height="2048" ></canvas>
+            <canvas id= "lienzobuckets" width="2048" height="2048"></canvas>
+        </div> 
+        
+        <script>
+            
+            var anchura = 1; /* Esta variable va a almacenar la anchura del cuadrado de comparación */
+            var umbral = 10;
+            var anchurabucket = 64;
+            var anchura = 2048;
+            var altura = 2048;
+            var x = 0;
+            var y = 0;
+            
+            var contexto = document.getElementById("lienzo").getContext("2d") /* Cargamos el contexto de la imagen en una variable */
+            var contextodestino = document.getElementById("lienzodestino").getContext("2d")
+             var contextobuckets = document.getElementById("lienzobuckets").getContext("2d")
+            var temporizador;
+            
+             
+            var foto = new Image(); /* Creamos un nuevo objeto de tipo imagen */
+            foto.src = "Rusty1.jpg"; /* Le indicamos cuál es el archivo informático al que corresponde esa imagen */
+            
+            var trabajador = new Array();
+            
+            setTimeout(function(){ /* Ejecuta una función con cierto retraso para darletiempo al programa a cargar la imagen */             
+                const tiempoInicio = Date.now(); /* Calculo el tiempo de inicio y lo pongo en una variable */                 
+                contexto.drawImage(foto,0,0) /* Dibujo la imagen en el lienzo*/                 
+
+                numerotrabajadores = navigator.hardwareConcurrency*8;
+                for(var i = 0;i<numerotrabajadores;i++){
+                    trabajador[i] = new Worker("tarea7.js");
+                         
+                        trabajador[i].onmessage = function(datos,i){
+                            //console.log(datos)
+                            contextodestino.putImageData(datos.data.resultado,datos.data.mix,datos.data.miy);
+                            x+=anchurabucket;
+                            if(x > 2048){x=0;y+=anchurabucket;}
+                            if(y < 2048){
+                                //console.log("voy a lanzar con: "+i+"-"+x+"-"+y)
+                                bucle(datos.data.miidworker,x,y)
+                            }else{
+                                const tiempoFinal = Date.now()
+                                 console.log("el tiempo requerido para calcular este programa ha sido de "+(tiempoFinal-tiempoInicio))
+                                
+                                }
+                            }
+                            bucle(i,x,y)
+                }
+                
+                const tiempoFinal = Date.now()                                 /* Calculo el tiempo de finalización y lo pongo en otra variable*/ 
+
+                /* Muestro por pantalla la diferencia entre los tiempor de inicio y los tiempos de finalización*/ 
+                //console.log("el tiempo requerido para calcular este programa ha sido de "+(tiempoFinal-tiempoInicio));
+            },2000)
+            
+            function bucle(i,x,y){
+                var indice = i
+                
+                contextobuckets.fillRect(x,y,anchurabucket,anchurabucket)
+                contextobuckets.clearRect(x+2,y+2,anchurabucket-4,anchurabucket-4)
+                //console.log("en el bucle devuelvo"+i+"-"+x+"-"+y)
+                
+                
+                var pixeles = contexto.getImageData(x,y,anchurabucket,anchurabucket); /*Meto toda la información de los pixeles en una variable */
+                var pixelesdestino = contextodestino.getImageData(0,0,anchurabucket,anchurabucket) /* Meto la informacion correspondiente al lienzo de destino */
+
+                json = {px:pixeles,pxdst:pixelesdestino,mix:x,miy:y,miumbral:umbral,mianchurabucket:anchurabucket,idworker:i}
+                //console.log("el indice del trabajor es:"+indice)
+                trabajador[indice].postMessage(json)  
+                
+                
+                
+                }
+                
+        </script>
+
+    </body>
+
+</html>

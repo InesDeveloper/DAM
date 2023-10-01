@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            <body{text-align: center;}
+        </style>
+    </head>
+    
+    <body>
+        <canvas id="lienzo" width=3280 height=3280></canvas>
+        <script>
+/* Cargamos el contexto de la imagen en una variable */            
+            var contexto = document.getElementById("lienzo").getContext("2d")
+            
+/* Creamos un nuevo objeto de tipo imagen */             
+            var foto = new Image();
+/* Le indicamos cuál es el archivo informático al que corresponde esaimagen */             
+            foto.src = "Rusty.jpg";
+/* Ejecuta una función con cierto retraso para darletiempo al programa a cargar la imagen */             
+            setTimeout(function(){
+/* Calculo el tiempo de inicio y lo pongo en una variable */                 
+                const tiempoInicio = Date.now();
+/* Dibujo la imagen en el lienzo*/                 
+                contexto.drawImage(foto,0,0)
+/* Atrapo todos los datos de la imagen en una matriz */                 
+                var pixeles = contexto.getImageData(0,0,3280,3280)
+/* Recorro esa imagen cada cuatro bloques cuatro piezas de contenido representan un pixel*/                
+                for(var i = 0;i<pixeles.data.length;i+=4){
+                    
+                    /* Invierto el canal rojo de la imagen */ 
+                    pixeles.data[i] = 255-pixeles.data[i];
+                    /* Invierto en el canal verde la imagen */ 
+                    pixeles.data[i+1] = 255-pixeles.data[i+1];
+                    /* Invierto en el canal azul de la imagen*/ 
+                    pixeles.data[i+2] = 225-pixeles.data[i+2];
+                }
+                /* Ponemos la imagen de vuelta dentro del lienzo */ 
+                contexto.putImageData(pixeles,0,0);  
+                /* Calculo el tiempo de finalización y lo pongo en otra variable*/ 
+                const tiempoFinal = Date.now()
+                /* Muestro por pantalla la diferencia entre los tiempor de inicio y los tiempos de finalización*/ 
+                console.log("el tiempo requerido para calcular este programa ha sido de "+(tiempoFinal-tiempoInicio));
+            },2000)
+            
+        </script>
+
+    </body>
+
+</html>
