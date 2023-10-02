@@ -1,0 +1,103 @@
+Sistemas de gestión empresarial Practica 2
+
+Vamos a plantear el desarrollo de un programa informático.
+
+Primero vamos a desarrollar un software generalista, teniendo una idea más o menos clara pero sin ser la idea definitiva.
+
+Vamos a hacer un software de una idea segura y por ello nos decantamos por documentos online, ya que las personas siempre vamos a necesitar este tipo de software.
+Podemos trabajar con bases de datos para guardar los documento, SQL - NoSQL. Ahora vamos a definir que va a hacer el software como, admitir usuarios y que puedan hacer documentos.
+
+Antes de hablar del modelo de datos que vamos a tener, comentamos que es una base de datos. 
+
+Una base de datos es una herramienta para recopilar y organizar información. Las bases de datos pueden almacenar información sobre personas, productos, pedidos u otras cosas. Muchas bases de datos comienzan como una lista en una hoja de cálculo o en un programa de procesamiento de texto.
+
+Dentro del modelo de datos tendremos una tabla llamada usuarios, podemos pintar las tablas en el caso de un documento excel, un pequeño esquema uml.
+Usuarios tendrá, identificador, nombre, apellido, contraseña, email, etc, hay que ver que campos son los que realmente vamos a utilizar.
+
+Una vez que tenemos los usuarios creamos los documentos, en el cual tenemos el identificador, id usuario al que pertenece el documento, podemos tener un idtipode documento, y esto nos hace que creemos una nueva tabla de tipo de documento el cual tenga un identificador y un tipo. Ponemos las claves primarias y las foraneas y así podemos ver 3 tablas con las que poder trabajar como modelo de datos de la aplicación que queremos crear, eso es lo principal aunque luego vayan saliendo más.
+
+Los documentos que se admitirán formalmente serán documentos de texto, hojas de cálculo y presentaciones.
+
+Las plantillas serán los propios documentos noSQL para que las plantillas en si mismas sean documento sin que tengamos realmente los elementos del documento para guardar.
+
+Le ponemos un nombre al proyecto como por ejemplo Docs, que aunque no sea un nombre final lo es claro para saber que estamos haciendo y lo usamos como nombre temporal buscando después desde el punto de vista de marketing el nombre final.
+
+Vamos a tener un usuario que estará por encima de todo para que cada uno pueda crear lo que necesite, o compartir sus documentos, poco a poco vamos a establecer más parámetros para el modelo de datos como por ejemplo la fecha de creación, especificar en un campo booleano si el documento esta compartido o no y si ese documento puede ser visto desde el panel de control de otros usuarios.
+
+En el momento que compartimos el documento, el documento no debería de estar dentro de la tabla de documentos ya que seria de uno a n, aunque si esta en otra tabla puede que no se quede tan claro el modelo de datos ya que lo que hagamos después luego puede ser peor. Lo mejor siempre es ir haciendo pruebas para saber que es lo mejor para la creación de nuestra aplicación y que todo quede lo más claro y optimizado posible.
+
+Hay que especificar los datos, si es un entero, un varchar, los caracteres que tendrán, que haga que la base de datos no vaya muy lenta.
+
+El id usuario es un id 15, podemos tener campos públicos o un booleano si lo tenemos disponible en la base de datos con la que estemos trabajando.
+
+Dentro de nuestra aplicación tendremos un superadministrador el cual se encargará de gestionar todos los documentos y todas las cuentas de usuario.
+Un panel de control para cada usuario, una parte frontal que permita visualizar los documentos compartidos con los usuarios externos, etc.
+
+El coger el balance entre ser ambicioso y realista es algo que cuesta a la hora de desarrollar el software.
+
+Existen varias metodologías de software, hacer la aplicación como un software de escritorio, que en el caso que hemos definido si es de escritorio no nos sirve puesto que queremos que múltiples personas accedan a nuestro programa.
+
+También tenemos el software móvil. Habría que hacer un estudio de mercado para ver si para móvil valdría la pena o no.
+
+Y por ultimo planteamos el software en la nube que ahora mismo es la tendencia, ya que trabajar en la nube nos permite tener un punto de vista colaborativo.
+
+Tenemos que definir cual va a ser el diagrama de flujo de nuestra aplicación como por ejemplo: 
+
+
+            login            signin
+             |                 |
+             |                 |
+             |                 |
+             |                 |
+             |
+             |        formulario de registro
+             |                 /
+             |                /
+             |               /
+             |              / 
+             \             /    
+               Escritorio   
+              /      |    \
+             /       |     \
+            /        |      \
+    documento  hojadecalculo  presentacion                                                                        
+                               
+                               
+                               
+Una vez elegido el tipo de software vamos a ver en que lenguaje lo hacemos.
+
+- Software de escritorio = Win- Mac - Linux.
+- Software móvil = Android - IOS - Java - Kotlin - swift.
+- Software en la nube = HTML + CSS + JS
+                        PHP - JEE - Python
+                        
+Tenemos que abarcar diversos lenguajes para que llegue a mas usuarios puesto que tienen diversos dispositivos.
+
+En bases de datos podemos usar MySQL - SQLite - PostgreSQL.
+
+En frameworks, es mejor no usar muchos para poder tener mayor control sobre nuestro proyecto, pero se puede usar bootstrap, ya que nos permite tener diferentes plantillas bien definidas, pero basar nuestro proyecto en un proyecto con demasiados frameworks hace que este cuente con una serie de versiones y eso es limitante y lo importante es que el proyecto no quede desfasado por motivos ajenos a nosotros, por lo tanto siempre es mejor hacer el propio código.
+
+Por lo tanto y en definitiva, a la hora de programar y no ir a ciegas, primero que definir el tipo de software y las tecnologías con las que vamos a trabajar.
+
+En el caso que hemos comentado y para que todo quede claro seria:
+
+Software en la nube:
+
+HTML + CSS + JS -(jQuery)(Bootstrap)
+PHP - JEE - Python
+MySQL - SQLite - PostgreSQL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
