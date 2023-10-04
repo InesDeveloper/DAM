@@ -1,6 +1,6 @@
-Sistemas de gestión empresarial Practica 2
+Sistemas de gratión empresarial Practica 2
 
-Vamos a plantear el desarrollo de un programa informático.
+Vamos a plantear el desarrollo de un programa informatico.
 
 Primero vamos a desarrollar un software generalista, teniendo una idea más o menos clara pero sin ser la idea definitiva.
 
@@ -14,7 +14,7 @@ Una base de datos es una herramienta para recopilar y organizar información. La
 Dentro del modelo de datos tendremos una tabla llamada usuarios, podemos pintar las tablas en el caso de un documento excel, un pequeño esquema uml.
 Usuarios tendrá, identificador, nombre, apellido, contraseña, email, etc, hay que ver que campos son los que realmente vamos a utilizar.
 
-Una vez que tenemos los usuarios creamos los documentos, en el cual tenemos el identificador, id usuario al que pertenece el documento, podemos tener un idtipode documento, y esto nos hace que creemos una nueva tabla de tipo de documento el cual tenga un identificador y un tipo. Ponemos las claves primarias y las foraneas y así podemos ver 3 tablas con las que poder trabajar como modelo de datos de la aplicación que queremos crear, eso es lo principal aunque luego vayan saliendo más.
+Una vez que tenemos los usuarios creamos los documentos, en el cual tenemos el identificador, id usuario al que pertenece el documento, podemos tener un idtipode documento, y esto nos hace que creemos una nueva tabla de tipo de documento el cual tenga un identificador y un tipo. Ponemos las claves primarias y las foraneas y asi podemos ver 3 tablas con las que poder trabajar como modelo de datos de la aplicación que queremos crear, eso es lo principal aunque luego vayan saliendo más.
 
 Los documentos que se admitirán formalmente serán documentos de texto, hojas de cálculo y presentaciones.
 
@@ -24,7 +24,7 @@ Le ponemos un nombre al proyecto como por ejemplo Docs, que aunque no sea un nom
 
 Vamos a tener un usuario que estará por encima de todo para que cada uno pueda crear lo que necesite, o compartir sus documentos, poco a poco vamos a establecer más parámetros para el modelo de datos como por ejemplo la fecha de creación, especificar en un campo booleano si el documento esta compartido o no y si ese documento puede ser visto desde el panel de control de otros usuarios.
 
-En el momento que compartimos el documento, el documento no debería de estar dentro de la tabla de documentos ya que seria de uno a n, aunque si esta en otra tabla puede que no se quede tan claro el modelo de datos ya que lo que hagamos después luego puede ser peor. Lo mejor siempre es ir haciendo pruebas para saber que es lo mejor para la creación de nuestra aplicación y que todo quede lo más claro y optimizado posible.
+En el momento que compartimos el documento, el documento no deberia de estar dentro de la tabla de documentos ya que seria de uno a n, aunque si esta en otra tabla puede que no se quede tan claro el modelo de datos ya que lo que hagamos después luego puede ser peor. Lo mejor siempre es ir haciendo pruebas para saber que es lo mejor para la creación de nuestra aplicación y que todo quede lo más claro y optimizado posible.
 
 Hay que especificar los datos, si es un entero, un varchar, los caracteres que tendrán, que haga que la base de datos no vaya muy lenta.
 
@@ -37,7 +37,7 @@ El coger el balance entre ser ambicioso y realista es algo que cuesta a la hora 
 
 Existen varias metodologías de software, hacer la aplicación como un software de escritorio, que en el caso que hemos definido si es de escritorio no nos sirve puesto que queremos que múltiples personas accedan a nuestro programa.
 
-También tenemos el software móvil. Habría que hacer un estudio de mercado para ver si para móvil valdría la pena o no.
+También tenemos el software móvil. Habría que hacer un estudio de mercado para ver si para movil valdria la pena o no.
 
 Y por ultimo planteamos el software en la nube que ahora mismo es la tendencia, ya que trabajar en la nube nos permite tener un punto de vista colaborativo.
 
@@ -64,7 +64,7 @@ Tenemos que definir cual va a ser el diagrama de flujo de nuestra aplicación co
                                
                                
                                
-Una vez elegido el tipo de software vamos a ver en que lenguaje lo hacemos.
+Una vez elegido el tipo de software vamosa ver en que lenguaje lo hacemos.
 
 - Software de escritorio = Win- Mac - Linux.
 - Software móvil = Android - IOS - Java - Kotlin - swift.
