@@ -8,7 +8,7 @@
         <table border=0 width=100% height=100%> <!-- Estructura del contenido gestionado con una tabla -->
             <tr height=20px id="menu"> <!-- Fila y columna para el título de la página -->
                 <td>
-                    Menu
+                    Nombre Documento
                 </td>
             </tr>
             <tr height=20px id="barranombredocumento"> <!-- Campo de texto para escribir el nombre del documento -->
@@ -19,7 +19,6 @@
             </tr>
             <tr height=50px id="herramientas"> <!-- Barra de herramientas con las opciones de personalización -->
                 <td>
-                    <button id="guardar">Guardar</button> <!-- Botón de guardar -->
                     <select id="tipotexto"> <!-- Desplegable con los tipos de estilos para el texto -->
                         <option value="p">Texto de parrafo</option>
                         <option value="h1">Encabezado 1</option>
@@ -47,6 +46,7 @@
                     <button id="underline">U</button> <!-- Botón de subrayado para el texto -->
                     <input type="color" id="fontcolor"> <!-- Campo de formulario para seleccionar el color de la fuente -->
                 </td>
+                <td><button id="guardar">Guardar</button> <!-- Botón de guardar --></td>
             </tr>
             <tr>
                 <td id="fondopagina"> <!-- Fila y columna para gestionar el documento donde escribiremos -->
