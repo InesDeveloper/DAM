@@ -19,11 +19,10 @@ class Personaje{
     mueve(){
         /* El personaje va perdiendo vida*/
         this.tiemponacimiento += 1;
-        /* Actualiza la posición del personaje*/
-        this.x -= Math.cos(this.direccion);
-        this.y -= Math.sin(this.direccion);
-
-        // cambiadireccion();
+        
+        if(this.tiemponacimiento % 100 == 0){
+            this.cambiadireccion();
+        }
         
         /* Actualizamos el angulo en radianes según la nomenclatura de angulos de 0 a 3 */
         if(this.direccionisometrica == 0){
@@ -35,6 +34,11 @@ class Personaje{
         }else if(this.direccionisometrica == 3){
             this.direccion = Math.PI*1.5;
         }
+        
+         /* Actualiza la posición del personaje*/
+        this.x -= Math.cos(this.direccion); 
+        this.y -= Math.sin(this.direccion);
+        
         /* Va cambiando de estado de animacion para caminar*/
         this.estadoanim++;
         if(this.estadoanim > 7){this.estadoanim = 0;}
@@ -51,6 +55,19 @@ class Personaje{
         /* Calcula las colisiones */
         this.colisiona();
     }
+    
+    persigue(){
+        this.estadoanim++;
+        if(this.estadoanim > 7){this.estadoanim = 0;}
+        
+        this.x -= (this.x - posx)/100;
+        this.y -= (this.y - posy)/100;
+        
+        this.x -= Math.cos(this.direccion);
+        this.y -= Math.sin(this.direccion);
+        
+    }
+      
     cambiadireccion(){
         /* Aqui le indicamos al programa que el personaje cambia de dirección cada 100 U de vida */
         if(this.tiemponacimiento % 100 == 0){this.direccionisometrica = Math.floor(Math.random()*4);}
@@ -66,7 +83,10 @@ class Personaje{
             || 
             this.y < terrenoy1
         ){
-            this.direccion += Math.PI;
+            if(this.direccionisometrica == 1){this.direccionisometrica = 3;}
+            else if(this.direccionisometrica == 3){this.direccionisometrica = 1;}
+            else if(this.direccionisometrica == 0){this.direccionisometrica = 2;}
+            else if(this.direccionisometrica == 2){this.direccionisometrica = 0;}
  
         }
     }

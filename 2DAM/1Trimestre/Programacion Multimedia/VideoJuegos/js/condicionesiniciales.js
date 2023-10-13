@@ -22,20 +22,31 @@ imagennpcmuerto.src = "img/personajemuerto.png"; /* Usamos esta imagen cuando al
 var imagenpersonaje = new Image();
 imagenpersonaje.src = "img/personajeamarillo.png";
 
+var imagenpremio = new Image();
+imagenpremio.src = "img/logo.png";
+
 /* Introduzco la lista de los personajes */
-var numeropersonajes = 20;
+var numeropersonajes = 5;
 var arraypersonajes = new Array();
 
 /* Propiedades Protagonista */
-var posx = 0;
-var posy = 0;
+var posx = 1000;
+var posy = 200;
 var estadoanimacion = 0;
 var angulo = 0;
 var velocidad = 5;
 var direccion= 0;
+var energia = 100;
 
 /* Aquí introducimos las coordenadas mínimas y máximas del terreno en el cual se van a mover los npc*/
 var terrenox1 = 600;
-var terrenoy1 = -200;
+var terrenoy1 = -300;
 var terrenox2 = 1400;
-var terrenoy2 = 600;
+var terrenoy2 = 500;
+
+var premiox = 800;
+var premioy = 400;
+
+var nivel = 1;
+
+var pausa = false;
