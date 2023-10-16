@@ -57,7 +57,7 @@
                     ejecucion = []
                     ejecucion[0] = $("#beginPlay").attr("id")
                     destino = $("#beginPlay").attr("exectarget")
-                    nodoactual = $("beginPlay");
+                    nodoactual = $("#beginPlay");
                     while(nodoactual.attr("id") != 'undefined') {
                         destino = $(".nodo[id='"+nodoactual.attr("exectarget")+"']");
                         nodoactual = $(".nodo[id='"+nodoactual.attr("exectarget")+"']");
