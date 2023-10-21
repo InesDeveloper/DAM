@@ -74,3 +74,6 @@ connection {
     z-index: 0;
     border-radius: 20px;
 }
+.selected{
+    box-shadow: 0px 0px 30px yellow;
+}

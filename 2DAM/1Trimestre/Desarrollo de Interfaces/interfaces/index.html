@@ -11,6 +11,44 @@
         <script> // Estilo y funcionalidad de jquery a las clases e identificadores
             var ejecucion = new Array();
             $(document).ready(function(){
+                
+                $.ajax({
+                    type:"GET",
+                    url:"ref/javascript.xml",
+                    cache:false,
+                    dataType:"xml",
+                    success: function(xml) {
+                        console.log("vamos")
+                        categorias = $(xml).find("category")
+                        for(var i = 0;i<categorias.length;i++){
+                            console.log($(categorias[i]).attr("id"));
+                            $("#biblioteca").append('<h3>'+$(categorias[i]).attr("id")+'</h3>')
+                            cadena = '';
+                            cadena += '<div>';
+                            contenido = $(categorias[i]).find("instruction")
+                            for(var j = 0;j < contenido.length; j++){
+                                console.log(contenido[j].innerHTML)
+                                cadena += '<li>'+contenido[j].innerHTML+'</li>'
+                            }
+                            cadena += '</div>'
+                            $("#biblioteca").append(cadena)
+                        }
+                        setTimeout(function(){
+                            $("#biblioteca").accordion();
+                        },1000)
+                        
+                        /*
+                        $(xml).find('members').each(function(){
+                            var name = $(this).find("name").text()
+                            alert(name);
+                        });
+                        */
+                    },error:function(err){
+                        console.log(err)
+                    }
+                    
+                });
+                
                 for(var i = 0; i < localStorage.length; i++){
                     clave = localStorage.key(i)
                     valor = localStorage.getItem(localStorage.key(i));
@@ -18,10 +56,14 @@
                     $(".nodo[id='"+clave+"']").css("top", valor.split(",")[1])
                 }
                 $(".nodo").each(function(){
-                            if($(this).attr("exectarget") != ''){
-                                $(this).connections({ to: ".nodo[id='"+$(this).attr("exectarget")+"']" });
-                            }
-                        })
+                    if($(this).attr("exectarget") != ''){
+                        $(this).connections({ to: ".nodo[id='"+$(this).attr("exectarget")+"']" });
+                    }
+                })
+                $(".nodo").click(function(){
+                    $(".nodo").removeClass("selected")
+                    $(this).addClass("selected")
+                })
                 $("#tabs").tabs();
                 $("#biblioteca").accordion();
                 $("#parametros").accordion();
@@ -264,5 +306,6 @@
                 </tr>
             </table>
         </div>
+        <div id="ajax"></div>
     </body>
 </html>
