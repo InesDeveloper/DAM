@@ -8,7 +8,13 @@
             var trabajadores = new Array();                                     //Los trabajadores son una nueva colección donde cada uno pone un Worker
             var personajes = new Array();
             var contexto = document.getElementById("lienzo").getContext("2d")   //Especifico un contexto en el que voy a dibujar
-            var temporalizador;                                                 //Creo un nuevo temporalizador vacío
+            var temporalizador;
+            var comida = new Array();
+            var numerocomida = 20;
+            for(var i = 0;i<numerocomida;i++){
+                comida[i] = {x:Math.random()*512,y:Math.random()*512}
+            }
+            //Creo un nuevo temporalizador vacío
             for(var i = 0;i<numerotrabajadores;i++){                            //Para cada uno de los trabajadores
                 trabajadores[i] = new Worker("tarea8.js");                      //dentro de la colección les asigno un trabajador
                 trabajadores[i].postMessage({id:i})
@@ -30,6 +36,14 @@
             function bucle(){                                                   //Define la funcion del bucle
                 contexto.fillStyle = "rgba(255,255,255,0.1)"                    
                 contexto.fillRect(0,0,512,512)
+                
+                for(var i = 0;i<numerocomida;i++){
+                    contexto.fillStyle = "red"
+                    contexto.beginPath();
+                    contexto.arc(comida[i].x, comida[i].y,5,0,Math.PI*2,true)
+                    contexto.fill();
+                }
+                
                 for(var i = 0;i<numerotrabajadores;i++){
                     contexto.fillStyle = "rgb("+personajes[i].r+","+personajes[i].g+","+personajes[i].b+")"
 //                    contexto.fillRect(personajes[i].x,personajes[i].y,personajes[i].tam,personajes[i].tam) // Dibuja un rectangulo
@@ -37,7 +51,7 @@
                     contexto.arc(personajes[i].x,personajes[i].y,personajes[i].tam,personajes[i].tam,2*Math.PI+personajes[i].tam);    // Pinta un circulo
                     contexto.fill();                                            // Rellena la figura con un color
                     contexto.stroke();                                          // Dibuja el path, pinta el borde
-                    trabajadores[i].postMessage({id:i,otros:personajes})
+                    trabajadores[i].postMessage({id:i,otros:personajes,comida:comida})
                 }
                 
                 clearTimeout(temporalizador)                                    //Elimino el temporizador anterior para refrescarlo
