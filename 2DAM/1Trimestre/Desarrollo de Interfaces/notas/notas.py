@@ -13,6 +13,11 @@ print("el contenido de tu nota es: "+nota)  # La muestro por pantalla
 
 for i in range(0,10):                                                   # Permito al usuario introducir varias notas
     print("Introduce el contenido de la siguiente nota en la lista")    # Le digo al usuario lo que espero que haga
-    notas.append(input())                                               # Añado una nueva nota vacía a la lista
-    print("El contenido de tu nota es: ")                               # Saco la entrada del usuario por pantalla
-    print(notas)
+    entrada = input()                                                   # Capturo la entrada del usuario
+    if entrada == "salir":                                              # Si lo que el usuario introduce es "salir"
+        break                                                           # Salgo del bucle
+    else:                                                               # En caso contrario
+        notas.append(entrada)                                           # Añado una nueva nota vacía a la lista
+        print("Has introducido una nueva nota")                         # Saco la entrada del usuario por pantalla
+
+print(notas)                                                        # Imprimo la lista de notas
