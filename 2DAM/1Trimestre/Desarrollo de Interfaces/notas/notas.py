@@ -1,5 +1,10 @@
 # Programa notas (c) 2023 Inés Martínez Sánchez
 
+import sqlite3 as bd                        # Importo la librería de SQLite
+
+
+conexion = bd.connect("notas.sqlite")       # Indico el nombre de la base de datos
+
 # Créditos iniciales
 print("Programa notas")                     # Indico el nombre del programa
 print("(c) 2023 Inés Martínez Sánchez")     # Indico el autor
