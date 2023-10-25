@@ -1,7 +1,7 @@
 # Programa notas (c) 2023 Inés Martínez Sánchez
 
 import sqlite3 as bd                        # Importo la librería de SQLite
-
+import time                                 # Importo la librería de tratamiento de fechas
 
 conexion = bd.connect("notas.sqlite")       # Indico el nombre de la base de datos
 cursor = conexion.cursor()                  # Creo un cursor
@@ -42,14 +42,20 @@ notas = []                                  # Creo una lista vacía
 print("Introduce el usuario")               # Le digo al usuario lo que espero que haga
 usuario = input()                           # Almaceno la entrada del usuario en la variable
 print("El usuario es: "+usuario)            # La muestro por pantalla
+print("Introduce la contraseña")            # Le solicito al usuario la contraseña
+contrasena = input()                        # Entrada de usuario
+print("Introduce el email")                 # Le solicito al usuario su email
+email = input()                             # Entrada de usuario
+cursor.execute("INSERT INTO usuarios VALUES(NULL,'"+usuario+"','"+contrasena+"','"+email+"');") # Inserto el usuario en la base de datos
+conexion.commit()                                                       # Ejecuto la inserción
 
 for i in range(0,10):                                                   # Permito al usuario introducir varias notas
     print("Introduce el contenido de la siguiente nota en la lista")    # Le digo al usuario lo que espero que haga
     entrada = input()                                                   # Capturo la entrada del usuario
     print("Introduce el color de la nota")                              # Le solicito al usuario el color de la nota
     color = input()                                                     # Capturo el color de la nota
-    print("Introduce la fecha de la nota")                              # Le solicito al usuario la fecha de la nota
-    fecha = input()                                                     # Capturo la fecha de la nota
+    # print("Introduce la fecha de la nota")                            # Le solicito al usuario la fecha de la nota
+    fecha = str(int(time.time()))                                       # Capturo la fecha de la nota
     if entrada == "salir":                                              # Si lo que el usuario introduce es "salir"
         break                                                           # Salgo del bucle
     else:                                                               # En caso contrario
