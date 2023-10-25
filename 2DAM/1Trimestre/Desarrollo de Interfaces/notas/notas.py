@@ -4,6 +4,27 @@ import sqlite3 as bd                        # Importo la librería de SQLite
 
 
 conexion = bd.connect("notas.sqlite")       # Indico el nombre de la base de datos
+cursor = conexion.cursor()                  # Creo un cursor
+# Sobre el cursor, ejecuto una petición para crear una tabla en la base de datos en el caso de que no exista anteriormente
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS 'notas'(
+        'id' INTEGER,
+        'texto' TEXT,
+        'color' TEXT,
+        'fecha' TEXT,
+        PRIMARY KEY('id' AUTOINCREMENT)
+    );
+""")
+# Sobre el cursor, ejecuto una petición para crear una tabla de usuarios en el caso de que no exista
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS 'usuarios'(
+        'id' INTEGER,
+        'usuario' TEXT,
+        'contrasena' TEXT,
+        'email' TEXT,
+        PRIMARY KEY('id' AUTOINCREMENT)
+    )
+""")
 
 # Créditos iniciales
 print("Programa notas")                     # Indico el nombre del programa
@@ -15,12 +36,12 @@ class Nota:                                 # Declaramos una clase
         self.color = color                  # Propiedad color
         self.fecha = fecha                  # Propiedad fecha
     
-nota = "Esta es mi primera nota"            # Creo un valor inicial para la variable
+usuario = "Esta es mi primera nota"         # Creo un valor inicial para la variable
 notas = []                                  # Creo una lista vacía
     
-print("Introduce el contenido de tu nota")  # Le digo al usuario lo que espero que haga
-nota = input()                              # Almaceno la entrada del usuario en la variable
-print("el contenido de tu nota es: "+nota)  # La muestro por pantalla
+print("Introduce el usuario")               # Le digo al usuario lo que espero que haga
+usuario = input()                           # Almaceno la entrada del usuario en la variable
+print("El usuario es: "+usuario)            # La muestro por pantalla
 
 for i in range(0,10):                                                   # Permito al usuario introducir varias notas
     print("Introduce el contenido de la siguiente nota en la lista")    # Le digo al usuario lo que espero que haga
@@ -40,3 +61,5 @@ for i in notas:                                                         # Para c
     print(i.texto)                                                      # Imprimo su contenido
     print(i.color)                                                      # Imprimo su color
     print(i.fecha)                                                      # Imprimo su fecha
+    cursor.execute("INSERT INTO notas VALUES(NULL,'"+i.texto+"','"+i.color+"','"+i.fecha+"');") # Inserto una a una las notas en la base de datos
+    conexion.commit()                                                   # Ejecuto la inserción
