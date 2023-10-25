@@ -2,6 +2,7 @@
 
 import sqlite3 as bd                        # Importo la librería de SQLite
 import time                                 # Importo la librería de tratamiento de fechas
+import re                                   # Importo la librería de expresiones regulares
 
 conexion = bd.connect("notas.sqlite")       # Indico el nombre de la base de datos
 cursor = conexion.cursor()                  # Creo un cursor
@@ -46,8 +47,17 @@ print("Introduce la contraseña")            # Le solicito al usuario la contras
 contrasena = input()                        # Entrada de usuario
 print("Introduce el email")                 # Le solicito al usuario su email
 email = input()                             # Entrada de usuario
-cursor.execute("INSERT INTO usuarios VALUES(NULL,'"+usuario+"','"+contrasena+"','"+email+"');") # Inserto el usuario en la base de datos
-conexion.commit()                                                       # Ejecuto la inserción
+
+expresion = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')         # Creo una ER para un correo electrónico
+
+if re.fullmatch(expresion,email):                                       # Valido el correo electrónico del usuario
+    print("Tu correo electrónico es válido")                            # Le digo que es correcto
+    cursor.execute("INSERT INTO usuarios VALUES(NULL,'"+usuario+"','"+contrasena+"','"+email+"');") # Inserto el usuario en la base de datos
+    conexion.commit()                                                                               # Ejecuto la inserción
+else:                                                                   # Si no es válido
+    print("Tu correo electrónico no es válido")                         # Le digo que no es correcto
+    
+                                                      
 
 for i in range(0,10):                                                   # Permito al usuario introducir varias notas
     print("Introduce el contenido de la siguiente nota en la lista")    # Le digo al usuario lo que espero que haga
