@@ -1,10 +1,11 @@
 /* En la función de inicio cargamos todas las condiciones iniciales del juego */ 
 function inicio(){
     /* Creo una instancia del objeto o personaje dentro de cada uno de los elementos de la colección */
+    /*
     for(var i = 0;i<numeropersonajes;i++){
         arraypersonajes[i] = new Personaje;
     }
-
+    */
     /* Ahora lanzo la ejecución del bucle */
     temporizador = setTimeout("bucle()",1000);
     
@@ -47,4 +48,8 @@ function inicio(){
         document.getElementById("contenedor").width = anchuranavegador;
         
     })
+    
+    posinicialjugador()
+    creaenemigos()
+    creaobjetivo()
 } 

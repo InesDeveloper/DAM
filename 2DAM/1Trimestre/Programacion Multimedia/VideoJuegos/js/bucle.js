@@ -5,10 +5,34 @@ function bucle(){
     contextopunto.clearRect(0,0,512,512);
     contextopunto.fillRect(posx/50,posy/50,5,5)
     dibujaterreno();
+    
+    /* Colision del personaje con el terreno */
+    var pixelpersonaje = contextomapa.getImageData(Math.round(posx/50)+1,Math.round(posy/50)+1,1,1)
+    for(var i = 0;i<pixelpersonaje.data.length;i+=4){
+        var cr = pixelpersonaje.data[i];
+        var cg = pixelpersonaje.data[i+1];
+        var cb = pixelpersonaje.data[i+2];
+        var ca = pixelpersonaje.data[i+3];
+        
+        if(ca == 0){
+            console.log("te has caido")
+            velocidadz *= 1.3;
+            posz += velocidadz;
+        }
+    }
+    
+    if(posz > 800){
+        window.location = window.location;
+    }
+    
     var mediopantallax = anchuranavegador/2;
     var mediopantallay = alturanavegador/2;
-    if(isox(posx,posy)+desfasex < mediopantallax){desfasex+=velocidaddesfase;}else{desfasex-=velocidaddesfase;}
-    if(isoy(posx,posy)+desfasey < mediopantallay){desfasey+=velocidaddesfase;}else{desfasey-=velocidaddesfase;}
+    /*
+    if(isox(posx,posy)+desfasex <= mediopantallax){desfasex+=velocidaddesfase;}else{desfasex-=velocidaddesfase;}
+    if(isoy(posx,posy)+desfasey <= mediopantallay){desfasey+=velocidaddesfase;}else{desfasey-=velocidaddesfase;}
+    */
+    desfasex = mediopantallax - isox(posx,posy)
+    desfasey = mediopantallay - isoy(posx,posy)
     /* Y te damos en todos los elementos del array uno a uno y realizamos las operaciones */
     for(var i = 0;i<numeropersonajes;i++){
         
@@ -21,6 +45,7 @@ function bucle(){
                     arraypersonajes[i].mueve();
                 } else {
                     arraypersonajes[i].persigue();
+                    //arraypersonajes[i].mueve();
                 }
                      
             }else{
@@ -38,40 +63,56 @@ function bucle(){
             if(arraypersonajes[i].direccionisometrica == 3){ytemp = 1536;}
 
         /* Dibujo al personaje */
-        var nuevaimagennpc;
         /* Si el personaje se queda sin vida usamos la imagenmuerto, sino usamos la de personajeazul*/
         if(arraypersonajes[i].muerto == true) {
-            nuevaimagennpc = imagennpcmuerto;
+            imagennpc = imagennpcmuerto;
         } else {
-            nuevaimagennpc = imagennpc1;
+            if(arraypersonajes[i].color == 0){imagennpc = imagennpc1;}
+            else if(arraypersonajes[i].color == 1){imagennpc = imagennpc2;}
+            else if(arraypersonajes[i].color == 2){imagennpc = imagennpc3;}
+            else if(arraypersonajes[i].color == 3){imagennpc = imagennpc4;}
+            else if(arraypersonajes[i].color == 4){imagennpc = imagennpc5;}
+            else if(arraypersonajes[i].color == 5){imagennpc = imagennpc6;}
         }
         
-        contexto.drawImage(
-            nuevaimagennpc,
-            arraypersonajes[i].estadoanim*256,
-            ytemp+256,
-            256,
-            256,
-            isox(arraypersonajes[i].x,arraypersonajes[i].y)+desfasex,
-            isoy(arraypersonajes[i].x,arraypersonajes[i].y)+desfasey,
-            128,
-            128
-        );
-        
-        /* Dibujo la barra de energía */
-        contexto.fillStyle = "black";
-        contexto.fillRect(
-           isox(arraypersonajes[i].x,arraypersonajes[i].y)+32+desfasex,
+        if(
+            isox(arraypersonajes[i].x,arraypersonajes[i].y)+desfasex > -100
+            &&
+            isox(arraypersonajes[i].x,arraypersonajes[i].y)+desfasex < anchuranavegador
+            &&
+            isoy(arraypersonajes[i].x,arraypersonajes[i].y)+desfasey > -100
+            &&
+            isoy(arraypersonajes[i].x,arraypersonajes[i].y)+desfasey < alturanavegador
+        )
+        {           
+            contexto.drawImage(
+                imagennpc,
+                arraypersonajes[i].estadoanim*256,
+                ytemp+256,
+                256,
+                256,
+                isox(arraypersonajes[i].x,arraypersonajes[i].y)+desfasex,
                 isoy(arraypersonajes[i].x,arraypersonajes[i].y)+desfasey,
-           64,10
-        )
-        contexto.fillStyle = "pink";
-        contexto.fillRect(
-           isox(arraypersonajes[i].x,arraypersonajes[i].y)+32+2+desfasex,
-                isoy(arraypersonajes[i].x,arraypersonajes[i].y+2)+desfasey,
-                60*(arraypersonajes[i].energia/100)
-            ,6
-        )
+                128,
+                128
+            );
+            
+            /* Dibujo la barra de energía */
+            contexto.fillStyle = "black";
+            contexto.fillRect(
+               isox(arraypersonajes[i].x,arraypersonajes[i].y)+32+desfasex,
+                    isoy(arraypersonajes[i].x,arraypersonajes[i].y)+desfasey,
+               64,10
+            )
+            contexto.fillStyle = "pink";
+            contexto.fillRect(
+               isox(arraypersonajes[i].x,arraypersonajes[i].y)+32+2+desfasex,
+                    isoy(arraypersonajes[i].x,arraypersonajes[i].y+2)+desfasey,
+                    60*(arraypersonajes[i].energia/100)
+                ,6
+            )
+        }
+        
     }
     
     /* ////////////////////////////Vamos con el personaje protagonista //////////////////////////////////*/
@@ -84,7 +125,7 @@ function bucle(){
                 256,
                 256,
                 isox(posx,posy)+desfasex,
-                isoy(posx,posy)+desfasey,
+                isoy(posx,posy)+desfasey+posz,
                 128,
                 128
             );

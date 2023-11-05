@@ -3,6 +3,7 @@ var contexto = document.getElementById("lienzo").getContext("2d");
 var contextofondo = document.getElementById("lienzofondo").getContext("2d");
 var contextomapa = document.getElementById("lienzomapa").getContext("2d");
 var contextopunto = document.getElementById("lienzopunto").getContext("2d");
+pixelesmapa = contextomapa.getImageData(0,0,512,512);
 
 contextopunto.fillStyle = "red";
 /* Aqui voy a declarar las variables globales a todo el programa */
@@ -19,14 +20,25 @@ document.getElementById("contenedor").height = alturanavegador;
 document.getElementById("contenedor").width = anchuranavegador;
 
 /* En esta zona cargamos las imágenes que vamos a utilizar en el videojuego */ 
+var imagennpc = new Image();
 var imagennpc1 = new Image();
-imagennpc1.src = "img/personajes/personajeazul.png";
+imagennpc1.src = "img/personajes/personajerojo.png";
+var imagennpc2 = new Image();
+imagennpc2.src = "img/personajes/personajeverde.png";
+var imagennpc3 = new Image();
+imagennpc3.src = "img/personajes/personajeazul.png";
+var imagennpc4 = new Image();
+imagennpc4.src = "img/personajes/personajeamarillo.png";
+var imagennpc5 = new Image();
+imagennpc5.src = "img/personajes/personajecyan.png";
+var imagennpc6 = new Image();
+imagennpc6.src = "img/personajes/personajemagenta.png";
+
 var imagennpcmuerto = new Image();
 imagennpcmuerto.src = "img/personajes/personajemuerto.png"; /* Usamos esta imagen cuando al personaje azul se le termine la vida*/
 
-
 var imagenpersonaje = new Image();
-imagenpersonaje.src = "img/personajes/personajeamarillo.png";
+imagenpersonaje.src = "img/personajes/personaje.png";
 
 var mapa = new Image();
 mapa.src = "img/mapas/mapa2.png";
@@ -38,12 +50,14 @@ var imagenpremio = new Image();
 imagenpremio.src = "img/items/premio.png";
 
 /* Introduzco la lista de los personajes */
-var numeropersonajes = 5;
+var numeropersonajes = 0;
 var arraypersonajes = new Array();
 
 /* Propiedades Protagonista */
 var posx = 1000;
 var posy = 200;
+var posz = 0;
+var velocidadz = 1;
 var estadoanimacion = 0;
 var angulo = 0;
 var velocidad = 5;

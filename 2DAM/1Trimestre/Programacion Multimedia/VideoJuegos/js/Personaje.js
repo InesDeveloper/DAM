@@ -9,7 +9,7 @@ class Personaje{
         this.direccion = Math.PI*2*Math.random();
         this.direccionverdadera = Math.PI*2*Math.random();
         this.direccionisometrica = Math.floor(Math.random()*4);
-        this.color = "#ff0000";
+        this.color = Math.floor(Math.random()*5);
         this.estadoanim = Math.floor(Math.random()*7);
         this.energia = 100;
         this.muerto = false;
@@ -65,7 +65,7 @@ class Personaje{
         
         this.x -= Math.cos(this.direccion);
         this.y -= Math.sin(this.direccion);
-        
+        this.colisiona()
     }
       
     cambiadireccion(){
@@ -74,6 +74,7 @@ class Personaje{
         
     }
     colisiona(){
+        /*
         if(
             this.x > terrenox2 
             || 
@@ -88,6 +89,15 @@ class Personaje{
             else if(this.direccionisometrica == 0){this.direccionisometrica = 2;}
             else if(this.direccionisometrica == 2){this.direccionisometrica = 0;}
  
+        }
+        */
+        var colisionapixel = contextomapa.getImageData(this.x/50+1,this.y/50+1,1,1);
+        var alpha = colisionapixel.data[3];
+        if(alpha == 0){
+            if(this.direccionisometrica == 1){this.direccionisometrica = 3;}
+            else if(this.direccionisometrica == 3){this.direccionisometrica = 1;}
+            else if(this.direccionisometrica == 0){this.direccionisometrica = 2;}
+            else if(this.direccionisometrica == 2){this.direccionisometrica = 0;}
         }
     }
     pierdeenergia(){
