@@ -18,6 +18,8 @@ select{
     color: azure;
     padding: 20px;
     font-family: monospace;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 #seleccionacampos{
     columns: 3;
@@ -38,4 +40,18 @@ table tr:nth-child(odd){
 }
 table tr td{
     padding: 10px;
+}
+.condicion{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#seccionacondiciones{
+    columns: 3;
+}
+input[type="text"],input[type="number"]{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 100%;
 }
