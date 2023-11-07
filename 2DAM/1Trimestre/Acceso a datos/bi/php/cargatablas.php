@@ -1,3 +1,4 @@
+<option>Selecciona una tabla</option>
 <?php
 
 include "config.php";

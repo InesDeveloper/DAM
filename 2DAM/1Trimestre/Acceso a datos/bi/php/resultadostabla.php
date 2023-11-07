@@ -15,7 +15,7 @@ echo '<p>La busqueda ha devuelto '.$contador.' resultados</p>'
 <table colpadding = 0 colspacing = 0 cellpadding = 0 cellspacing = 0 width = 100%>
 <?php 
  
-$mysqli = new mysqli("localhost","registros","registros","registros");
+//$mysqli = new mysqli("localhost","registros","registros","registros");
 $sql = $_GET['sql']."";
 $result = $mysqli -> query($sql);
 if($row = $result -> fetch_assoc()) {
@@ -26,7 +26,7 @@ if($row = $result -> fetch_assoc()) {
   echo '</tr>';
 } 
     
-$mysqli = new mysqli("localhost","registros","registros","registros");
+//$mysqli = new mysqli("localhost","registros","registros","registros");
 $sql = $_GET['sql'];
 $result = $mysqli -> query($sql);
 while ($row = $result -> fetch_assoc()) {

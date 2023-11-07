@@ -1,5 +1,5 @@
 <?php
 
-$mysqli = new mysqli("localhost","registros","registros","registros");
+$mysqli = new mysqli("localhost","bi","bi","bi");
 
 ?>
