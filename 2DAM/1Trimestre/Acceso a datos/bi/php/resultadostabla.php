@@ -4,10 +4,11 @@ include "config.php";
 $sql = $_GET['sql']."";
 $result = $mysqli -> query($sql);
 $row = $result -> fetch_assoc(); 
-$contador = 0;
-while ($row = $result -> fetch_assoc()){
-    $contador++;
-  } 
+//$contador = 0;
+//while ($row = $result -> fetch_assoc()){
+//    $contador++;
+//} 
+$contador = $result->num_rows;
 echo '<p>La busqueda ha devuelto '.$contador.' resultados</p>'
 ?>
 
