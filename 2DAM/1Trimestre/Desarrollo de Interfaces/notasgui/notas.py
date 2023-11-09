@@ -62,6 +62,13 @@ def iniciaSesion():                         # Funcion de inicio de sesion
             existe = True                   # Actualizo el valor
         if existe == True:                  # En el caso que exista
             print("El usuario que has introducido es correcto")
+            ventanaprincipal = tk.Tk()                              # Creo una interfaz gráfica de usuario
+            ventanaprincipal.title("Notas v0.01")                   # Especifico el título de la ventana
+            ventanaprincipal.geometry('200x200+20+50')              # Geometria de la ventana y margen con la pantalla
+            ventanaprincipal.attributes("-topmost",True)            # Siempre encima del resto de las ventanas
+            ventanaprincipal.attributes("-alpha",0.9)               # Añado un efecto de transparencia
+            ventanaprincipal.resizable(0,0)                         # Impiso que el usuario pueda redimensionar la ventana
+            raiz.destroy()
         else:
             print("El usuario no es correcto")
             raiz.after(3000,lambda:raiz.destroy()) # Se cierra la ventana despues de 3sgd
