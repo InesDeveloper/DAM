@@ -38,7 +38,7 @@ def iniciaSesion():                         # Funcion de inicio de sesion
     print("El email de usuario es:"+varemail.get())
     # Voy a comprobar si existe un usuario en la base de datos
     cursor = conexion.cursor()              # Creo un cursor
-    cursor.execute('SELECT * FROM usuarios') # Ejecuto una petición de seleccionar usuarios
+    cursor.execute('SELECT * FROM usuarios')# Ejecuto una petición de seleccionar usuarios
     datos = cursor.fetchall()               # Cargo los datos
     numerousuarios = 0                      # Creo una variable contador
     for i in datos:                         # Para cada uno de los registros devueltos
@@ -49,6 +49,22 @@ def iniciaSesion():                         # Funcion de inicio de sesion
         conexion.commit()                   # Ejecuto la inserción
     else:                                   # En el caso de que haya usuarios
         print("sí que existe un usuario en la base de datos")
+        cursor.execute('''
+                SELECT *
+                FROM usuarios
+                WHERE usuario = "'''+varusuario.get()+'''"
+                AND contrasena = "'''+varcontrasena.get()+'''"
+                AND email = "'''+varemail.get()+'''"
+                ''')                        # Realizo una consulta a la base de datos
+        existe = False
+        datos = cursor.fetchall()           # Cargo los datos
+        for i in datos:                     # Para cada uno de los registros devueltos
+            existe = True                   # Actualizo el valor
+        if existe == True:                  # En el caso que exista
+            print("El usuario que has introducido es correcto")
+        else:
+            print("El usuario no es correcto")
+            raiz.after(3000,lambda:raiz.destroy()) # Se cierra la ventana despues de 3sgd
  
 # CREACIÓN DE LA VENTANA PRINCIPAL Y ESTILO DE LA VENTANA #
 
