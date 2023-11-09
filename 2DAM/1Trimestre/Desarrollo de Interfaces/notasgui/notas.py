@@ -45,6 +45,8 @@ def iniciaSesion():                         # Funcion de inicio de sesion
         numerousuarios = numerousuarios +1  # Le sumo un valor al contador
     if(numerousuarios == 0):                # Si no hay usuarios
         print("actualmente no hay ningun usuario en la base de datos")
+        cursor.execute("INSERT INTO usuarios VALUES(NULL,'"+varusuario.get()+"','"+varcontrasena.get()+"','"+varemail.get()+"');") # Inserto el usuario en la base de datos
+        conexion.commit()                   # Ejecuto la inserción
     else:                                   # En el caso de que haya usuarios
         print("sí que existe un usuario en la base de datos")
  
