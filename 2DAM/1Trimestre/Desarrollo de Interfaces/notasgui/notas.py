@@ -32,11 +32,22 @@ cursor.execute("""
 #DECLARO FUNCIONES PARA EL PROGRAMA
 
 def iniciaSesion():                         # Funcion de inicio de sesion
-    print("Vamos a iniciar sesion")         # Imprime un mensaje en pantalla
+    print("Vamos a iniciar sesión")         # Imprime un mensaje en pantalla
     print("El nombre de usuario es:"+varusuario.get())
     print("La contraseña de usuario es:"+varcontrasena.get())
     print("El email de usuario es:"+varemail.get())
-
+    # Voy a comprobar si existe un usuario en la base de datos
+    cursor = conexion.cursor()              # Creo un cursor
+    cursor.execute('SELECT * FROM usuarios') # Ejecuto una petición de seleccionar usuarios
+    datos = cursor.fetchall()               # Cargo los datos
+    numerousuarios = 0                      # Creo una variable contador
+    for i in datos:                         # Para cada uno de los registros devueltos
+        numerousuarios = numerousuarios +1  # Le sumo un valor al contador
+    if(numerousuarios == 0):                # Si no hay usuarios
+        print("actualmente no hay ningun usuario en la base de datos")
+    else:                                   # En el caso de que haya usuarios
+        print("sí que existe un usuario en la base de datos")
+ 
 # CREACIÓN DE LA VENTANA PRINCIPAL Y ESTILO DE LA VENTANA #
 
 raiz = tk.Tk()                              # Creo una interfaz gráfica de usuario
