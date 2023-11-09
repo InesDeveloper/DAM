@@ -40,6 +40,7 @@
             <h1>Introduce los datos en este formulario</h1>
             <p>En este formulario, puedes itroducir tus datos simplemente rellenando aquellos campos que se te piden</p>
             <?php
+                include "codificador.php";
                 include "controlador.php";
                 $miformulario = new Supercontrolador();
                 if(isset($_POST['clave']) && $_POST['clave'] = 'procesaformulario'){
@@ -47,6 +48,7 @@
                 }else{
                     $miformulario->formulario("entregas");
                 }
+                include "registro.php";
             ?>
         </div>
         

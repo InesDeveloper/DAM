@@ -17,6 +17,7 @@ class Supercontrolador {
                         <p>'.json_decode($fila["Comment"])->descripcion.' - Caracteres mínimo '.json_decode($fila["Comment"])->min.' máximo '.$match[1].'</p>
                         ';
                         if($fila["Null"] == "NO"){echo " <p>* Campo requerido</p>";}
+                        if(json_decode($fila["Comment"])->deshabilitado == "true"){echo " <p>* Campo deshabilitado. Rellenado automatico</p>";}
                         
                         echo'
                         <div class="contienecampo">
@@ -24,12 +25,17 @@ class Supercontrolador {
                         <input type="'.json_decode($fila["Comment"])->tipodato.'" name="'.$fila["Field"].'" id="'.$fila["Field"].'"
                         ';
                             if($fila["Null"] == "NO"){echo " required ";}
-                            if(json_decode($fila["Comment"])->deshabilitado == "true"){echo " disabled ";}
+                            if(json_decode($fila["Comment"])->deshabilitado == "true"){echo " readonly ";}
                             preg_match('#\((.*?)\)#', $fila["Type"], $match);
                             echo '
                             maxlenght = "'.$match[1].'"
                             minlenght = "'.json_decode($fila["Comment"])->min.'"
                             placeholder = "'.json_decode($fila["Comment"])->placeholder.'"
+                            ';
+                            if(isset(json_decode($fila["Comment"])->parametroget)){
+                                echo ' value= "'.$_GET[json_decode($fila["Comment"])->parametroget].'"';
+                            }
+                            echo '
                         >
                         </td><td width="20%">
                         <div class="tipocampo"><i class="'.json_decode($fila["Comment"])->icono.'"></i></div>
@@ -74,12 +80,37 @@ class Supercontrolador {
                 $listadovalores .= ",'".$valor."'";
             }
         }
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        $cabeceras = 'From: noreply@ines.com' . "\r\n" .
+            'Reply-To: noreply@ines.com' . "\r\n" . 
+            'X-Mailer:PHP/' . phpversion();
+        $cabeceras .= 'MIME-Version: 1.0' . "\r\n";
+        $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $mensaje = "<h1>Has enviado un formulario al sistema de entregas</h1><br><p>Comprobante de los cambios que has enviado desde el formulario</p><br>";
+        foreach($_POST as $nombre_campo => $valor){
+            if($nombre_campo != 'tabla' && $nombre_campo != 'clave'){    
+                $mensaje .="".ucfirst($nombre_campo).": <br>".$valor."</b><br>";
+            }
+        }
+        
+        $mensaje .= "<br><p>Puedes consultar tus entregas previamente realizadas haciendo click:";
+        $mensaje .= "<a href='http://localhost:8888/supercrud/informe.php?clave=".codifica($_POST['email'])."'>Aquí</a></p>";
+        $mensaje .= "<p style='color:red;'>IMPORTANTE: Este enlace contiene una clave con tu identificación - no compartas este correo electrónico con nadie</p><br>";
+        
+        mail(
+            $_POST['email'],
+            "Formulario enviado",
+            $mensaje,
+            $cabeceras
+        );
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
         $mysqli = new mysqli($mydbserver, $mydbuser, $mydbpassword, $mydb);
         $consulta = "INSERT INTO ".$_POST['tabla']." (Identificador".$listadocolumnas.") VALUES (NULL".$listadovalores.")";
         //echo $consulta;
         
         $mysqli->query($consulta);
+        include "registro.php";
         echo '
             <div class="notice">
                 <h1>Registro guardado correctamente</h1>
