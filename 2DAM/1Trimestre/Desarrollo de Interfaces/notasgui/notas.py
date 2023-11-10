@@ -112,7 +112,7 @@ def creaNota():
     texto = tk.Text(ventananuevanota,bg="white")
     texto.pack()
     identificadorpropio = identificador
-    selectorcolor = ttk.Button(ventananuevanota,text="Cambiar color",command=lambda:cambiaColor(ventananuevanota,texto,identificador))
+    selectorcolor = ttk.Button(ventananuevanota,text="Cambiar color",command=lambda:cambiaColor(ventananuevanota,texto,identificadorpropio,))
     selectorcolor.pack()
     identificador = identificador + 1       # Subo el identificador
 
