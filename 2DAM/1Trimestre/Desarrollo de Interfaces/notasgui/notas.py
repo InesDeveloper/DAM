@@ -58,7 +58,7 @@ def iniciaSesion():                         # Funcion de inicio de sesion
                 AND email = "'''+varemail.get()+'''"
                 ''')                        # Realizo una consulta a la base de datos
         existe = False
-        existe = True
+        existe = True                       # Fuerzo para no tener que validar durante el desarrollo
         datos = cursor.fetchall()           # Cargo los datos
         for i in datos:                     # Para cada uno de los registros devueltos
             existe = True                   # Actualizo el valor
@@ -90,10 +90,10 @@ def creaNota():
     ventananuevanota.geometry(str(anchura)+'x'+str(altura)+'+100+100') # Geometria de la ventana y margen con la pantalla
     texto = tk.Text(ventananuevanota,bg="white")
     texto.pack()
-    selectorcolor = ttk.Button(ventananuevanota,text="Cambiar color",command=lambda:cambiaColor(ventananuevanota))
+    selectorcolor = ttk.Button(ventananuevanota,text="Cambiar color",command=lambda:cambiaColor(ventananuevanota,texto))
     selectorcolor.pack()
 
-def cambiaColor(ventana):                   # Creo la funcion de cambio de color
+def cambiaColor(ventana,texto):                   # Creo la funcion de cambio de color
     nuevocolor = askcolor(title="Selecciona un color") # Saco un selector de color
     ventana.configure(bg = nuevocolor[1])   # Cambio el color de fondo a la ventana seleccionada
  
