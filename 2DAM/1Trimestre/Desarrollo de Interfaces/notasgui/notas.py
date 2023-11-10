@@ -89,9 +89,20 @@ def iniciaSesion():                         # Funcion de inicio de sesion
             etiquetaicono.pack()            # Empaqueto
             botonnuevanota = ttk.Button(marco2,text="Nueva nota",command=creaNota) # Creo el boton de crear una nueva nota
             botonnuevanota.pack(pady=10,expand=True) # Lo empaqueto
+            botonguardanotas = ttk.Button(marco2,text="Guardar notas",command=guardaNotas) # Creo el boton de guardar una nota
+            botonguardanotas.pack(pady=10,expand=True) # Lo empaqueto
         else:                               # En el caso de que no exista
             print("El usuario no es correcto")
             raiz.after(3000,lambda:raiz.destroy()) # Se cierra la ventana despues de 3sgd
+            
+def guardaNotas():
+    for i in notas:                         # Para cada una de las notas
+        print(i.texto)                      # Imprimo su contenido
+        print(i.color)                      # Imprimo su color
+        print(i.fecha)                      # Imprimo su fecha
+        cursor.execute("INSERT INTO notas VALUES(NULL,'"+i.texto+"','"+i.color+"','"+i.fecha+"');") # Inserto una nota en la base de datos
+        conexion.commit()
+            
 def creaNota():
     global notas
     global identificador
@@ -109,7 +120,7 @@ def creaNota():
     anchura = 300                           # Defino la anchura como un valor
     altura = 350                            # Defino la altura como otro valor
     ventananuevanota.geometry(str(anchura)+'x'+str(altura)+'+100+100') # Geometria de la ventana y margen con la pantalla
-    texto = tk.Text(ventananuevanota,bg="white")
+    texto = tk.Text(ventananuevanota,bg="white",fg="black")
     texto.pack()
     identificadorpropio = identificador
     selectorcolor = ttk.Button(ventananuevanota,text="Cambiar color",command=lambda:cambiaColor(ventananuevanota,texto,identificadorpropio,))
@@ -133,7 +144,7 @@ def cambiaColor(ventana,texto,identificador): # Creo la funcion de cambio de col
 
 raiz = tk.Tk()                              # Creo una interfaz gráfica de usuario
 raiz.title("Notas v0.01")                   # Especifico el título de la ventana
-raiz.geometry('200x200+20+50')              # Geometria de la ventana y margen con la pantalla
+raiz.geometry('200x250+20+50')              # Geometria de la ventana y margen con la pantalla
 raiz.attributes("-topmost",True)            # Siempre encima del resto de las ventanas
 raiz.attributes("-alpha",0.9)               # Añado un efecto de transparencia
 raiz.resizable(0,0)                         # Impiso que el usuario pueda redimensionar la ventana
