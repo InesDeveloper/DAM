@@ -100,15 +100,13 @@ def iniciaSesion():                         # Funcion de inicio de sesion
                 print(i)
                 cargaNota(i[1],i[2],i[3])
                 notas.append(Nota(i[1],i[2],i[3]))
+                #identificador = identificador +1
 
             for i in notas:                         # Para cada una de las notas
                 print(i.texto)                      # Imprimo su contenido
                 print(i.color)                      # Imprimo su color
                 print(i.fecha)                      # Imprimo su fecha
-
-
-
-            
+  
         else:                               # En el caso de que no exista
             print("El usuario no es correcto")
             raiz.after(3000,lambda:raiz.destroy()) # Se cierra la ventana despues de 3sgd
@@ -118,7 +116,15 @@ def guardaNotas():
         print(i.texto)                      # Imprimo su contenido
         print(i.color)                      # Imprimo su color
         print(i.fecha)                      # Imprimo su fecha
-        cursor.execute("INSERT INTO notas VALUES(NULL,'"+i.texto+"','"+i.color+"','"+i.fecha+"');") # Inserto una nota en la base de datos
+        existe = False
+        cursor.execute('SELECT * FROM NOTAS WHERE fecha = "'+i.fecha+'"')
+        datos = cursor.fetchall()
+        for i in datos:
+            existe = True
+            print("La nota que intentas introducir existe")
+        if existe == False:
+            print("Como no existe,meto la nota")
+            cursor.execute("INSERT INTO notas VALUES(NULL,'"+i.texto+"','"+i.color+"','"+i.fecha+"');") # Inserto una nota en la base de datos
         conexion.commit()
             
 def creaNota():
