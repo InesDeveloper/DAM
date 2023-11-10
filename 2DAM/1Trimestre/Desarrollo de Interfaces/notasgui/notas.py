@@ -6,8 +6,7 @@ import time
 
 
 class Nota:                                 # Declaramos una clase
-    def __init__(self,identificador, texto, color, fecha):# Método constructor
-        self.identificador = identificador
+    def __init__(self,texto,color,fecha):   # Método constructor
         self.texto = texto                  # Propiedad texto
         self.color = color                  # Propiedad color
         self.fecha = fecha                  # Propiedad fecha
@@ -91,6 +90,25 @@ def iniciaSesion():                         # Funcion de inicio de sesion
             botonnuevanota.pack(pady=10,expand=True) # Lo empaqueto
             botonguardanotas = ttk.Button(marco2,text="Guardar notas",command=guardaNotas) # Creo el boton de guardar una nota
             botonguardanotas.pack(pady=10,expand=True) # Lo empaqueto
+            
+# CARGO LAS NOTAS DE LA BASE DE DATOS
+
+            cursor.execute('SELECT * FROM NOTAS')
+            datos = cursor.fetchall()
+            for i in datos:
+                print("Hay una nota en la base de datos")
+                print(i)
+                cargaNota(i[1],i[2],i[3])
+                notas.append(Nota(i[1],i[2],i[3]))
+
+            for i in notas:                         # Para cada una de las notas
+                print(i.texto)                      # Imprimo su contenido
+                print(i.color)                      # Imprimo su color
+                print(i.fecha)                      # Imprimo su fecha
+
+
+
+            
         else:                               # En el caso de que no exista
             print("El usuario no es correcto")
             raiz.after(3000,lambda:raiz.destroy()) # Se cierra la ventana despues de 3sgd
@@ -108,10 +126,9 @@ def creaNota():
     global identificador
     fecha = str(int(time.time()))
     
-    notas.append(Nota(identificador,'','',fecha)) # Añado una nota a la lista
+    notas.append(Nota('','',fecha))         # Añado una nota a la lista
 
     for i in notas:                         # Para cada una de las notas
-        print(i.identificador)
         print(i.texto)                      # Imprimo su contenido
         print(i.color)                      # Imprimo su color
         print(i.fecha)                      # Imprimo su fecha
@@ -127,6 +144,36 @@ def creaNota():
     selectorcolor.pack()
     identificador = identificador + 1       # Subo el identificador
 
+def cargaNota(mitexto,color,fecha):
+    global notas
+    global identificador
+    fecha = str(int(time.time()))
+    
+    notas.append(Nota('','',fecha))         # Añado una nota a la lista
+    
+    for i in notas:                         # Para cada una de las notas
+        print(i.texto)                      # Imprimo su contenido
+        print(i.color)                      # Imprimo su color
+        print(i.fecha)                      # Imprimo su fecha
+
+    ventananuevanota = tk.Toplevel()        # Nueva ventana flotante
+    anchura = 300                           # Defino la anchura como un valor
+    altura = 350                            # Defino la altura como otro valor
+    ventananuevanota.geometry(str(anchura)+'x'+str(altura)+'+100+100') # Geometria de la ventana y margen con la pantalla
+    texto = tk.Text(ventananuevanota,bg="white",fg="black")
+    texto.insert("1.0",mitexto)
+    texto.pack()
+    ventananuevanota.configure(bg = color)
+    try:
+        texto.configure(bg = color)
+    except Exception as e:
+        print (e)
+    identificadorpropio = identificador
+    selectorcolor = ttk.Button(ventananuevanota,text="Cambiar color",command=lambda:cambiaColor(ventananuevanota,texto,identificadorpropio,))
+    selectorcolor.pack()
+    identificador = identificador + 1       # Subo el identificador
+           
+
 def cambiaColor(ventana,texto,identificador): # Creo la funcion de cambio de color
     nuevocolor = askcolor(title="Selecciona un color") # Saco un selector de color
     ventana.configure(bg = nuevocolor[1])   # Cambio el color de fondo a la ventana seleccionada
@@ -135,7 +182,6 @@ def cambiaColor(ventana,texto,identificador): # Creo la funcion de cambio de col
     notas[identificador].texto = texto.get("1.0",tk.END)
     print("El identificador es:"+str(identificador))
     for i in notas:                         # Para cada una de las notas
-        print(i.identificador)
         print(i.texto)                      # Imprimo su contenido
         print(i.color)                      # Imprimo su color
         print(i.fecha)                      # Imprimo su fecha
