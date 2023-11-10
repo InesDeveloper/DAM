@@ -120,6 +120,8 @@ def cambiaColor(ventana,texto,identificador): # Creo la funcion de cambio de col
     nuevocolor = askcolor(title="Selecciona un color") # Saco un selector de color
     ventana.configure(bg = nuevocolor[1])   # Cambio el color de fondo a la ventana seleccionada
     texto.configure(bg = nuevocolor[1])
+    notas[identificador].color = nuevocolor[1]
+    notas[identificador].texto = texto.get("1.0",tk.END)
     print("El identificador es:"+str(identificador))
     for i in notas:                         # Para cada una de las notas
         print(i.identificador)
