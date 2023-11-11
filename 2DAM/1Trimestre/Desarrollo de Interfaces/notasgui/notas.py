@@ -119,9 +119,10 @@ def guardaNotas():
         existe = False
         cursor.execute('SELECT * FROM NOTAS WHERE fecha = "'+i.fecha+'"')
         datos = cursor.fetchall()
-        for i in datos:
+        for j in datos:
             existe = True
             print("La nota que intentas introducir existe")
+            cursor.execute("UPDATE notas SET texto = '"+i.texto+"', color='"+i.color+"' WHERE fecha ='"+i.fecha+"';") # Inserto una nota en la base de datos
         if existe == False:
             print("Como no existe,meto la nota")
             cursor.execute("INSERT INTO notas VALUES(NULL,'"+i.texto+"','"+i.color+"','"+i.fecha+"');") # Inserto una nota en la base de datos
