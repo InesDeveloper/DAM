@@ -99,7 +99,7 @@ def iniciaSesion():                         # Funcion de inicio de sesion
                 print("Hay una nota en la base de datos")
                 print(i)
                 cargaNota(i[1],i[2],i[3])
-                notas.append(Nota(i[1],i[2],i[3]))
+                #notas.append(Nota(i[1],i[2],i[3])) # arreglado (ya añado una nueva nota en la función carganota)
                 #identificador = identificador +1
 
             for i in notas:                         # Para cada una de las notas
@@ -153,9 +153,9 @@ def creaNota():
 def cargaNota(mitexto,color,fecha):
     global notas
     global identificador
-    fecha = str(int(time.time()))
+    #fecha = str(int(time.time()))          # arreglado (esta fecha me pisa el valor recibido en la función)
     
-    notas.append(Nota('','',fecha))         # Añado una nota a la lista
+    notas.append(Nota(mitexto,color,fecha)) # Añado una nota a la lista - arreglado (antes creaba una nota vacía Nota('','',fecha) intentando cargarla, ahora le paso por parametro sus valores)
     
     for i in notas:                         # Para cada una de las notas
         print(i.texto)                      # Imprimo su contenido
