@@ -93,12 +93,14 @@ class Personaje{
         */
         var colisionapixel = contextomapa.getImageData(this.x/50+1,this.y/50+1,1,1);
         var alpha = colisionapixel.data[3];
+        var componente = colisionapixel.data[0];
         if(alpha == 0){
             if(this.direccionisometrica == 1){this.direccionisometrica = 3;}
             else if(this.direccionisometrica == 3){this.direccionisometrica = 1;}
             else if(this.direccionisometrica == 0){this.direccionisometrica = 2;}
             else if(this.direccionisometrica == 2){this.direccionisometrica = 0;}
         }
+        this.z = componente;
     }
     pierdeenergia(){
         this.energia -= 20;

@@ -12,6 +12,9 @@
             <canvas id="lienzo" width=512px height=512px></canvas>
         </div>
         <canvas id="lienzomapa" width=512px height=512px></canvas>
+        <canvas id="lienzomapapersonajes" width=512px height=512px></canvas>
+        <canvas id="lienzomaparecogibles" width=512px height=512px></canvas>
+        <canvas id="lienzomapaprops" width=512px height=512px></canvas>
         <canvas id="lienzopunto" width=512px height=512px></canvas>
         <div id="pantallainicial">
             <h1>Run</h1>
@@ -40,11 +43,13 @@
         
         <script src="lib/jquery-3.7.1.min.js"></script>
         <script src="js/Personaje.js"></script>
+        <script src="js/Props.js"></script>
+        <script src="js/Recogibles.js"></script>
         <script src="js/funciones.js"></script>
         <script src="js/condicionesiniciales.js"></script>
         <script src="js/inicio.js"></script>
         <script src="js/bucle.js"></script>
-        
+        <script src="js/funcionesbucle.js"></script>
         <script>
             $("#botonjugar").click(function(){
                 $("#pantallainicial").fadeOut("slow");

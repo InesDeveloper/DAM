@@ -2,6 +2,9 @@
 var contexto = document.getElementById("lienzo").getContext("2d");
 var contextofondo = document.getElementById("lienzofondo").getContext("2d");
 var contextomapa = document.getElementById("lienzomapa").getContext("2d");
+var contextomapapersonajes = document.getElementById("lienzomapapersonajes").getContext("2d");
+var contextomapaprops = document.getElementById("lienzomapaprops").getContext("2d");
+var contextomaparecogibles = document.getElementById("lienzomaparecogibles").getContext("2d");
 var contextopunto = document.getElementById("lienzopunto").getContext("2d");
 pixelesmapa = contextomapa.getImageData(0,0,512,512);
 
@@ -40,8 +43,20 @@ imagennpcmuerto.src = "img/personajes/personajemuerto.png"; /* Usamos esta image
 var imagenpersonaje = new Image();
 imagenpersonaje.src = "img/personajes/personaje.png";
 
+var imagenpersonajeaccion = new Image();
+imagenpersonajeaccion.src = "img/personajes/personajeaccion.png";
+
 var mapa = new Image();
-mapa.src = "img/mapas/mapa2.png";
+mapa.src = "img/mapas/mapa1.png";
+
+var mapapersonajes = new Image();
+mapapersonajes.src = "img/mapas/mapa1personajes.png";
+
+var maparecogibles = new Image();
+maparecogibles.src = "img/mapas/mapa1recogibles.png";
+
+var mapaprops = new Image();
+mapaprops.src = "img/mapas/mapa1props.png";
 
 var bloque9 = new Image();
 bloque9.src = "img/terreno/terreno9.png";
@@ -49,9 +64,25 @@ bloque9.src = "img/terreno/terreno9.png";
 var imagenpremio = new Image();
 imagenpremio.src = "img/items/premio.png";
 
+var imagenrecogible1 = new Image();
+imagenrecogible1.src = "img/recogibles/pocion.png";
+var imagenrecogible2 = new Image();
+imagenrecogible2.src = "img/recogibles/pocion2.png";
+var imagenrecogible3 = new Image();
+imagenrecogible3.src = "img/recogibles/pocion3.png";
+
+var imagenprop1 = new Image();
+imagenprop1.src = "img/props/prop1.png";
+
 /* Introduzco la lista de los personajes */
 var numeropersonajes = 0;
 var arraypersonajes = new Array();
+
+var numeroprops = 0;
+var arrayprops = new Array();
+
+var numerorecogibles = 0;
+var arrayrecogibles = new Array();
 
 /* Propiedades Protagonista */
 var posx = 1000;
@@ -63,6 +94,11 @@ var angulo = 0;
 var velocidad = 5;
 var direccion= 0;
 var energia = 100;
+var moviendo = false;
+var saltopersonaje = 0;
+var velocidadz = 0;
+var saltando = false;
+var accion = false;
 
 /* Aquí introducimos las coordenadas mínimas y máximas del terreno en el cual se van a mover los npc*/
 var terrenox1 = 600;
@@ -81,3 +117,5 @@ var desfasex = 420;
 var desfasey = 0;
 
 var velocidaddesfase = 1;
+
+var alturabloquez = 1;

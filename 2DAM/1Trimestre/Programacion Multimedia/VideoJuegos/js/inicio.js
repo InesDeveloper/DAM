@@ -11,18 +11,20 @@ function inicio(){
     
     /* Este bloque de código define que es lo que ocurre cuando el protagonista pulsa las teclas de dirección*/
     $(document).keydown(function(e){
-        if(e.key == "w"){direccion = 1;}
-        if(e.key == "s"){direccion = 2;}
-        if(e.key == "a"){direccion = 3;}
-        if(e.key == "d"){direccion = 4;}
+        if(e.key == "w"){direccion = 1;moviendo = true;}
+        if(e.key == "s"){direccion = 2;moviendo = true;}
+        if(e.key == "a"){direccion = 3;moviendo = true;}
+        if(e.key == "d"){direccion = 4;moviendo = true;}
+        if(e.key == "z" && saltando == false){saltando = true;velocidadz = 20;}
+        if(e.key == "e" && accion == false){accion = true;}
     })
      
     /* Esto ocurre cuando se dejan de pulsar las teclas de dirección */
     $(document).keyup(function(e){
-        if(e.key == "w"){direccion = 0;}
-        if(e.key == "s"){direccion = 0;}
-        if(e.key == "a"){direccion = 0;}
-        if(e.key == "d"){direccion = 0;}
+        if(e.key == "w"){direccion = 0;moviendo = false;}
+        else if(e.key == "s"){direccion = 0;moviendo = false;}
+        else if(e.key == "a"){direccion = 0;moviendo = false;}
+        else if(e.key == "d"){direccion = 0;moviendo = false;}
      }) 
     
     /* Volver al menu principal */
@@ -52,4 +54,6 @@ function inicio(){
     posinicialjugador()
     creaenemigos()
     creaobjetivo()
+    creaprops()
+    crearecogibles()
 } 

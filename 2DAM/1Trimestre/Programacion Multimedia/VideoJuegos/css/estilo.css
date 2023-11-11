@@ -42,8 +42,16 @@ body{margin: 0px;padding: 0px;overflow: hidden;}
     top:0px;
     left:0px;
     z-index:100000;
-    
-    
+    border:1px solid black;
+    display: none;
+}
+#lienzomapapersonajes, #lienzomaparecogibles, #lienzomapaprops{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:100000;
+    border:1px solid black;
+    display: none;
 }
 #lienzofondo{
     position:absolute;
