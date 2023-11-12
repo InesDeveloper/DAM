@@ -9,7 +9,18 @@
     </head>
     <body>
         <?php include "codificador.php";?>
-        <h1>Entregas para <?php echo descodifica($_GET['clave'])?></h1>
+        <h1>Entregas para 
+            <?php 
+                $clave = "";
+                if(isset($_GET['clave'])){
+                    echo descodifica($_GET['clave']);
+                    $clave = descodifica($_GET['clave']);
+                } else if(isset($_POST['clave'])) {
+                    echo $_POST['clave'];
+                    $clave = $_POST['clave'];
+                }
+                
+            ?></h1>
         <table>
             <tr><th>URL</th><th>Asignatura</th><th>Práctica</th><th>Fecha</th><th>Video</th>
         <?php
@@ -17,7 +28,7 @@
         include "config.php";
 
         $mysqli = new mysqli($mydbserver, $mydbuser, $mydbpassword, $mydb);
-        $consulta = "SELECT * FROM entregas WHERE email = '".descodifica($_GET['clave'])."'";
+        $consulta = "SELECT * FROM entregas WHERE email = '".$clave."'";
         $resultado = $mysqli->query($consulta);
         while ($fila = $resultado->fetch_assoc()){
             $parts = parse_url($fila['url']);
