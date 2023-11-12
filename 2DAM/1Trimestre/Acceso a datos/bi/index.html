@@ -52,7 +52,9 @@
                 <div id="seleccionlimite">
                     <p>Podemos limitar la cantidad de registros que nos proporciona el informe</p>
                     <div id="seleccionalimite">
-                        <input type="number" id="limite">
+                        <!-- <input type="number" id="limite"> -->
+                        <input type="range" id="limite" min="0" max="100" value="5" onchange="rangevalue.value=value">
+                        <output id="rangevalue">5</output>
                     </div>    
                 </div>
                 
