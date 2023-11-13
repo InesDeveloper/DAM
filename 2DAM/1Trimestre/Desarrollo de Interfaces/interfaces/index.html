@@ -24,18 +24,18 @@
                             console.log($(categorias[i]).attr("id"));
                             $("#biblioteca").append('<h3>'+$(categorias[i]).attr("id")+'</h3>')
                             cadena = '';
-                            cadena += '<div>';
+                            cadena += '<div><p><ul>';
                             contenido = $(categorias[i]).find("instruction")
                             for(var j = 0;j < contenido.length; j++){
                                 console.log(contenido[j].innerHTML)
                                 cadena += '<li>'+contenido[j].innerHTML+'</li>'
                             }
-                            cadena += '</div>'
+                            cadena += '</ul></p></div>';
                             $("#biblioteca").append(cadena)
                         }
-                        setTimeout(function(){
-                            $("#biblioteca").accordion();
-                        },1000)
+                        //setTimeout(function(){
+                            $("#biblioteca").accordion("refresh");
+                        //},1000)
                         
                         /*
                         $(xml).find('members').each(function(){
