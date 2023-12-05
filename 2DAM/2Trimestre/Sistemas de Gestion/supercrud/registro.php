@@ -1,24 +1,24 @@
 <?php
-
+/*
      foreach($_REQUEST as $nombre_campo => $valor){
         //echo "el campo es: ".$nombre_campo." y el valor es ".$valor;
         if(preg_match('~\b(delete|drop|truncate)\b~i',$nombre_campo)){
             $volcado = implode(",", $_REQUEST).",".$_SERVER['REMOTE_ADDR'].",".$_SERVER['HTTP_USER_AGENT']."\n";
             $myfile = fopen("volcado.txt", "a");
             fwrite($myfile, $volcado);
-            die("ejecucion detenida");
+            die("ejecucion detenida por registro");
         }
 
         if(preg_match('~\b(delete|drop|truncate)\b~i',$valor)){
             $volcado = implode(",", $_REQUEST).",".$_SERVER['REMOTE_ADDR'].",".$_SERVER['HTTP_USER_AGENT']."\n";
             $myfile = fopen("volcado.txt", "a");
             fwrite($myfile, $volcado);
-            die("ejecucion detenida");
+            die("ejecucion detenida por registro");
         }
 
     }
 
-
+*/
     include "config.php";
     $mysqli = new mysqli($mydbserver, $mydbuser, $mydbpassword, $mydb);
     $url = "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";

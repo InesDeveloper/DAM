@@ -12,7 +12,7 @@ $miformulario = new Supercontrolador();
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <style>
         /* ESTILOS GENERALES*/
-            body{background: rgb(237, 233, 233);font-family: sans-serif;}
+            body{background: rgb(237, 233, 233);font-family: sans-serif;padding: 0px;margin: 0px;height: 100%;overflow: hidden;}
         /* ESTILOS DEL FORMULARIO DE LOGIN */
             #formulariologin{width: 200px;height: 200px;background: #edbded;padding: 30px;margin: auto;border-radius: 20px;text-align: center}
             #formulariologin input{width: 100%;padding-top: 10px;padding-bottom: 10px;border: 0px;margin-top: 10px;outline: none;background: rgb(240,240,240);border-radius: 5px;}
@@ -26,13 +26,13 @@ $miformulario = new Supercontrolador();
             #contienemenu ul{list-style-type: none;padding: 0px;margin: 0px;}
             #contienemenu ul li{padding: 10px;margin: 0px;border-bottom: 1px solid grey;}
             #contienemenu ul li a{color: inherit;text-decoration: none;}
-            #contienecontenido{padding: 10px;}
+            #contienecontenido{padding: 10px;background: white;height: 100%;overflow-y: scroll;}
             #contienecontenido table{width: 100%;text-align: left;}
             #contienecontenido table a{padding: 5px;color:inherit;text-decoration: none;}
             #contienecontenido table a i{font-size: 20px;}
             #create{color: inherit;text-decoration: none;font-size: 80px;position: absolute;bottom: 10px;right: 10px;}
         /* ESTILOS DEL FORMULARIO */
-            #formulario{width: 50%;background: white;margin: auto;padding: 20px;box-shadow: 0px 10px 20px rgb(0,0,0,0.4);border-radius: 10px;text-align: center;}
+            #formulario{width: 50%;background: white;margin: auto;padding: 20px;border-radius: 10px;text-align: center;}
             #formulario h1{color:rgb(100,100,100);font-size: 20px;padding: 0px;margin: 0px;margin-bottom: 20px;}
             #formulario h3{text-align: left;margin: 0px;padding: 0px;}
             #formulario p{text-align: left;font-size: 10px;}
@@ -60,6 +60,9 @@ $miformulario = new Supercontrolador();
                 border-radius: 0px 5px 5px 0px;}
             .clearfix{clear: both;}
             .contienecampo table{width: 100%;}
+        /* ESTILOS DE LOS CAMPOS */
+            .email{filter: blur(4px);}
+            .urlsi{color:blueviolet;text-decoration: underline;}
             
         </style>
     </head>
@@ -67,7 +70,7 @@ $miformulario = new Supercontrolador();
     
         <?php
        
-            if(isset($_POST['usuario'])){
+            if(isset($_POST['usuario']) && !isset($_SESSION['usuario'])){
                 include "../config.php";
                 $mysqli = new mysqli($mydbserver, $mydbuser, $mydbpassword, $mydb);
                 $consulta = "SELECT * FROM usuarios WHERE usuario = '".$_POST['usuario']."' AND contrasena = '".$_POST['contrasena']."'";
@@ -101,8 +104,14 @@ $miformulario = new Supercontrolador();
                     <section>
                         <div id="contienecontenido">
                         ';
+                
+                            if(isset($_GET['delete'])){$miformulario->delete($_GET['tabla'],$_GET['delete']);}
+                            if(isset($_GET['update'])){echo '<div id="formulario">';$miformulario->update($_GET['tabla'],$_GET['update']);echo '</div>';}
+                            if($_POST['clave'] == "procesainsertar"){$miformulario->procesainsertar();}
+                            if($_POST['clave'] == "procesaupdate"){$miformulario->procesaupdate($_POST['tabla'],$_POST['identificador']);}
                             if(isset($_GET['tabla'])){$miformulario->leer($_GET['tabla']);}
                             if(isset($_GET['create'])){echo '<div id="formulario">';$miformulario->insertar($_GET['create']);echo '</div>';}
+
                           echo ' 
                           
                         </div>    
