@@ -142,14 +142,20 @@ class Supercontrolador {
         }
         echo '<th>Operaciones</th>';
         echo '</tr>';
-        $consulta = "SELECT * FROM ".$tabla;
+        $consulta = "SELECT * FROM ".$tabla."";
+        $resultado = $mysqli->query($consulta);
+        $_SESSION['numerodeelementos'] = $resultado->num_rows;
+        
+        $consulta = "SELECT * FROM ".$tabla." LIMIT ".$_SESSION['elementosporpagina']." OFFSET ".($_SESSION['elementosporpagina']*$_SESSION['pagina'])." ";
         $resultado = $mysqli->query($consulta);
 
         while ($fila = $resultado->fetch_assoc()) {
+            $identificador = "";
             echo '<tr>';
             $contadorcolumna = 0;
             foreach($fila as $nombre_campo => $valor){
-                echo '<td class="'.$nombrecolumna[$contadorcolumna].' ';
+                if($nombrecolumna[$contadorcolumna] == "Identificador"){$identificador = $valor;}
+                echo '<td class="'.$nombrecolumna[$contadorcolumna].'" columna="'.$nombrecolumna[$contadorcolumna].'" tabla="'.$tabla.'" identificador="'.$identificador.'" ';
                 if(filter_var($valor, FILTER_VALIDATE_URL)){echo "urlsi";}
                 echo '">';
                 if(filter_var($valor, FILTER_VALIDATE_URL)){echo "<a href='".$valor."' target='_blank'>";}
@@ -184,7 +190,12 @@ class Supercontrolador {
         
         echo '</table>';
         echo '<a href="?create='.$_GET['tabla'].'" id="create"><i class="fas fa-plus-circle"></i></a>';
-
+        echo '<div class="paginacion">
+            <a href="?tabla='.$_GET['tabla'].'&pagina=primera"><i class="fas fa-arrow-circle-left"></i></a>
+            <a href="?tabla='.$_GET['tabla'].'&pagina=anterior"><i class="fas fa-chevron-circle-left"></i></a>
+            <a href="?tabla='.$_GET['tabla'].'&pagina=siguiente"><i class="fas fa-chevron-circle-right"></i></a>
+            <a href="?tabla='.$_GET['tabla'].'&pagina=ultima"><i class="fas fa-arrow-circle-right"></i></a>
+        </div>';    
     } 
     
     function insertar($tabla) {
