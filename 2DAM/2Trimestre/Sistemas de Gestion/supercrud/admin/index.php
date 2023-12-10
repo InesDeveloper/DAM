@@ -42,7 +42,7 @@ $miformulario = new Supercontrolador();
                             $_SESSION['pagina'] = $ultimapagina;
                         } else {
                             $ultimapagina--;
-                            $_SESSION['pagina'] = $_SESSION['pagina'] = $ultimapagina;
+                            $_SESSION['pagina'] = $ultimapagina;
                         }
                         
                         break;
