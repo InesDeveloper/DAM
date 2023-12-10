@@ -160,14 +160,34 @@ function dibujaterreno() {
                         anchuradibujo
                     );
                 }
-                    var centro = contextomapaarquitectura.getImageData(x,y,1,1).data
-                    var arriba = contextomapaarquitectura.getImageData(x,y-1,1,1).data
-                    var abajo = contextomapaarquitectura.getImageData(x,y+1,1,1).data
-                    var derecha = contextomapaarquitectura.getImageData(x+1,y,1,1).data
-                    var izquierda = contextomapaarquitectura.getImageData(x-1,y,1,1).data
-                    
-                    if(centro[3] == 255){
-                        if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 255 && derecha[3] == 255){
+                
+                var centro = contextomapaarquitectura.getImageData(x,y,1,1).data
+                var arriba = contextomapaarquitectura.getImageData(x,y-1,1,1).data
+                var abajo = contextomapaarquitectura.getImageData(x,y+1,1,1).data
+                var derecha = contextomapaarquitectura.getImageData(x+1,y,1,1).data
+                var izquierda = contextomapaarquitectura.getImageData(x-1,y,1,1).data
+
+                if(centro[3] == 255){
+                    // Bloque en X
+                    if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 255 && derecha[3] == 255){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                        
+                            contextofondo.drawImage(
+                                bloquearquitecturaxa,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        } else {
                             contextofondo.drawImage(
                                 bloquearquitecturax,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -176,8 +196,26 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        // Bloques simples
-                        if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 0 && derecha[3] == 0){
+                    }
+                    // Bloques simples
+                    if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 0 && derecha[3] == 0){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitecturasimple1a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitecturasimple1,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -186,7 +224,25 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        if(arriba[3] == 0 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 255){
+                    }
+                    if(arriba[3] == 0 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 255){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitecturasimple2a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitecturasimple2,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -195,21 +251,57 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        // Puertas
-                        if(centro[0] == 255 && centro[1] == 0 && centro[2] == 0){
-                            
-                        }
-                        // Ventanas
-                        if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 0 && derecha[3] == 0 && centro[0] == 0 && centro[1] == 255 && centro[2] == 0){
+                    }
+                    // Puertas
+                    if(centro[0] == 255 && centro[1] == 0 && centro[2] == 0){
+
+                    }
+                    // Ventanas
+                    if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 0 && derecha[3] == 0 && centro[0] == 0 && centro[1] == 255 && centro[2] == 0){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
                             contextofondo.drawImage(
-                                bloquearquitecturaventana1,
+                                bloquearquitecturaventana1a,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
                                 isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
                                 anchuradibujo,
                                 anchuradibujo*3
                             );
+                        }else{
+                           contextofondo.drawImage(
+                                bloquearquitecturaventana1,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            ); 
                         }
-                        if(arriba[3] == 0 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 255 && centro[0] == 0 && centro[1] == 255 && centro[2] == 0){
+                    }
+                    if(arriba[3] == 0 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 255 && centro[0] == 0 && centro[1] == 255 && centro[2] == 0){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitecturaventana2a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitecturaventana2,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -218,7 +310,25 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        if(arriba[3] == 0 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 255){
+                    }
+                    if(arriba[3] == 0 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 255){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitecturasimple2a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitecturasimple2,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -227,8 +337,26 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        // T
-                        if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 255 && derecha[3] == 0){
+                    }
+                    // T
+                    if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 255 && derecha[3] == 0){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitecturat4a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitecturat4,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -237,7 +365,25 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        if(arriba[3] == 255 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 255){
+                    }
+                    if(arriba[3] == 255 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 255){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitecturat3a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitecturat3,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -246,7 +392,25 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        if(arriba[3] == 0 && abajo[3] == 255 && izquierda[3] == 255 && derecha[3] == 255){
+                    }
+                    if(arriba[3] == 0 && abajo[3] == 255 && izquierda[3] == 255 && derecha[3] == 255){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitecturat2a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitecturat2,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -255,7 +419,25 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 0 && derecha[3] == 255){
+                    }
+                    if(arriba[3] == 255 && abajo[3] == 255 && izquierda[3] == 0 && derecha[3] == 255){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitecturat2a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitecturat2,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -264,9 +446,27 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        
-                        // L
-                        if(arriba[3] == 255 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 0){
+                    }
+
+                    // L
+                    if(arriba[3] == 255 && abajo[3] == 0 && izquierda[3] == 255 && derecha[3] == 0){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitectural4a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitectural4,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -275,7 +475,25 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        if(arriba[3] == 255 && abajo[3] == 0 && izquierda[3] == 0 && derecha[3] == 255){
+                    }
+                    if(arriba[3] == 255 && abajo[3] == 0 && izquierda[3] == 0 && derecha[3] == 255){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitectural3a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
                             contextofondo.drawImage(
                                 bloquearquitectural3,
                                 isox(x*anchurabloque,y*anchurabloque)+desfasex,
@@ -284,31 +502,89 @@ function dibujaterreno() {
                                 anchuradibujo*3
                             );
                         }
-                        if(arriba[3] == 0 && abajo[3] == 255 && izquierda[3] == 255 && derecha[3] == 0){
-                            contextofondo.drawImage(
-                                bloquearquitectural2,
-                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
-                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
-                                anchuradibujo,
-                                anchuradibujo*3
-                            );
-                        }
-                        if(arriba[3] == 0 && abajo[3] == 255 && izquierda[3] == 0 && derecha[3] == 255){
-                            contextofondo.drawImage(
-                                bloquearquitectural2,
-                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
-                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
-                                anchuradibujo,
-                                anchuradibujo*3
-                            );
-                        }
-                        
                     }
+                    if(arriba[3] == 0 && abajo[3] == 255 && izquierda[3] == 255 && derecha[3] == 0){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitectural2a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
+                            contextofondo.drawImage(
+                                bloquearquitectural2,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }
+                    }
+                    if(arriba[3] == 0 && abajo[3] == 255 && izquierda[3] == 0 && derecha[3] == 255){
+                        if(
+                        (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                         (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 < alturanavegador * 0.25
+                        || 
+                            isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300 > alturanavegador * 0.75)
+                        ){
+                            contextofondo.drawImage(
+                                bloquearquitectural2a,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }else{
+                            contextofondo.drawImage(
+                                bloquearquitectural2,
+                                isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                                isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                                anchuradibujo,
+                                anchuradibujo*3
+                            );
+                        }
+                    }
+
+                }
+                
+                var techo = contextomapatechos.getImageData(x,y,1,1).data
+                if(techo[3] == 255){
+                    if(
+                         (isox(x*anchurabloque,y*anchurabloque)+desfasex < anchuranavegador*0.25
+                           ||
+                        isox(x*anchurabloque,y*anchurabloque)+desfasex > anchuranavegador*0.75)
+                        &&
+                           (isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez+400 < alturanavegador * 0.25
+                           || 
+                           isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez+400 > alturanavegador * 0.75)
+                    ){
+                        contextofondo.drawImage(
+                           bloquetecho,
+                          isox(x*anchurabloque,y*anchurabloque)+desfasex,
+                           isoy(x*anchurabloque,y*anchurabloque)+desfasey-pixeles.data[i]*alturabloquez-300,
+                           anchuradibujo,
+                           anchuradibujo*3
+                        ); 
+                    }
+                }
                     
-             }
+            }
         }
     }
-    
+
 }
 
 function posinicialjugador(){

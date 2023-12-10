@@ -53,6 +53,7 @@ function inicio(){
     
     contextomapacolores.drawImage(mapacolores,0,0)
     contextomapaarquitectura.drawImage(mapaarquitectura,0,0)
+    contextomapatechos.drawImage(mapatechos,0,0)
     
     posinicialjugador()
     creaenemigos()

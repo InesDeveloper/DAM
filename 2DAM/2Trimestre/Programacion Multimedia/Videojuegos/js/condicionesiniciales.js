@@ -6,6 +6,7 @@ var contextomapacolores = document.getElementById("lienzomapacolores").getContex
 var contextomapaarquitectura = document.getElementById("lienzomapaarquitectura").getContext("2d");
 var contextomapapersonajes = document.getElementById("lienzomapapersonajes").getContext("2d");
 var contextomapaprops = document.getElementById("lienzomapaprops").getContext("2d");
+var contextomapatechos = document.getElementById("lienzomapatechos").getContext("2d");
 var contextomaparecogibles = document.getElementById("lienzomaparecogibles").getContext("2d");
 var contextopunto = document.getElementById("lienzopunto").getContext("2d");
 pixelesmapa = contextomapa.getImageData(0,0,512,512);
@@ -57,6 +58,9 @@ mapacolores.src = "img/mapas/mapa1colores.png";
 var mapaarquitectura = new Image();
 mapaarquitectura.src = "img/mapas/mapa1arquitectura.png";
 
+var mapatechos = new Image();
+mapatechos.src = "img/mapas/mapa1techos.png";
+
 var mapapersonajes = new Image();
 mapapersonajes.src = "img/mapas/mapa1personajes.png";
 
@@ -92,6 +96,25 @@ var bloquearquitecturat3 = new Image();bloquearquitecturat3.src = "img/arquitect
 var bloquearquitecturat4 = new Image();bloquearquitecturat4.src = "img/arquitectura/t4.png";
 var bloquearquitecturaventana1 = new Image();bloquearquitecturaventana1.src = "img/arquitectura/ventana1.png";
 var bloquearquitecturaventana2 = new Image();bloquearquitecturaventana2.src = "img/arquitectura/ventana2.png";
+
+var bloquearquitecturasimple1a = new Image();bloquearquitecturasimple1a.src = "img/arquitectura/simple1-1.png";
+var bloquearquitecturasimple2a = new Image();bloquearquitecturasimple2a.src = "img/arquitectura/simple2-1.png";
+
+var bloquearquitecturaxa = new Image();bloquearquitecturaxa.src = "img/arquitectura/cruz-1.png";
+
+var bloquearquitectural1a = new Image();bloquearquitectural1a.src = "img/arquitectura/l1-1.png";
+var bloquearquitectural2a = new Image();bloquearquitectural2a.src = "img/arquitectura/l2-1.png";
+var bloquearquitectural3a = new Image();bloquearquitectural3a.src = "img/arquitectura/l3-1.png";
+var bloquearquitectural4a = new Image();bloquearquitectural4a.src = "img/arquitectura/l4-1.png";
+
+var bloquearquitecturat1a = new Image();bloquearquitecturat1a.src = "img/arquitectura/t1-1.png";
+var bloquearquitecturat2a = new Image();bloquearquitecturat2a.src = "img/arquitectura/t2-1.png";
+var bloquearquitecturat3a = new Image();bloquearquitecturat3a.src = "img/arquitectura/t3-1.png";
+var bloquearquitecturat4a = new Image();bloquearquitecturat4a.src = "img/arquitectura/t4-1.png";
+var bloquearquitecturaventana1a = new Image();bloquearquitecturaventana1a.src = "img/arquitectura/ventana1-1.png";
+var bloquearquitecturaventana2a = new Image();bloquearquitecturaventana2a.src = "img/arquitectura/ventana2-1.png";
+
+var bloquetecho = new Image();bloquetecho.src = "img/arquitectura/techo.png";
 
 var imagenpremio = new Image();
 imagenpremio.src = "img/items/premio.png";
