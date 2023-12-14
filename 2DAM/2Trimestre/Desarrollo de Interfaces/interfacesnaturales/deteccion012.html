@@ -2,6 +2,12 @@
 <html lang="es">
     <head>
         <title>Detección de movimiento</title>
+        <style>
+            html,body{background: #a7616d;}
+            video{display: none;}
+            canvas{position: absolute;top: 0px;left: 0px;}
+            #lienzo2{opacity: 0.5;}
+        </style>
     </head>
     <body>
         <canvas id="lienzo" width="640px" height="480px"></canvas>
@@ -13,7 +19,8 @@
             const lienzo2 = document.getElementById("lienzo2");
             const contexto = lienzo.getContext("2d");
             const contexto2 = lienzo2.getContext("2d");
-            const paso = 32;
+            contexto2.fillStyle = "rgba(255,255,255,0.1)"
+            const paso = 16;
             var pixelesviejos = [];
             var pixelesnuevos = [];
             var contador = 0
@@ -27,8 +34,7 @@
             })
             
         function videoALienzo(){
-            contexto2.clearRect(0,0,640,480)
-            console.log("-")
+            contexto2.fillRect(0,0,640,480)
             contexto.drawImage(video,0,0,lienzo.width,lienzo.height);
             pixelesviejos = pixelesnuevos
             pixelesnuevos = [];
@@ -51,8 +57,7 @@
                     
                     let diferencia = Math.abs(rojonuevo-rojoviejo)
                     
-                    if(diferencia > 10){
-                        console.log("si")
+                    if(diferencia > 20){
                         contexto2.strokeRect(
                             pixelesnuevos[i].x,
                             pixelesnuevos[i].y,
