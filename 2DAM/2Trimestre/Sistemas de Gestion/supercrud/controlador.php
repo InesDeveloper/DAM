@@ -135,48 +135,87 @@ class Supercontrolador {
         echo '<tr>';
         $contadorcolumna = 0;
         while ($fila = $resultado->fetch_assoc()) {
-            echo '<th>'.$fila["Field"].'</th>';
+            echo '<th>'.json_decode($fila["Comment"])->titulo.'</th>';
             $nombrecolumna[$contadorcolumna] = $fila["Field"];
             $contadorcolumna++;
        
         }
         echo '<th>Operaciones</th>';
         echo '</tr>';
+        $consulta = "SHOW FULL COLUMNS FROM ".$tabla;
+        
+        $resultado = $mysqli->query($consulta);
+        echo '<table>';
+        echo '<tr>';
+        echo '<form action="?tabla='.$tabla.'&buscar=si" method="POST">';
+        $contadorcolumna = 0;
+        while ($fila = $resultado->fetch_assoc()) {
+            echo '<th><input type="text" name="'.$fila["Field"].'" class="campobuscador"><i class="fas fa-search iconobusca"></i></th>';
+            $comentarios[$contadorcolumna] = $fila["Comment"];
+            $contadorcolumna++;
+        }
+        
+        echo '<th><input type="submit" value="Busca"></th>';
+        echo '</form>';
+        echo '</tr>';
+        
         $consulta = "SELECT * FROM ".$tabla."";
         $resultado = $mysqli->query($consulta);
         $_SESSION['numerodeelementos'] = $resultado->num_rows;
         
-        $consulta = "SELECT * FROM ".$tabla." LIMIT ".$_SESSION['elementosporpagina']." OFFSET ".($_SESSION['elementosporpagina']*$_SESSION['pagina'])." ";
+        $consulta = "SELECT * FROM ".$tabla;
+        
+        if(isset($_GET['buscar'])){
+            $consulta .= " WHERE ";
+            foreach($_POST as $clave => $valor){
+                $consulta .= $clave." LIKE '%".$valor."%' AND ";
+            }
+            $consulta .= " true";
+        }
+        if(!isset($_GET['buscar'])){
+            $consulta .= " LIMIT ".$_SESSION['elementosporpagina'];
+            $consulta .= " OFFSET ".($_SESSION['elementosporpagina']*$_SESSION['pagina']); 
+        }
         $resultado = $mysqli->query($consulta);
-
         while ($fila = $resultado->fetch_assoc()) {
             $identificador = "";
             echo '<tr>';
             $contadorcolumna = 0;
             foreach($fila as $nombre_campo => $valor){
                 if($nombrecolumna[$contadorcolumna] == "Identificador"){$identificador = $valor;}
-                echo '<td class="'.$nombrecolumna[$contadorcolumna].'" columna="'.$nombrecolumna[$contadorcolumna].'" tabla="'.$tabla.'" identificador="'.$identificador.'" ';
-                if(filter_var($valor, FILTER_VALIDATE_URL)){echo "urlsi";}
-                echo '">';
-                if(filter_var($valor, FILTER_VALIDATE_URL)){echo "<a href='".$valor."' target='_blank'>";}
-                if(filter_var($valor, FILTER_VALIDATE_EMAIL)){echo "<a href='mailto:".$valor."' target='_blank'>";}
-                echo $valor;
-                if(filter_var($valor, FILTER_VALIDATE_EMAIL)){echo "</a>";}
-                if(filter_var($valor, FILTER_VALIDATE_URL)){echo "</a>";}
-                /*
-                if(filter_var($valor, FILTER_VALIDATE_URL)){
-                    $url = $valor;
-                    $parsed = parse_url($url);
-                    if($parsed['host'] == "www.youtube.com" || $parsed['host'] == "youtu.be"){
-                        $parts = parse_url($url);
-                        parse_str($parts['query'], $query);
-                        $miparte = $query['v'];
-                        echo '<iframe width="300" height="200" src="https://www.youtube.com/embed/'.$miparte.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-    
+                if(json_decode($comentarios[$contadorcolumna])->FKtabla != ""){
+                    $consulta2 = "SELECT ".json_decode($comentarios[$contadorcolumna])->FKmostrar." AS campo FROM ".json_decode($comentarios[$contadorcolumna])->FKtabla." WHERE ".json_decode($comentarios[$contadorcolumna])->FKclave." = '".$valor."'";
+                    $resultado2 = $mysqli->query($consulta2);
+                    echo '<td externo="si" tabla="'.$tabla.'" claveexterna="'.json_decode($comentarios[$contadorcolumna])->FKclave.'" tablaexterna="'.json_decode($comentarios[$contadorcolumna])->FKtabla.'" columna="'.$nombrecolumna[$contadorcolumna].'" columnaexterna = "'.json_decode($comentarios[$contadorcolumna])->FKmostrar.'" identificador="'.$identificador.'">';
+                    while ($fila2 = $resultado2->fetch_assoc()){
+                        echo '<b>'.$valor."</b> - ".$fila2['campo'].'';
                     }
+                    echo '</td>';
+                } else {
+                    echo '<td externo="no" class="'.$nombrecolumna[$contadorcolumna].'" columna="'.$nombrecolumna[$contadorcolumna].'" tabla="'.$tabla.'" identificador="'.$identificador.'" ';
+                    if(filter_var($valor, FILTER_VALIDATE_URL)){echo "urlsi";}
+                    echo '">';
+                    if(filter_var($valor, FILTER_VALIDATE_URL)){echo "<a href='".$valor."' target='_blank'>";}
+                    if(filter_var($valor, FILTER_VALIDATE_EMAIL)){echo "<a href='mailto:".$valor."' target='_blank'>";}
+                    echo $valor;
+                    if(filter_var($valor, FILTER_VALIDATE_EMAIL)){echo "</a>";}
+                    if(filter_var($valor, FILTER_VALIDATE_URL)){echo "</a>";}
+                    /*
+                    if(filter_var($valor, FILTER_VALIDATE_URL)){
+                        $url = $valor;
+                        $parsed = parse_url($url);
+                        if($parsed['host'] == "www.youtube.com" || $parsed['host'] == "youtu.be"){
+                            $parts = parse_url($url);
+                            parse_str($parts['query'], $query);
+                            $miparte = $query['v'];
+                            echo '<iframe width="300" height="200" src="https://www.youtube.com/embed/'.$miparte.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+
+                        }
+                    }
+                    */
+                    echo '</td>';
                 }
-                */
-                echo '</td>';
+                
                 $contadorcolumna++;
             }
             
