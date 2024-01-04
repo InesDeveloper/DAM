@@ -1,0 +1,12 @@
+
+2024,0,2,11,26,57,null,/,null,/
+2024,0,2,11,26,59,null,/contacto,null,/contacto
+2024,0,2,11,27,0,null,/contacto,null,/contacto
+2024,0,2,11,45,33,null,/procesa,null,/procesa
+2024,0,4,22,47,5,null,/,null,/
+2024,0,4,22,47,7,null,/contacto,null,/contacto
+2024,0,4,22,47,8,null,/contacto,null,/contacto
+2024,0,4,22,47,22,null,/procesa,null,/procesa
+2024,0,4,22,47,24,null,/,null,/
+2024,0,4,22,47,25,null,/contacto,null,/contacto
+2024,0,4,22,47,26,null,/contacto,null,/contacto
