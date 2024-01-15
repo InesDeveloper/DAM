@@ -220,6 +220,7 @@ class Supercontrolador {
             }
             
             echo '<td>';
+            echo '<a href="?tabla='.$_GET['tabla'].'&informe='.$fila['Identificador'].'"><i class="fas fa-file-alt"></i></a>';
             echo '<a href="?tabla='.$_GET['tabla'].'&update='.$fila['Identificador'].'"><i class="fas fa-pen-square"></i></a>';
             echo '<a href="?tabla='.$_GET['tabla'].'&delete='.$fila['Identificador'].'"><i class="fas fa-minus-square"></i></a>';
             echo '</td>';
@@ -236,8 +237,45 @@ class Supercontrolador {
             <a href="?tabla='.$_GET['tabla'].'&pagina=ultima"><i class="fas fa-arrow-circle-right"></i></a>
         </div>';    
     } 
-    
-    function insertar($tabla) {
+    function informe($tabla,$identificador){
+        echo "<h1>Informe</h1>";
+        include "config.php";
+        //echo "A continuacion te pongo el contenido de la tabla ".$tabla;
+        $mysqli = new mysqli($mydbserver, $mydbuser, $mydbpassword, $mydb);
+        $consulta = "SELECT * FROM ".$tabla. " WHERE Identificador =".$identificador." ";
+        
+        $resultado = $mysqli->query($consulta);
+        echo '<table>';
+        
+        while ($fila = $resultado->fetch_assoc()) {
+            echo '';
+            foreach($fila as $indice=>$valor){
+                echo '<tr><td>'.$indice.'</td><td>'.$valor.'</td></tr>';
+            }
+            echo '';
+        }
+        echo '</table>';
+        
+        echo '<table>'; 
+        
+        $consulta = "SELECT * FROM informes WHERE tabla = '".$tabla."'";
+        $resultado = $mysqli->query($consulta);
+        while ($fila = $resultado->fetch_assoc()) {
+            echo "La peticion que voy a hacer es: ".str_replace('[X]',$identificador,$fila['consulta']);
+            $consulta2 = str_replace('[X]',$identificador,$fila['consulta']);
+            $resultado2 = $mysqli->query($consulta2);
+            while ($fila2 = $resultado2->fetch_assoc()) {
+                echo '<tr>';
+                foreach($fila2 AS $clave=>$valor){
+                    echo '<td>'.$valor.'</td>';
+                }
+                echo '</tr>';
+            }
+        }
+        
+        echo '</table>';
+    }
+    function insertar($tabla){
         include "config.php";
         echo '<form action="?tabla='.$tabla.'" method="POST">';
         echo '<input type="hidden" name="clave" value="procesainsertar">';

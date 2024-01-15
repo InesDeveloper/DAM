@@ -76,7 +76,18 @@ $miformulario = new Supercontrolador();
                         $resultado = $mysqli->query($consulta);
                 
                         while ($fila = $resultado->fetch_array()) {
-                            echo '<li><a href="?tabla='.$fila[0].'">'.$fila[0].'</a></li>';
+                            $consulta2 = "SHOW TABLE STATUS WHERE Name='".$fila[0]."' ";
+                            
+                            $resultado2 = $mysqli->query($consulta2);
+                            while($fila2 = $resultado2->fetch_array()){
+                                if(json_decode($fila2['Comment'])-> titulo == ""){
+                                    echo '<li><a href="?tabla='.$fila[0].'"><i class="fas fa-arrow-circle-right"></i> '.$fila[0].'</a></li>';
+                                }else{
+                                    echo '<li><a href="?tabla='.$fila[0].'" title="'.json_decode($fila2['Comment'])->descripcion.'"> <i class="'.json_decode($fila2['Comment'])->icono.'"></i>'.json_decode($fila2['Comment'])->titulo.'</a></li>';
+                                }
+                                
+                            }
+                            
                         }
                         echo '</ul>
                         </div>
@@ -84,12 +95,15 @@ $miformulario = new Supercontrolador();
                     <section>
                         <div id="contienecontenido">
                         ';
-                
+                            if(isset($_GET['informe'])){$miformulario->informe($_GET['tabla'],$_GET['informe']);}
                             if(isset($_GET['delete'])){$miformulario->delete($_GET['tabla'],$_GET['delete']);}
                             if(isset($_GET['update'])){echo '<div id="formulario">';$miformulario->update($_GET['tabla'],$_GET['update']);echo '</div>';}
                             if($_POST['clave'] == "procesainsertar"){$miformulario->procesainsertar();}
                             if($_POST['clave'] == "procesaupdate"){$miformulario->procesaupdate($_POST['tabla'],$_POST['identificador']);}
-                            if(isset($_GET['tabla'])){$miformulario->leer($_GET['tabla']);}
+                            if(
+                                isset($_GET['tabla'])
+                                && (!isset($_GET['informe']) && !isset($_GET['delete']) && !isset($_GET['update']))
+                            ){$miformulario->leer($_GET['tabla']);}
                             if(isset($_GET['create'])){echo '<div id="formulario">';$miformulario->insertar($_GET['create']);echo '</div>';}
 
                           echo ' 
