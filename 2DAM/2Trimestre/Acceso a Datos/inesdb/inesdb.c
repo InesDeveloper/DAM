@@ -12,7 +12,10 @@ int main(int argc, char *argv[]){
         char *documento = argv[4];
         char conextension[100];
         char ruta[100];
-
+        /*
+            Uso:
+            ./inesdb.out [operacion] [basededatos] [coleccion] [documento] [contenido]
+        */
         strcpy(conextension,documento);
         strcat(conextension,".json");
         
