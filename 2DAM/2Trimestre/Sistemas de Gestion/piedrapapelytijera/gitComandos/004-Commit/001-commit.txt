@@ -1,0 +1,5 @@
+git commit -m "Primera versión de mi juego"
+
+git add piedrapapelotijera.py
+
+git commit -m "Segunda version - decimos lo que saca la máquina"
