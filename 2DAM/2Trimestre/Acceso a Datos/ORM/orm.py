@@ -31,7 +31,7 @@ class Persona:
         self.posy += math.sin(self.direccion)
     def colisiona(self):
         if self.posx < 0 or self.posx > 512 or self.posy < 0 or self.posy > 512:
-            self.direccion += math.pi
+            self.direccion += math.pi/2
             
 def guardarPersonas():
     print("guardo a los jugadores")
