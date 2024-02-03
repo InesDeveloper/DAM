@@ -17,3 +17,15 @@ class Inesdb:
             return("ok")
         else:
             return("ko")
+
+    def create_collection(self,coleccion):
+        self.operacion = "create_collection"
+        self.coleccion = coleccion
+
+        comando = r"~/Documents/GitHub/DAM/2DAM/2Trimestre/Acceso\ a\ Datos/inesdb/inesdb.out "+self.operacion+' '+self.basededatos+' '+self.coleccion+'"'
+        resultado = subprocess.run(comando,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+
+        if resultado.returncode == 0:
+            return("ok")
+        else:
+            return("ko")
